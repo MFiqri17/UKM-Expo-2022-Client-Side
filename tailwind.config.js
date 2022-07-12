@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         primary: ['Inter', ...fontFamily.sans],
+        magic: ['Letter Magic', ...fontFamily.sans],
       },
       colors: {
         primary: {
@@ -24,6 +25,10 @@ module.exports = {
           900: 'rgb(var(--tw-color-primary-900) / <alpha-value>)',
         },
         dark: '#222222',
+        cgreen: '#62B497',
+        ccream: '#F5FBF3',
+        clime: '#CDDD91',
+        cbrown: '#3C3C3B',
       },
       keyframes: {
         flicker: {

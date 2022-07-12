@@ -46,9 +46,12 @@
     font-style: normal;
     font-weight: 100 900;
     font-display: optional;
-    src: url('/fonts/Letter Magic.ttf') format('ttf');
+    src: url('/fonts/letter-magic.ttf') format('ttf');
   }
 
+  html {
+    @apply scroll-smooth;
+  }
   .cursor-newtab {
     cursor: url('/images/new-tab.png') 10 10, pointer;
   }
@@ -86,7 +89,7 @@
 
   .layout {
     /* 1100px */
-    max-width: 68.75rem;
+    max-width: 90rem;
     @apply mx-auto w-11/12;
   }
 
@@ -98,16 +101,16 @@
   .min-h-main {
     @apply min-h-[calc(100vh-56px)];
   }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-cbrown via-cgreen to-clime bg-clip-text font-magic text-transparent;
+  }
 }
 
 @layer utilities {
   .animated-underline {
     background-image: linear-gradient(#33333300, #33333300),
-      linear-gradient(
-        to right,
-        var(--color-primary-400),
-        var(--color-primary-500)
-      );
+      linear-gradient(to right, #62b497, #62b499);
     background-size: 100% 2px, 0 2px;
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;
