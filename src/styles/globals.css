@@ -46,7 +46,7 @@
     font-style: normal;
     font-weight: 400 600;
     font-display: swap;
-    src: url('/fonts/magic.ttf') format('truetype');
+    src: url('/fonts/letter-magic.ttf') format('truetype');
   }
 
   @font-face {
