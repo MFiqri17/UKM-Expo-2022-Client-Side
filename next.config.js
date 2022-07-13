@@ -7,11 +7,9 @@ module.exports = {
   reactStrictMode: true,
 
   // Uncoment to add domain whitelist
-  // images: {
-  //   domains: [
-  //     'res.cloudinary.com',
-  //   ],
-  // },
+  images: {
+    domains: ['cf.shopee.co.id', 'images.tokopedia.net', 'ae01.alicdn.com'],
+  },
 
   // SVGR
   webpack(config) {

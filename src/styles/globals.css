@@ -44,9 +44,16 @@
   @font-face {
     font-family: 'Letter Magic';
     font-style: normal;
-    font-weight: 100 900;
+    font-weight: 400 600;
+    font-display: swap;
+    src: url('/fonts/magic.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400 600;
     font-display: optional;
-    src: url('/fonts/letter-magic.ttf') format('ttf');
   }
 
   html {
@@ -103,7 +110,7 @@
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-cbrown via-cgreen to-clime bg-clip-text font-magic text-transparent;
+    @apply bg-gradient-to-r from-cblack via-cgreen to-cgreenb bg-clip-text font-magic text-transparent;
   }
 }
 

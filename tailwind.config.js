@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['Inter', ...fontFamily.sans],
-        magic: ['Letter Magic', ...fontFamily.sans],
+        primary: ['Poppins', ...fontFamily.sans],
+        magic: ['Letter Magic'],
       },
       colors: {
         primary: {
@@ -26,9 +26,24 @@ module.exports = {
         },
         dark: '#222222',
         cgreen: '#62B497',
-        ccream: '#F5FBF3',
-        clime: '#CDDD91',
-        cbrown: '#3C3C3B',
+        ccream: '#FAD0B6',
+        cgreenb: '#CDDD91',
+        cblack: '#3C3C3B',
+        cpurple: '#A967A3',
+        cpurpleb: '#F4B2F5',
+        cyellow: '#FCCC81',
+        corange: '#F18E3E',
+        cred: '#E63B2B',
+        cpeach: '#EE7F80',
+        cgreenc: '#F5EFB2',
+        cwhite: '#FBF8F3',
+        cgrey: '#6A6A6A',
+        // Light
+        clightorange: '#FBF8F3',
+        clightgreen: '#F5FBF3',
+        clightpurple: '#F9F3FB',
+        clightred: '#FBF3F3',
+        clightpink: '#FBF3FB',
       },
       keyframes: {
         flicker: {
