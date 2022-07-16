@@ -26,7 +26,7 @@ module.exports = {
         },
         dark: '#222222',
         cgreen: '#62B497',
-        ccream: '#FAD0B6',
+        ccream: '#FBF8F3',
         cgreenb: '#CDDD91',
         cblack: '#3C3C3B',
         cpurple: '#A967A3',
@@ -39,7 +39,7 @@ module.exports = {
         cwhite: '#FBF8F3',
         cgrey: '#6A6A6A',
         // Light
-        clightorange: '#FBF8F3',
+        clightorange: '#FAD0B6',
         clightgreen: '#F5FBF3',
         clightpurple: '#F9F3FB',
         clightred: '#FBF3F3',
