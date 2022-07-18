@@ -50,7 +50,6 @@ export default function HomePage() {
             />
             <h2>
               <span className='text-gradient text-2xl md:text-7xl'>
-                {' '}
                 Apa itu
               </span>
             </h2>
@@ -90,7 +89,7 @@ export default function HomePage() {
           </div>
         </section>
         <section>
-          <ul className='text-md my-12 flex justify-around md:text-2xl'>
+          <ul className='text-md my-12 flex justify-around font-bold md:text-2xl'>
             <li>Seni</li>
             <li>Beladiri</li>
             <li>Olahraga</li>
@@ -100,7 +99,7 @@ export default function HomePage() {
         <section className='mb-20 flex items-center justify-center text-xl font-medium'>
           <UnstyledLink
             href='#'
-            className='rounded-xl bg-gradient-to-r from-cgreenb to-cgreen py-4 px-8 transition duration-300 hover:scale-105'
+            className='rounded-xl bg-gradient-to-r from-cgreenb to-cgreen py-4 px-8 text-lg transition duration-300 hover:scale-105 md:text-2xl'
           >
             Cara mendaftar
           </UnstyledLink>
@@ -108,10 +107,10 @@ export default function HomePage() {
         <section className='layout'>
           <div className='flex items-center space-x-4'>
             <div>
-              <h2 className='text-6xl'>
+              <h2 className='text-gradient text-2xl md:text-7xl'>
                 <span className=' text-gradient'>Filosofi</span>
               </h2>
-              <h2 className='text-6xl'>
+              <h2 className='text-gradient text-2xl md:text-7xl'>
                 <span className=' text-gradient'>Warna</span>
               </h2>
             </div>
@@ -124,10 +123,10 @@ export default function HomePage() {
         <section className='layout'>
           <div className='flex items-center space-x-4'>
             <div>
-              <h2 className='text-6xl'>
+              <h2 className='text-gradient text-2xl md:text-7xl'>
                 <span className=' text-gradient'>Filosofi</span>
               </h2>
-              <h2 className='text-6xl'>
+              <h2 className='text-gradient text-2xl md:text-7xl'>
                 <span className=' text-gradient'>Bentuk</span>
               </h2>
             </div>
@@ -146,10 +145,14 @@ export default function HomePage() {
               className='absolute left-0 right-0 mx-auto'
             />
             <h2>
-              <span className='text-gradient text-7xl'>Retro Speksi</span>
+              <span className='text-gradient text-2xl md:text-7xl'>
+                Retro Speksi
+              </span>
             </h2>
             <h2>
-              <span className='text-gradient text-7xl'>2020 & 2021</span>
+              <span className='text-gradient text-2xl md:text-7xl'>
+                2020 & 2021
+              </span>
             </h2>
           </div>
           <RetrospeksiCarousel />

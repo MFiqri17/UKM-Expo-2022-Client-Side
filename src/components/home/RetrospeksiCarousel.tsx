@@ -25,53 +25,51 @@ export default function RetrospeksiCarousel() {
         }}
         pagination={{ clickable: true }}
         modules={[Autoplay, Pagination]}
-        className='mySwiper mb-24 hidden md:block'
+        className='mySwiper mb-24 hidden cursor-grab md:block'
       >
         <SwiperSlide className='mb-8'>
           <div className='flex h-48 w-full justify-center rounded-xl  border'>
             <Image
-              src='/images/logo/ukm-expo.svg'
+              src='/images/retro/retro5.png'
               alt='UKM EXPO Logo'
-              className='object-fit'
-              width='90%'
-              height='90%'
+              className='object-cover'
+              layout='fill'
             />
           </div>
         </SwiperSlide>
         <SwiperSlide className='mb-8'>
           <div className='flex h-48 w-full justify-center rounded-xl border'>
             <Image
-              src='/images/logo/ukm-expo.svg'
+              src='/images/retro/retro4.png'
               alt='UKM EXPO Logo'
-              className='object-fit'
-              width='90%'
-              height='90%'
+              className='object-cover'
+              layout='fill'
             />
           </div>
         </SwiperSlide>
         <SwiperSlide className='mb-8'>
           <div className='flex h-48 w-full justify-center rounded-xl border'>
             <Image
-              src='/images/logo/ukm-expo.svg'
+              src='/images/retro/retro3.png'
               alt='UKM EXPO Logo'
-              className='object-fit'
-              width='90%'
-              height='90%'
+              className='object-cover'
+              layout='fill'
             />
           </div>
         </SwiperSlide>
         <SwiperSlide className='mb-8'>
           <div className='flex h-48 w-full justify-center rounded-xl border'>
             <Image
-              src='/images/logo/ukm-expo.svg'
+              src='/images/retro/retro2.png'
               alt='UKM EXPO Logo'
-              className='object-fit'
-              width='90%'
-              height='90%'
+              className='object-cover'
+              layout='fill'
             />
           </div>
         </SwiperSlide>
       </Swiper>
+
+      {/* mobile display */}
       <Swiper
         slidesPerView={1}
         loop={true}
@@ -82,49 +80,45 @@ export default function RetrospeksiCarousel() {
         }}
         pagination={{ clickable: true }}
         modules={[Autoplay, Pagination]}
-        className='mySwiper mb-24 md:hidden'
+        className='mySwiper mb-24 cursor-grab md:hidden'
       >
         <SwiperSlide className='mb-8'>
           <div className='flex h-48 w-full justify-center rounded-xl  border'>
             <Image
-              src='/images/logo/ukm-expo.svg'
+              src='/images/retro/retro5.png'
               alt='UKM EXPO Logo'
-              className='object-fit'
-              width='90%'
-              height='90%'
+              className='object-cover'
+              layout='fill'
             />
           </div>
         </SwiperSlide>
         <SwiperSlide className='mb-8'>
           <div className='flex h-48 w-full justify-center rounded-xl border'>
             <Image
-              src='/images/logo/ukm-expo.svg'
+              src='/images/retro/retro4.png'
               alt='UKM EXPO Logo'
-              className='object-fit'
-              width='90%'
-              height='90%'
+              className='object-cover'
+              layout='fill'
             />
           </div>
         </SwiperSlide>
         <SwiperSlide className='mb-8'>
           <div className='flex h-48 w-full justify-center rounded-xl border'>
             <Image
-              src='/images/logo/ukm-expo.svg'
+              src='/images/retro/retro3.png'
               alt='UKM EXPO Logo'
-              className='object-fit'
-              width='90%'
-              height='90%'
+              className='object-cover'
+              layout='fill'
             />
           </div>
         </SwiperSlide>
         <SwiperSlide className='mb-8'>
           <div className='flex h-48 w-full justify-center rounded-xl border'>
             <Image
-              src='/images/logo/ukm-expo.svg'
+              src='/images/retro/retro2.png'
               alt='UKM EXPO Logo'
-              className='object-fit'
-              width='90%'
-              height='90%'
+              className='object-cover'
+              layout='fill'
             />
           </div>
         </SwiperSlide>
@@ -147,53 +141,51 @@ export default function RetrospeksiCarousel() {
         }}
         pagination={{ clickable: true }}
         modules={[Autoplay, Pagination]}
-        className='mySwiper mb-24 hidden md:block'
+        className='mySwiper mb-24 hidden cursor-grab md:block'
       >
         <SwiperSlide className='mb-8'>
           <div className='flex h-48 w-full justify-center rounded-xl  border'>
             <Image
-              src='/images/logo/ukm-expo.svg'
+              src='/images/retro/retro1.png'
               alt='UKM EXPO Logo'
-              className='object-fit'
-              width='90%'
-              height='90%'
+              className='object-cover'
+              layout='fill'
             />
           </div>
         </SwiperSlide>
         <SwiperSlide className='mb-8'>
           <div className='flex h-48 w-full justify-center rounded-xl border'>
             <Image
-              src='/images/logo/ukm-expo.svg'
+              src='/images/retro/retro2.png'
               alt='UKM EXPO Logo'
-              className='object-fit'
-              width='90%'
-              height='90%'
+              className='object-cover'
+              layout='fill'
             />
           </div>
         </SwiperSlide>
         <SwiperSlide className='mb-8'>
           <div className='flex h-48 w-full justify-center rounded-xl border'>
             <Image
-              src='/images/logo/ukm-expo.svg'
+              src='/images/retro/retro3.png'
               alt='UKM EXPO Logo'
-              className='object-fit'
-              width='90%'
-              height='90%'
+              className='object-cover'
+              layout='fill'
             />
           </div>
         </SwiperSlide>
         <SwiperSlide className='mb-8'>
           <div className='flex h-48 w-full justify-center rounded-xl border'>
             <Image
-              src='/images/logo/ukm-expo.svg'
+              src='/images/retro/retro4.png'
               alt='UKM EXPO Logo'
-              className='object-fit'
-              width='90%'
-              height='90%'
+              className='object-cover'
+              layout='fill'
             />
           </div>
         </SwiperSlide>
       </Swiper>
+
+      {/* mobile display */}
       <Swiper
         slidesPerView={1}
         loop={true}
@@ -204,49 +196,45 @@ export default function RetrospeksiCarousel() {
         }}
         pagination={{ clickable: true }}
         modules={[Autoplay, Pagination]}
-        className='mySwiper mb-24 md:hidden'
+        className='mySwiper mb-24 cursor-grab md:hidden'
       >
         <SwiperSlide className='mb-8'>
           <div className='flex h-48 w-full justify-center rounded-xl  border'>
             <Image
-              src='/images/logo/ukm-expo.svg'
+              src='/images/retro/retro1.png'
               alt='UKM EXPO Logo'
-              className='object-fit'
-              width='90%'
-              height='90%'
+              className='object-cover'
+              layout='fill'
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className='mb-8'>
+          <div className='relative flex h-48 w-full justify-center rounded-xl border'>
+            <Image
+              src='/images/retro/retro2.png'
+              alt='UKM EXPO Logo'
+              className='object-cover'
+              layout='fill'
             />
           </div>
         </SwiperSlide>
         <SwiperSlide className='mb-8'>
           <div className='flex h-48 w-full justify-center rounded-xl border'>
             <Image
-              src='/images/logo/ukm-expo.svg'
+              src='/images/retro/retro3.png'
               alt='UKM EXPO Logo'
-              className='object-fit'
-              width='90%'
-              height='90%'
+              className='object-cover'
+              layout='fill'
             />
           </div>
         </SwiperSlide>
         <SwiperSlide className='mb-8'>
           <div className='flex h-48 w-full justify-center rounded-xl border'>
             <Image
-              src='/images/logo/ukm-expo.svg'
+              src='/images/retro/retro4.png'
               alt='UKM EXPO Logo'
-              className='object-fit'
-              width='90%'
-              height='90%'
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className='mb-8'>
-          <div className='flex h-48 w-full justify-center rounded-xl border'>
-            <Image
-              src='/images/logo/ukm-expo.svg'
-              alt='UKM EXPO Logo'
-              className='object-fit'
-              width='90%'
-              height='90%'
+              className='object-cover'
+              layout='fill'
             />
           </div>
         </SwiperSlide>

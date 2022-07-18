@@ -21,25 +21,25 @@ export default function HomePage() {
 
       <main>
         <section
-          className='flex bg-white bg-cover object-cover pt-16'
+          className='flex flex-col bg-white bg-cover object-cover pt-16 md:flex-row'
           style={{
             backgroundImage: `url('/images/bg-event.svg')`,
             backgroundPosition: `center`,
           }}
         >
-          <div className='ml-24 flex flex-1 flex-col justify-center space-y-20'>
-            <h1 className='font-magic text-7xl'>Event</h1>
+          <div className='ml-4 flex flex-1 flex-col items-center justify-center space-y-20 md:ml-24 md:items-start'>
+            <h1 className='font-magic text-5xl md:text-7xl'>Event</h1>
             <div className='flex'>
               <UnstyledLink
                 href='#'
-                className='rounded-xl bg-ccream py-4 px-8 font-bold !transition duration-300 hover:scale-105'
+                className='rounded-xl bg-ccream py-4 px-8 text-sm font-bold !transition duration-300 hover:scale-105'
               >
                 Lihat lebih lanjut
               </UnstyledLink>
             </div>
           </div>
           <div className='relative w-full flex-1'>
-            <div className='h-[28rem] w-[28rem]'>
+            <div className='h-48 w-48 md:h-[28rem] md:w-[28rem]'>
               <Image
                 src='/images/flowers-float-event.svg'
                 alt='UKM EXPO Logo'
@@ -67,18 +67,36 @@ export default function HomePage() {
             </h2>
           </div>
         </section>
-        <section className='layout mb-40 flex flex-col justify-center space-y-8 space-x-8 md:flex-row md:space-y-0'>
-          <div className='rounded-3xl bg-ccream p-12' id='card'>
-            <ul className='mb-8 list-disc'>
+        <section className='layout mb-40 flex flex-col justify-center space-y-8 md:flex-row md:space-x-8 md:space-y-0'>
+          <div className='flex flex-col rounded-3xl bg-ccream p-12' id='card'>
+            <ul className='mb-8 flex-1 list-disc'>
               <dt className='mb-4 font-primary text-4xl font-bold'>
                 25 Agustus
               </dt>
-              <li className='font-primary text-xl font-medium'>Perisai Diri</li>
-              <li className='font-primary text-xl font-medium'>Basket</li>
-              <li className='font-primary text-xl font-medium'>Karate DO</li>
-              <li className='font-primary text-xl font-medium'>Softball</li>
-              <li className='font-primary text-xl font-medium'>LMP 1.0</li>
-              <li className='font-primary text-xl font-medium'>Musik ITS</li>
+              <li className='font-primary text-xl font-medium'>PSM ITS</li>
+              <li className='font-primary text-xl font-medium'>ITS MUN Club</li>
+              <li className='font-primary text-xl font-medium'>
+                Taekwondo ITS
+              </li>
+              <li className='font-primary text-xl font-medium'>
+                PLH Siklus ITS
+              </li>
+              <li className='font-primary text-xl font-medium'>ITS Robotic</li>
+              <li className='font-primary text-xl font-medium'>PSHT ITS</li>
+              <li className='font-primary text-xl font-medium'>Bridge ITS</li>
+              <li className='font-primary text-xl font-medium'>Rebana ITS</li>
+              <li className='font-primary text-xl font-medium'>
+                Perisai Diri ITS
+              </li>
+              <li className='font-primary text-xl font-medium'>
+                Maritime Challenge
+              </li>
+              <li className='font-primary text-xl font-medium'>
+                Tiyang Alit ITS
+              </li>
+              <li className='font-primary text-xl font-medium'>
+                Karate-do ITS
+              </li>
             </ul>
             <div className='flex justify-center'>
               <UnstyledLink
@@ -89,17 +107,28 @@ export default function HomePage() {
               </UnstyledLink>
             </div>
           </div>
-          <div className='rounded-3xl bg-ccream p-12' id='card'>
-            <ul className='mb-8  list-disc'>
+          <div className='flex flex-col rounded-3xl bg-ccream p-12' id='card'>
+            <ul className='mb-8  flex-1 list-disc'>
               <dt className='mb-4 font-primary text-4xl font-bold'>
                 26 Agustus
               </dt>
-              <li className='font-primary text-xl font-medium'>Perisai Diri</li>
-              <li className='font-primary text-xl font-medium'>Basket</li>
-              <li className='font-primary text-xl font-medium'>Karate DO</li>
-              <li className='font-primary text-xl font-medium'>Softball</li>
-              <li className='font-primary text-xl font-medium'>LMP 1.0</li>
+              <li className='font-primary text-xl font-medium'>IFLS</li>
+              <li className='font-primary text-xl font-medium'>
+                ITS Flag Football
+              </li>
+              <li className='font-primary text-xl font-medium'>KSR PMI</li>
+              <li className='font-primary text-xl font-medium'>
+                Penalaran ITS
+              </li>
               <li className='font-primary text-xl font-medium'>Musik ITS</li>
+              <li className='font-primary text-xl font-medium'>Kendo ITS</li>
+              <li className='font-primary text-xl font-medium'>Click ITS</li>
+              <li className='font-primary text-xl font-medium'>
+                Merpati Putih ITS
+              </li>
+              <li className='font-primary text-xl font-medium'>TDC ITS</li>
+              <li className='font-primary text-xl font-medium'>UKTK ITS</li>
+              <li className='font-primary text-xl font-medium'>Kempo ITS</li>
             </ul>
             <div className='flex justify-center'>
               <UnstyledLink

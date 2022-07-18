@@ -25,25 +25,25 @@ export default function HomePage() {
 
       <main>
         <section
-          className='flex bg-white bg-cover object-cover pt-16'
+          className='flex flex-col bg-white bg-cover object-cover pt-16 md:flex-row'
           style={{
             backgroundImage: `url('/images/bg-event.svg')`,
             backgroundPosition: `center`,
           }}
         >
-          <div className='ml-24 flex flex-1 flex-col justify-center space-y-20'>
-            <h1 className='font-magic text-7xl'>Event</h1>
+          <div className='ml-4 flex flex-1 flex-col items-center justify-center space-y-20 md:ml-24 md:items-start'>
+            <h1 className='font-magic text-5xl md:text-7xl'>Event</h1>
             <div className='flex'>
               <UnstyledLink
                 href='#'
-                className='rounded-xl bg-ccream py-4 px-8 font-bold !transition duration-300 hover:scale-105'
+                className='rounded-xl bg-ccream py-4 px-8 text-sm font-bold !transition duration-300 hover:scale-105'
               >
                 Lihat lebih lanjut
               </UnstyledLink>
             </div>
           </div>
           <div className='relative w-full flex-1'>
-            <div className='h-[28rem] w-[28rem]'>
+            <div className='h-48 w-48 md:h-[28rem] md:w-[28rem]'>
               <Image
                 src='/images/flowers-float-event.svg'
                 alt='UKM EXPO Logo'
@@ -62,7 +62,7 @@ export default function HomePage() {
               className='absolute left-0 right-0 mx-auto'
             />
             <h2>
-              <span className='text-gradient text-4xl md:text-7xl'>
+              <span className='text-gradient text-2xl md:text-7xl'>
                 Event Kami
               </span>
             </h2>
@@ -74,12 +74,10 @@ export default function HomePage() {
             <div className='flex flex-col space-y-6 rounded-r-3xl bg-ccream px-8 py-24'>
               <h3>Opening</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                reiciendis dolorem placeat explicabo assumenda enim maiores
-                nostrum voluptatem eum totam est aliquam, fuga facilis a commodi
-                aut adipisci. Quas, maiores eligendi. Deleniti quod repellat
-                nostrum numquam optio magni velit nihil ad voluptatibus,
-                suscipit fugit eum.
+                Opening adalah serangkaian acara di rangkaian UKM EXPO 2022 yang
+                berupa simbolisasi pembukaan, sambutan, arak-arakan UKM, serta
+                games yang diadakan di Hari ke-1 pada Kamis, 25 Agustus 2022.
+                Bakal seru banget, wajib dateng pokoknya!
               </p>
               <div className='flex'>
                 <UnstyledLink
@@ -95,12 +93,12 @@ export default function HomePage() {
             <div className='flex flex-col space-y-6 rounded-l-3xl bg-ccream px-8 py-24'>
               <h3>Main Event</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                reiciendis dolorem placeat explicabo assumenda enim maiores
-                nostrum voluptatem eum totam est aliquam, fuga facilis a commodi
-                aut adipisci. Quas, maiores eligendi. Deleniti quod repellat
-                nostrum numquam optio magni velit nihil ad voluptatibus,
-                suscipit fugit eum.
+                Main event merupakan agenda lanjutan dari pembukaan yang berisi
+                agenda-agenda utama dalam rangkaian UKM EXPO 2022.
+                Penampilan-penampilan menakjubkan dari tiap UKM akan disuguhkan
+                pada main event. Selain itu, akan ada stand UKM di sekeliling
+                panggung sehingga teman-teman MABA dapat melakukan eksplorasi
+                UKM on the spot. Jangan sampai terlewat, yaa!
               </p>
               <div className='flex'>
                 <UnstyledLink
@@ -118,12 +116,12 @@ export default function HomePage() {
             <div className='flex flex-col space-y-6 rounded-r-3xl bg-ccream px-8 py-24'>
               <h3>Closing</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                reiciendis dolorem placeat explicabo assumenda enim maiores
-                nostrum voluptatem eum totam est aliquam, fuga facilis a commodi
-                aut adipisci. Quas, maiores eligendi. Deleniti quod repellat
-                nostrum numquam optio magni velit nihil ad voluptatibus,
-                suscipit fugit eum.
+                Closing adalah malam terakhir penyelenggaraan UKM EXPO 2022 yang
+                akan diisi dengan pentas seni dan pertunjukkan minat bakat.
+                Nantinya di closing ini akan ada penampilan drama musikal
+                melankoli, penerbangan lampion, dan bahkan dihadiri guest star
+                ternama. Rugi banget kalau ga dateng, tuh! Yuk beli tiket
+                closing lewat (click here redirect ke buy now)
               </p>
               <div className='flex'>
                 <UnstyledLink
