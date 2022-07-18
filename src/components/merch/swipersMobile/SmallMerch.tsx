@@ -3,10 +3,10 @@ import { useState } from 'react';
 import { A11y,Navigation, Pagination, Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import CatalogArray from '@/components/merch/data/CatalogArray';
+import catalog from '@/components/merch/data/CatalogArray';
 
 export default function SmallMerch({ SmallMerch }: { SmallMerch: string }) {
-  const [catalogs] = useState(CatalogArray);
+  const [catalogs] = useState(catalog);
   return (
     <>
       <Swiper

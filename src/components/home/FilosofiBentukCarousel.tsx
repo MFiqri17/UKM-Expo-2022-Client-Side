@@ -38,10 +38,10 @@ export default function FilosofiWarnaCarousel() {
             />
           </div>
           <div className='basis-1/2'>
-            <h3 className='mb-4 bg-gradient-to-r from-[#FAD0B6] to-[#EE7F80] bg-clip-text pb-4 text-start text-7xl text-transparent'>
+            <h3 className='mb-4 bg-gradient-to-r from-[#FAD0B6] to-[#EE7F80] bg-clip-text text-start text-xl text-transparent md:text-6xl'>
               Bola Api
             </h3>
-            <p className='text-2xl leading-snug'>
+            <p className='text-sm leading-snug md:text-2xl'>
               Memanifestasikan elemen api sebagai elemen utama dalam tema UKM
               EXPO 2022: Fire It On yang mengarah pada simbol energi yang
               berbentuk lebih halus, dapat dirasakan tetapi tidak dapat
@@ -61,10 +61,10 @@ export default function FilosofiWarnaCarousel() {
             />
           </div>
           <div className='basis-1/2'>
-            <h3 className='mb-4 bg-gradient-to-r from-[#FAD0B6] to-[#EE7F80] bg-clip-text text-start text-7xl text-transparent'>
+            <h3 className='mb-4 bg-gradient-to-r from-[#FAD0B6] to-[#EE7F80] bg-clip-text pb-3 text-start text-xl text-transparent md:text-6xl'>
               Burung Phoenix
             </h3>
-            <p className='text-2xl leading-snug'>
+            <p className='text-sm leading-snug md:text-2xl'>
               Merepresentasikan kebangkitan kemakmuran kegiatan UKM EXPO 2022
               dengan mengusung tema dan semangat baru melalui pengadaan kegiatan
               secara luring

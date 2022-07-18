@@ -23,6 +23,22 @@ class MyDocument extends Document {
             type='font/woff2'
             crossOrigin='anonymous'
           />
+          <link
+            rel='preload'
+            href='/fonts/letter-magic.ttf'
+            as='font'
+            type='font/ttf'
+          />
+          <link rel='preconnect' href='https://fonts.googleapis.com' />
+          <link
+            rel='preconnect'
+            href='https://fonts.gstatic.com'
+            crossOrigin='anonymous'
+          />
+          <link
+            href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap'
+            rel='stylesheet'
+          />
         </Head>
         <body>
           <Main />
