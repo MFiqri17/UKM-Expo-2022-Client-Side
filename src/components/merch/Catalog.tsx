@@ -3,7 +3,7 @@ import * as React from 'react';
 import { useState } from 'react';
 
 import CatalogCard from '@/components/merch/CatalogCard';
-import CatalogArray from '@/components/merch/data/CatalogArray';
+import catalog from '@/components/merch/data/CatalogArray';
 import MobileCatalog from '@/components/merch/mobile/MobileCatalog';
 
 function classNames(...classes: string[]) {
@@ -11,7 +11,7 @@ function classNames(...classes: string[]) {
 }
 
 export default function Catalog() {
-  const [catalogs] = useState(CatalogArray);
+  const [catalogs] = useState(catalog);
   return (
     <div className=' text-center'>
       <div className='mb-[52px] flex flex-row justify-center space-x-[10px] md:space-x-[30px]'>
