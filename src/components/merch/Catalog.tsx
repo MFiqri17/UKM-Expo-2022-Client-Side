@@ -3,19 +3,26 @@ import * as React from 'react';
 import { useState } from 'react';
 
 import CatalogCard from '@/components/merch/CatalogCard';
-import CatalogArray from '@/components/merch/data/CatalogArray';
+import catalog from '@/components/merch/data/CatalogArray';
+import MobileCatalog from '@/components/merch/mobile/MobileCatalog';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
 
 export default function Catalog() {
-  const [catalogs] = useState(CatalogArray);
+  const [catalogs] = useState(catalog);
   return (
-    <div className='mt-[157px] text-center'>
-      <h1 className='mb-[52px]'>Catalog</h1>
+    <div className=' text-center'>
+      <div className='mb-[52px] flex flex-row justify-center space-x-[10px] md:space-x-[30px]'>
+        <img src='svg/Line.svg' className='w-[60px] md:w-fit' alt='' />
+        <h1 className=' bg-gradient-to-r from-cblack	 via-cgreen to-cgreenb bg-clip-text font-magic text-4xl text-transparent md:text-7xl'>
+          Catalog
+        </h1>
+        <img src='svg/Line.svg' className='w-[60px] md:w-fit' alt='' />
+      </div>
 
-      <div>
+      <div className='hidden md:block'>
         <Tab.Group>
           <Tab.List className='flex flex-wrap justify-center space-x-[21px]  '>
             {Object.keys(catalogs).map((catalog, index) => (
@@ -54,6 +61,7 @@ export default function Catalog() {
           </Tab.Panels>
         </Tab.Group>
       </div>
+      <MobileCatalog />
     </div>
   );
 }

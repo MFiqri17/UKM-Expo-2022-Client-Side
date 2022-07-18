@@ -1,0 +1,21 @@
+.swiper-button-next {
+  background-image: url('/svg/right.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 76% !important;
+}
+
+.swiper-button-prev {
+  background-image: url('/svg/left.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 76% !important;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev::after {
+  display: none;
+}
