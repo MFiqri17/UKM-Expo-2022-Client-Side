@@ -1,6 +1,7 @@
 import { Tab } from '@headlessui/react';
 import * as React from 'react';
 import { useState } from 'react';
+import Image from 'next/image'
 
 import BundleArray from '@/components/merch/data/BundleArray';
 import MobileBundle from '@/components/merch/mobile/MobileBundle';
@@ -15,11 +16,11 @@ export default function BundlePack() {
   return (
     <div className='mt-60 text-center'>
       <div className='mb-[9.75rem] flex flex-row justify-center space-x-[10px] md:space-x-[30px]'>
-        <img src='svg/Line.svg' className='w-[3.75rem] md:w-fit' alt='' />
+        <Image src='svg/Line.svg' className='w-[3.75rem] md:w-fit' alt='' layout="fill" />
         <h1 className=' bg-gradient-to-r from-cblack	 via-cgreen to-cgreenb bg-clip-text font-magic text-4xl text-transparent md:text-7xl'>
           Bundle Pack
         </h1>
-        <img src='svg/Line.svg' className='w-[3.75rem] md:w-fit' alt='' />
+        <Image src='svg/Line.svg' className='w-[3.75rem] md:w-fit' alt='' layout='fill'/>
       </div>
       <div className='hidden md:block'>
         <Tab.Group>
