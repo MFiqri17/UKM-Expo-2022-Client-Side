@@ -17,24 +17,32 @@ export default function FilosofiWarnaCarousel() {
       }}
       pagination={{ clickable: true }}
       modules={[Autoplay, Pagination]}
-      className='mySwiper'
+      className='mySwiper mb-24'
     >
-      <Image
-        src='images/lotus-1.svg'
-        alt='lotus-flower'
-        className='absolute right-0 z-50 -translate-y-48'
-      />
-      <Image
-        src='images/lotus-2.svg'
-        alt='lotus-flower'
-        className='absolute z-50 -translate-y-48'
-      />
+      <div className='absolute right-0 z-50 -translate-y-44'>
+        <Image
+          src='/images/lotus-1.svg'
+          alt='lotus-flower'
+          width={200}
+          height={135}
+        />
+      </div>
+      <div className='absolute left-0 z-50 -translate-y-44'>
+        <Image
+          src='/images/lotus-2.svg'
+          alt='lotus-flower'
+          width={200}
+          height={135}
+        />
+      </div>
       <SwiperSlide>
-        <div className='m-24 flex flex-1 space-x-48 rounded-xl bg-ccream p-24'>
+        <div className='mx-24 mt-24 mb-12 flex flex-1 space-x-48 rounded-xl bg-ccream p-24'>
           <div className='flex  basis-1/4 items-center'>
             <Image
-              src='images/merah-muda.svg'
+              src='/images/merah-muda.svg'
               alt='Logo Merah Muda'
+              width={260}
+              height={260}
               className='w-full'
             />
           </div>
@@ -50,11 +58,13 @@ export default function FilosofiWarnaCarousel() {
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className='m-24 flex flex-1 space-x-48 rounded-xl bg-ccream p-24'>
+        <div className='mx-24 mt-24 flex flex-1 space-x-48 rounded-xl bg-ccream p-24'>
           <div className='flex  basis-1/4 items-center'>
             <Image
-              src='images/jingga.svg'
+              src='/images/jingga.svg'
               alt='Logo Merah Muda'
+              width={260}
+              height={260}
               className='w-full'
             />
           </div>
@@ -70,11 +80,13 @@ export default function FilosofiWarnaCarousel() {
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className='m-24 flex flex-1 space-x-48 rounded-xl bg-ccream p-24'>
+        <div className='mx-24 mt-24 flex flex-1 space-x-48 rounded-xl bg-ccream p-24'>
           <div className='flex  basis-1/4 items-center'>
             <Image
-              src='images/hijau.svg'
+              src='/images/hijau.svg'
               alt='Logo Merah Muda'
+              width={260}
+              height={260}
               className='w-full'
             />
           </div>
@@ -90,11 +102,13 @@ export default function FilosofiWarnaCarousel() {
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className='m-24 flex flex-1 space-x-48 rounded-xl bg-ccream p-24'>
+        <div className='mx-24 mt-24 flex flex-1 space-x-48 rounded-xl bg-ccream p-24'>
           <div className='flex  basis-1/4 items-center'>
             <Image
-              src='images/ungu.svg'
+              src='/images/ungu.svg'
               alt='Logo Merah Muda'
+              width={260}
+              height={260}
               className='w-full'
             />
           </div>
