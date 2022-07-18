@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { useTimer } from 'react-timer-hook';
-
+import Image from 'next/image';
 import Button from '@/components/buttons/Button';
+import SectionTitle from '@/components/SectionTitle';
 
 export default function Timer({ expiryTimestamp }: { expiryTimestamp: Date }) {
   // const time = new Date();
@@ -10,13 +11,7 @@ export default function Timer({ expiryTimestamp }: { expiryTimestamp: Date }) {
   });
   return (
     <div className='mt-[135px] text-center'>
-      <div className='flex flex-row justify-center space-x-[10px] md:space-x-[30px]'>
-        <img src='svg/Line.svg' className='w-[60px] md:w-fit' alt='' />
-        <h1 className='bg-gradient-to-r from-cblack	 via-cgreen to-cgreenb bg-clip-text font-magic text-4xl text-transparent md:text-7xl'>
-          Pre Order
-        </h1>
-        <img src='svg/Line.svg' className='w-[60px] md:w-fit' alt='' />
-      </div>
+      <SectionTitle title='Pre Order'/>
       <h4 className='mt-8 mb-16 text-2xl font-medium md:text-4xl'>
         Reguler registration ditutup
       </h4>

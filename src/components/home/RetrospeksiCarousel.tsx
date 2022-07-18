@@ -4,7 +4,6 @@ import { Autoplay, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-
 export default function RetrospeksiCarousel() {
   return (
     <div className='text-center'>
@@ -123,7 +122,6 @@ export default function RetrospeksiCarousel() {
           </div>
         </SwiperSlide>
       </Swiper>
-
       {/* 2021 */}
       <h2 className='mt-24 mb-12'>
         <span className='text-gradient font-primary text-4xl font-extrabold md:text-7xl'>

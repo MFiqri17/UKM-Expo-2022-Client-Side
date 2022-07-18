@@ -5,6 +5,7 @@ import Image from 'next/image'
 
 import BundleArray from '@/components/merch/data/BundleArray';
 import MobileBundle from '@/components/merch/mobile/MobileBundle';
+import SectionTitle from '@/components/SectionTitle';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -15,13 +16,7 @@ export default function BundlePack() {
   const indexes = [1, 2, 3, 4, 5];
   return (
     <div className='mt-60 text-center'>
-      <div className='mb-[9.75rem] flex flex-row justify-center space-x-[10px] md:space-x-[30px]'>
-        <Image src='svg/Line.svg' className='w-[3.75rem] md:w-fit' alt='' layout="fill" />
-        <h1 className=' bg-gradient-to-r from-cblack	 via-cgreen to-cgreenb bg-clip-text font-magic text-4xl text-transparent md:text-7xl'>
-          Bundle Pack
-        </h1>
-        <Image src='svg/Line.svg' className='w-[3.75rem] md:w-fit' alt='' layout='fill'/>
-      </div>
+      <SectionTitle title='Bundle Pack' />
       <div className='hidden md:block'>
         <Tab.Group>
           <div className='flex justify-between px-20'>

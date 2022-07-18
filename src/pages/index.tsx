@@ -1,5 +1,5 @@
+import Image from 'next/image';
 import * as React from 'react';
-
 import ArrowDownButton from '@/components/buttons/ArrowDownButton';
 import FilosofiBentukCarousel from '@/components/home/FilosofiBentukCarousel';
 import FilosofiWarnaCarousel from '@/components/home/FilosofiWarnaCarousel';
@@ -7,7 +7,6 @@ import RetrospeksiCarousel from '@/components/home/RetrospeksiCarousel';
 import Layout from '@/components/layout/Layout';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
-
 import FireItOn from '@/assets/svg/FireItOn';
 /**
  * SVGR Support
@@ -16,16 +15,13 @@ import FireItOn from '@/assets/svg/FireItOn';
  * You can override the next-env if the type is important to you
  * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
  */
-
 // !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
 // Before you begin editing, follow all comments with `STARTERCONF`,
 // to customize the default configuration.
-
 export default function HomePage() {
   return (
     <Layout>
       <Seo templateTitle='Home' />
-
       <main>
         <section
           className='bg-white bg-cover object-cover'
@@ -39,17 +35,10 @@ export default function HomePage() {
             <ArrowDownButton className='translate-y-6' href='#ukm' />
           </div>
         </section>
-<<<<<<< HEAD
-        <section className='layout' id='ukm'>
-          <div className='relative flex-col items-center justify-center text-center'>
-            <img
-              src='images/header-line.svg'
-=======
         <section className='layout my-24 scroll-m-24' id='ukm'>
           <div className='relative mb-4 flex-col items-center justify-center text-center'>
             <Image
               src='/images/header-line.svg'
->>>>>>> 20c1be970b8ba1c087e9869098c929bf0b25bcdf
               alt='line'
               layout='fill'
               className='absolute left-0 right-0 mx-auto'
@@ -77,19 +66,6 @@ export default function HomePage() {
             </p>
           </div>
         </section>
-<<<<<<< HEAD
-        <section className='relative'>
-          <img
-            src='images/leaf-bg.svg'
-            alt='leaf background'
-            className='ml-24'
-          />
-          <p className='absolute top-20 -z-[1] mx-24 rounded-2xl bg-ccream px-24 py-16 text-center text-2xl font-normal'>
-            Untuk mahasiswa baru yang masih meraba-raba mengenai minat bakatnya
-            diharapkan setelah mengikuti rangkaian kegiatan UKM Expo ini dapat
-            mengenali minat bakatnya pada bidang apa.
-          </p>
-=======
         <section className='relative mt-36 mb-24'>
           <div className='absolute bottom-12 h-40 w-40 -translate-x-8 md:-bottom-8 md:left-20 md:h-96 md:w-96 md:-translate-x-0'>
             <Image
@@ -106,7 +82,6 @@ export default function HomePage() {
               ini dapat mengenali minat bakatnya pada bidang apa.
             </p>
           </div>
->>>>>>> 20c1be970b8ba1c087e9869098c929bf0b25bcdf
         </section>
         <section>
           <ul className='text-md my-12 flex justify-around font-bold md:text-2xl'>
@@ -119,11 +94,7 @@ export default function HomePage() {
         <section className='mb-20 flex items-center justify-center text-xl font-medium'>
           <UnstyledLink
             href='#'
-<<<<<<< HEAD
-            className='duratio-300 from-clime rounded-xl bg-gradient-to-r to-cgreen py-4 px-8 transition hover:scale-105'
-=======
             className='rounded-xl bg-gradient-to-r from-cgreenb to-cgreen py-4 px-8 text-lg transition duration-300 hover:scale-105 md:text-2xl'
->>>>>>> 20c1be970b8ba1c087e9869098c929bf0b25bcdf
           >
             Cara mendaftar
           </UnstyledLink>

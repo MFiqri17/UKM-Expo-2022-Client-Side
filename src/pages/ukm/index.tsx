@@ -1,4 +1,4 @@
-import { ukm } from 'data/ukm';
+import { ukm } from '@/components/ukm/data/ukm';
 import * as React from 'react';
 
 import Layout from '@/components/layout/Layout';

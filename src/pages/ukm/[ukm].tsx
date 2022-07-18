@@ -1,4 +1,4 @@
-import { ukm } from 'data/ukm';
+import { ukm } from '@/components/ukm/data/ukm';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 
