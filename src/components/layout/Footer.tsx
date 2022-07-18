@@ -5,17 +5,17 @@ const OA = [
   {
     href: 'https://www.instagram.com/ukmexpo_its/',
     label: 'ukmexpo_its',
-    img: '/images/instagram.svg',
+    img: '/images/socials/instagram.svg',
   },
   {
     href: 'https://www.youtube.com/channel/UCRcX486rcfh6PrhcH80wVWw',
     label: 'UKM EXPO ITS',
-    img: '/images/youtube.svg',
+    img: '/images/socials/youtube.svg',
   },
   {
     href: '#',
     label: 'yay7605b',
-    img: '/images/line.svg',
+    img: '/images/socials/line.svg',
   },
 ];
 
