@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import * as React from 'react';
 
 export default function CatalogCard({
@@ -12,7 +11,7 @@ export default function CatalogCard({
 }) {
   return (
     <div className='w-[413px] rounded-[20px] bg-[#FBF8F3] object-cover'>
-      <Image src={image} alt={title} />
+      <img src={image} alt={title} />
       <h4>{title}</h4>
       <h5>{price}</h5>
       <button></button>

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import * as React from 'react';
 import { Autoplay, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -19,12 +18,12 @@ export default function FilosofiWarnaCarousel() {
       modules={[Autoplay, Pagination]}
       className='mySwiper'
     >
-      <Image
+      <img
         src='images/lotus-1.svg'
         alt='lotus-flower'
         className='absolute right-0 z-50 -translate-y-48'
       />
-      <Image
+      <img
         src='images/lotus-2.svg'
         alt='lotus-flower'
         className='absolute z-50 -translate-y-48'
@@ -32,7 +31,7 @@ export default function FilosofiWarnaCarousel() {
       <SwiperSlide>
         <div className='m-24 flex flex-1 space-x-48 rounded-xl bg-ccream p-24'>
           <div className='flex  basis-1/4 items-center'>
-            <Image
+            <img
               src='images/merah-muda.svg'
               alt='Logo Merah Muda'
               className='w-full'
@@ -52,7 +51,7 @@ export default function FilosofiWarnaCarousel() {
       <SwiperSlide>
         <div className='m-24 flex flex-1 space-x-48 rounded-xl bg-ccream p-24'>
           <div className='flex  basis-1/4 items-center'>
-            <Image
+            <img
               src='images/jingga.svg'
               alt='Logo Merah Muda'
               className='w-full'
@@ -72,7 +71,7 @@ export default function FilosofiWarnaCarousel() {
       <SwiperSlide>
         <div className='m-24 flex flex-1 space-x-48 rounded-xl bg-ccream p-24'>
           <div className='flex  basis-1/4 items-center'>
-            <Image
+            <img
               src='images/hijau.svg'
               alt='Logo Merah Muda'
               className='w-full'
@@ -92,7 +91,7 @@ export default function FilosofiWarnaCarousel() {
       <SwiperSlide>
         <div className='m-24 flex flex-1 space-x-48 rounded-xl bg-ccream p-24'>
           <div className='flex  basis-1/4 items-center'>
-            <Image
+            <img
               src='images/ungu.svg'
               alt='Logo Merah Muda'
               className='w-full'

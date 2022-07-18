@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import Layout from '@/components/layout/Layout';
 import BundlePack from '@/components/merch/BundlePack';
 import Catalog from '@/components/merch/Catalog';
 import HeroMerch from '@/components/merch/HeroMerch';
@@ -10,11 +11,11 @@ export default function Merch() {
   time.setSeconds(time.getSeconds() + 600);
 
   return (
-    <div>
+    <Layout>
       <HeroMerch />
       <Timer expiryTimestamp={time} />
       <BundlePack />
       <Catalog />
-    </div>
+    </Layout>
   );
 }

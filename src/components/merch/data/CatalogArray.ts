@@ -65,7 +65,14 @@ const catalog = {
       price: '85.000',
     },
   ],
-  'Size Chart': [],
+  'Size Chart': [
+    {
+      id: 1,
+      image: '',
+      title: '',
+      price: '',
+    },
+  ],
 };
 
 export default catalog;

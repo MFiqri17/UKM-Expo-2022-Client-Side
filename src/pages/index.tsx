@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import * as React from 'react';
 
 import ArrowDownButton from '@/components/buttons/ArrowDownButton';
@@ -42,7 +41,7 @@ export default function HomePage() {
         </section>
         <section className='layout' id='ukm'>
           <div className='relative flex-col items-center justify-center text-center'>
-            <Image
+            <img
               src='images/header-line.svg'
               alt='line'
               className='absolute left-0 right-0 mx-auto'
@@ -67,7 +66,7 @@ export default function HomePage() {
           </div>
         </section>
         <section className='relative'>
-          <Image
+          <img
             src='images/leaf-bg.svg'
             alt='leaf background'
             className='ml-24'
@@ -89,7 +88,7 @@ export default function HomePage() {
         <section className='flex items-center justify-center text-xl font-medium'>
           <UnstyledLink
             href='#'
-            className='duratio-300 rounded-xl bg-gradient-to-r from-clime to-cgreen py-4 px-8 transition hover:scale-105'
+            className='duratio-300 from-clime rounded-xl bg-gradient-to-r to-cgreen py-4 px-8 transition hover:scale-105'
           >
             Cara mendaftar
           </UnstyledLink>
