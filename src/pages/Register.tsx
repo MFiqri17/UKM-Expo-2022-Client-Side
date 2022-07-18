@@ -155,8 +155,19 @@ export default function Register() {
               id='email'
               type='email'
               className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
-              placeholder='Masukkan nama lengkap kamu'
+              placeholder='Masukkan email aktif kamu'
               name='email'
+              required
+            />
+          </div>
+          <div className='font-mediumtext-cblack flex flex-col space-y-2'>
+            <label className='text-xl font-semibold'>No telepon</label>
+            <input
+              id='telepon'
+              type='text'
+              className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
+              placeholder='Masukkan nomor telepon kamu'
+              name='noTelepon'
               required
             />
           </div>
@@ -192,7 +203,7 @@ export default function Register() {
               id='rekening'
               type='number'
               className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
-              placeholder='Masukkan nama lengkap kamu'
+              placeholder={payment == 'Bank BRI' ? `Masukkan nomor rekening kamu` : `Masukkan Nomor ${payment} kamu`}
               name='rekening'
               required
             />
@@ -205,7 +216,7 @@ export default function Register() {
               id='kode'
               type='text'
               className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
-              placeholder='Masukkan nama lengkap kamu'
+              placeholder='Masukkan nomor kode referral kamu'
               name='kode'
               required
             />
