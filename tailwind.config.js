@@ -26,7 +26,7 @@ module.exports = {
         },
         dark: '#222222',
         cgreen: '#62B497',
-        ccream: '#FBF8F3',
+        ccream: '#FAD0B6',
         cgreenb: '#CDDD91',
         cblack: '#3C3C3B',
         cpurple: '#A967A3',
@@ -39,7 +39,7 @@ module.exports = {
         cwhite: '#FBF8F3',
         cgrey: '#6A6A6A',
         // Light
-        clightorange: '#FAD0B6',
+        clightorange: '#FBF8F3',
         clightgreen: '#F5FBF3',
         clightpurple: '#F9F3FB',
         clightred: '#FBF3F3',
@@ -65,10 +65,22 @@ module.exports = {
             backgroundPosition: '700px 0',
           },
         },
+        wiggle: {
+          '0%': {
+            transform: 'translateY(-0.25rem)',
+          },
+          '40%': {
+            transform: 'translateY(-0.15rem)',
+          },
+          '100%': {
+            transform: 'translateY(0rem)',
+          },
+        },
       },
       animation: {
         flicker: 'flicker 3s linear infinite',
         shimmer: 'shimmer 1.3s linear infinite',
+        wiggle: 'wiggle 0.25s ease-out',
       },
     },
   },

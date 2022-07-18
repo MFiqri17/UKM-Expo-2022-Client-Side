@@ -52,7 +52,7 @@
   @font-face {
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 400 600;
+    font-weight: 400 600 700;
     font-display: optional;
   }
 
@@ -112,6 +112,18 @@
   .text-gradient {
     @apply bg-gradient-to-r from-cblack via-cgreen to-cgreenb bg-clip-text font-magic text-transparent;
   }
+
+  .btn {
+    @apply rounded-xl px-5 py-3 font-semibold text-cblack shadow transition-all hover:-translate-y-1 hover:shadow-lg active:animate-wiggle active:shadow;
+  }
+
+  .btn-light {
+    @apply bg-clightorange;
+  }
+
+  .btn-gradient {
+    @apply bg-gradient-to-r from-cgreenb to-cgreen;
+  }
 }
 
 @layer utilities {
@@ -132,5 +144,9 @@
   .animated-underline:hover,
   .animated-underline:focus-visible {
     background-size: 0 2px, 100% 2px;
+  }
+
+  .swiper-button-next {
+    color: red;
   }
 }
