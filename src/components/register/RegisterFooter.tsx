@@ -18,7 +18,7 @@ export default function RegisterFooter() {
         <div className='flex flex-row items-end justify-center space-x-6'>
           <a href='https://ise-its.com' target='_blank' rel='noreferrer'>
             <svg
-              className='fill-[#D0D0D0] transition duration-300 ease-linear hover:fill-pink-300'
+              className='fill-[#D0D0D0] transition duration-300 ease-linear hover:fill-cgreen'
               width='20'
               height='20'
               viewBox='0 0 20 20'
@@ -28,12 +28,12 @@ export default function RegisterFooter() {
             </svg>
           </a>
           <a
-            href='https://www.instagram.com/is_expo/'
+            href='https://www.instagram.com/ukmexpo_its/'
             target='_blank'
             rel='noreferrer'
           >
             <svg
-              className='fill-[#D0D0D0] transition duration-300 ease-linear hover:fill-pink-300'
+              className='fill-[#D0D0D0] transition duration-300 ease-linear hover:fill-cgreen'
               width='20'
               height='20'
               viewBox='0 0 20 20'
@@ -49,7 +49,7 @@ export default function RegisterFooter() {
             rel='noreferrer'
           >
             <svg
-              className='fill-[#D0D0D0] transition duration-300 ease-linear hover:fill-pink-300'
+              className='fill-[#D0D0D0] transition duration-300 ease-linear hover:fill-cgreen'
               width='22'
               height='20'
               viewBox='0 0 22 20'
@@ -64,12 +64,12 @@ export default function RegisterFooter() {
             </svg>
           </a>
           <a
-            href='https://m.youtube.com/channel/UCPbOX3w8G4_dwOMDNl97PTw'
+            href=' https://www.youtube.com/channel/UCRcX486rcfh6PrhcH80wVWw/videos'
             target='_blank'
             rel='noreferrer'
           >
             <svg
-              className='fill-[#D0D0D0] transition duration-300 ease-linear hover:fill-pink-300'
+              className='fill-[#D0D0D0] transition duration-300 ease-linear hover:fill-cgreen'
               width='26'
               height='20'
               viewBox='0 0 26 20'
@@ -89,7 +89,7 @@ export default function RegisterFooter() {
             rel='noreferrer'
           >
             <svg
-              className='fill-[#D0D0D0] transition duration-300 ease-linear hover:fill-pink-300'
+              className='fill-[#D0D0D0] transition duration-300 ease-linear hover:fill-cgreen'
               width='18'
               height='20'
               viewBox='0 0 18 20'
@@ -105,7 +105,7 @@ export default function RegisterFooter() {
             rel='noreferrer'
           >
             <svg
-              className='fill-[#D0D0D0] transition duration-300 ease-linear hover:fill-pink-300'
+              className='fill-[#D0D0D0] transition duration-300 ease-linear hover:fill-cgreen'
               width='20'
               height='20'
               viewBox='0 0 20 20'
@@ -121,7 +121,7 @@ export default function RegisterFooter() {
             rel='noreferrer'
           >
             <svg
-              className='fill-[#D0D0D0] transition duration-300 ease-linear hover:fill-pink-300'
+              className='fill-[#D0D0D0] transition duration-300 ease-linear hover:fill-cgreen'
               width='24'
               height='24'
               viewBox='0 0 24 24'

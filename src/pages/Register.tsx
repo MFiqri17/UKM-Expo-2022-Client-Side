@@ -1,6 +1,11 @@
 import React, { useRef, useState } from 'react';
+import { useRouter } from 'next/router';
 
 import RegisterLayout from '@/components/register/RegisterLayout';
+
+import axios from 'axios';
+
+
 
 interface IFileState {
   file: File | null;
@@ -29,21 +34,21 @@ const pembayaran = [
   {
     uid: 2,
 
-    name: 'Shopee Pay',
+    name: 'Shopee',
     noRek: '088804821572',
     atasNama: 'maitsadzr',
   },
   {
     uid: 3,
 
-    name: 'Bank BRI',
+    name: 'BRI',
     noRek: '365601027280538',
     atasNama: 'maitsa adzro fania',
   },
 ];
 
 export default function Register() {
-
+  const router = useRouter()
   const harga = 25000;
   const [price, setPrice] = useState(harga);
   const [quantity, setQuantity] = useState(1);
@@ -75,28 +80,57 @@ export default function Register() {
       [e.target.id]: e.target.value
    }));
   }
+
+  const changeFile = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if(e.target.files){
+    const file = e.target.files[0]  
+    setForm((prevState) => ({
+      ...prevState,
+      [e.target.id]: file
+
+      
+
+    }))
+  }
+    // if(e.currentTarget.files)
+    // console.log(e.currentTarget.files[0]);
+  }
   
   
 
   const formSubmitHandler = async (e:any) => {
     e.preventDefault();
-  //  const formdata = new FormData();
-  //     formdata.append('nama', form.nama);
-  //     formdata.append('email', form.email);
-  //     formdata.append('noTelepon', form.noTelepon);
-  //     formdata.append()
-  //     formdata.append('payment_proof', form.buktiTF);
-  //     formdata.append('bank_no', form.noRek);
-  //     formdata.append('ticket_type', 'presale 1');
-  
-      const requestOptions = {
-        method: 'POST',
-        body: form,
-      };
-      // let res = await fetch('localhost:3000/v1/ticketing', requestOptions);
-      // let resJson = await res.json();
 
-      console.log(requestOptions.body);
+   const total = parseInt(form.jumlah) * harga; 
+
+   const formdata = new FormData();
+   formdata.append("name", form.nama);
+   formdata.append("email", form.email);
+   formdata.append("whatsapp", form.noTelepon);
+   formdata.append("payment_proof", form.buktiTF);
+   formdata.append("payment_no", form.noRek);
+   formdata.append("payment_method", form.opsi);
+   formdata.append("ticket_total", form.jumlah);
+   formdata.append("payment_total", total.toString());
+  
+      const requestOptions:object = {
+        method: 'POST',
+        body: formdata,
+      };
+
+      console.log(form.buktiTF)
+      console.log(total)
+
+     axios({
+        method: 'post',
+        headers: {'Content-Type': 'multipart/form-data' },
+        url: 'http://localhost:3001/v1/ticketing',
+        data: formdata
+      }).then( () =>  router.push('/'));
+
+
+   
+      
   }
 
 
@@ -325,8 +359,8 @@ export default function Register() {
               </button>
               <input
                 ref={fileRef}
-                onChange={(e:any) => {handleChange(e); changeForm(e)}}
-                value={form.buktiTF}
+                onChange={(e:any) => {changeFile(e); handleChange(e)}}
+                // value={form.buktiTF}
                 multiple={false}
                 id='buktiTF'
                 name='bukti-tf'

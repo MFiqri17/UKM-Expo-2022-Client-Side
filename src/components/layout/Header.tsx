@@ -10,7 +10,7 @@ const links = [
   { href: '/', label: 'HOME' },
   { href: '/event', label: 'EVENT' },
   { href: '/ukm', label: 'UKM' },
-  { href: '/Merch', label: 'MERCH' },
+  { href: '/ComingSoon', label: 'MERCH' },
 ];
 
 export default function Header() {
