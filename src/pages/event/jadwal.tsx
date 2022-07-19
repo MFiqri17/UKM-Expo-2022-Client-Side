@@ -32,7 +32,7 @@ export default function HomePage() {
             <div className='flex'>
               <UnstyledLink
                 href='#'
-                className='rounded-xl bg-ccream py-4 px-8 text-sm font-bold !transition duration-300 hover:scale-105'
+                className='rounded-xl bg-clightorange py-4 px-8 text-sm font-bold !transition duration-300 hover:scale-105'
               >
                 Lihat lebih lanjut
               </UnstyledLink>
@@ -68,7 +68,10 @@ export default function HomePage() {
           </div>
         </section>
         <section className='layout mb-40 flex flex-col justify-center space-y-8 md:flex-row md:space-x-8 md:space-y-0'>
-          <div className='flex flex-col rounded-3xl bg-ccream p-12' id='card'>
+          <div
+            className='flex flex-col rounded-3xl bg-clightorange p-12'
+            id='card'
+          >
             <ul className='mb-8 flex-1 list-disc'>
               <dt className='mb-4 font-primary text-4xl font-bold'>
                 25 Agustus
@@ -107,7 +110,10 @@ export default function HomePage() {
               </UnstyledLink>
             </div>
           </div>
-          <div className='flex flex-col rounded-3xl bg-ccream p-12' id='card'>
+          <div
+            className='flex flex-col rounded-3xl bg-clightorange p-12'
+            id='card'
+          >
             <ul className='mb-8  flex-1 list-disc'>
               <dt className='mb-4 font-primary text-4xl font-bold'>
                 26 Agustus
@@ -159,7 +165,7 @@ export default function HomePage() {
           <div className='mb-12'>
             <div className='container lg:mx-auto'>
               <ol className='items-center justify-center md:flex'>
-                <li className='relative mb-6 rounded-xl bg-ccream py-4 sm:mb-0'>
+                <li className='relative mb-6 rounded-xl bg-clightorange py-4 sm:mb-0'>
                   <time className='mb-2 block px-12 font-primary text-lg font-bold'>
                     Day 1
                   </time>
@@ -234,7 +240,7 @@ export default function HomePage() {
           </div>
         </section>
         <section>
-          <div className='layout grid grid-cols-1 gap-2 rounded-2xl bg-ccream px-4 py-16 font-primary font-semibold md:grid-cols-2'>
+          <div className='layout grid grid-cols-1 gap-2 rounded-2xl bg-clightorange px-4 py-16 font-primary font-semibold md:grid-cols-2'>
             <div className='grid grid-cols-3'>
               <div>
                 <ol className='text-center'>

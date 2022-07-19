@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import * as React from 'react';
+
 import ArrowDownButton from '@/components/buttons/ArrowDownButton';
 import FilosofiBentukCarousel from '@/components/home/FilosofiBentukCarousel';
 import FilosofiWarnaCarousel from '@/components/home/FilosofiWarnaCarousel';
@@ -7,6 +8,7 @@ import RetrospeksiCarousel from '@/components/home/RetrospeksiCarousel';
 import Layout from '@/components/layout/Layout';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
+
 import FireItOn from '@/assets/svg/FireItOn';
 /**
  * SVGR Support
@@ -75,7 +77,7 @@ export default function HomePage() {
               className='lg:ml-24'
             />
           </div>
-          <div className='mx-2 rounded-2xl bg-ccream px-4 py-8 md:px-24 md:py-16 lg:mx-24'>
+          <div className='mx-2 rounded-2xl bg-clightorange px-4 py-8 md:px-24 md:py-16 lg:mx-24'>
             <p className='text-md  text-center font-normal md:text-2xl'>
               Untuk mahasiswa baru yang masih meraba-raba mengenai minat
               bakatnya diharapkan setelah mengikuti rangkaian kegiatan UKM Expo
