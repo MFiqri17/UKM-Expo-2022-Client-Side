@@ -6,7 +6,7 @@ const defaultMeta = {
   title: 'UKM EXPO 2022',
   siteName: 'UKM EXPO 2022',
   description:
-    'A starter for Next.js, Tailwind CSS, and TypeScript with Absolute Import, Seo, Link component, pre-configured with Husky',
+    'Suatu rangkaian kegiatan untuk memperkenalkan Unit Kegiatan Mahasiswa (UKM) kepada para mahasiswa baru. Dalam UKM Expo, mahasiswa baru memiliki kesempatan untuk bertanya mengenai seluk beluk dan berbagai aktivitas UKM yang mereka minati. UKM Expo ini diharapkan bisa menjadi sarana untuk menunjukkan eksistensi UKM yang ada di ITS sebagai wadah pengembangan diri bersama melalui minat dan bakat yang sama.',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
   url: 'https://tsnext-tw.thcl.dev',
   type: 'website',
@@ -15,7 +15,7 @@ const defaultMeta = {
    * No need to be filled, will be populated with openGraph function
    * If you wish to use a normal image, just specify the path below
    */
-  image: 'https://tsnext-tw.thcl.dev/images/large-og.png',
+  image: '/svg/OG.svg',
 };
 
 type SeoProps = {
