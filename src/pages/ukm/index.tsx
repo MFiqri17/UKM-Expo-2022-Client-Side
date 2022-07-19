@@ -1,8 +1,8 @@
-import { ukm } from '@/components/ukm/data/ukm';
 import * as React from 'react';
 
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
+import { ukm } from '@/components/ukm/data/ukm';
 import BidangUKM from '@/components/ukm/main/BidangUKM';
 import HeroUKM from '@/components/ukm/main/HeroUKM';
 import ListUKM from '@/components/ukm/main/ListUKM';
