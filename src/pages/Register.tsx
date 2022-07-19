@@ -43,7 +43,8 @@ const pembayaran = [
 ];
 
 export default function Register() {
-  const [harga, setHarga] = useState(25000);
+
+  const harga = 25000;
   const [price, setPrice] = useState(harga);
   const [quantity, setQuantity] = useState(1);
   const fileRef = useRef<HTMLInputElement>(null);
@@ -54,8 +55,50 @@ export default function Register() {
   };
   const [Img, setImg] = React.useState(initialFileState);
   const [payment, setPayment] = React.useState('');
-  const [noRekening, setNoRekening] = React.useState('');
-  const [nama, setNama] = React.useState('');
+
+  const [form, setForm] = React.useState({
+    nama: "",
+    email: "",
+    noTelepon: "",
+    opsi: "",
+    noRek: "",
+    kode: "",
+    jumlah: "",
+    cost: "",
+    buktiTF: "",
+  })
+
+
+  const changeForm = (e:any) => {
+    setForm((prevState) => ({
+      ...prevState,
+      [e.target.id]: e.target.value
+   }));
+  }
+  
+  
+
+  const formSubmitHandler = async (e:any) => {
+    e.preventDefault();
+  //  const formdata = new FormData();
+  //     formdata.append('nama', form.nama);
+  //     formdata.append('email', form.email);
+  //     formdata.append('noTelepon', form.noTelepon);
+  //     formdata.append()
+  //     formdata.append('payment_proof', form.buktiTF);
+  //     formdata.append('bank_no', form.noRek);
+  //     formdata.append('ticket_type', 'presale 1');
+  
+      const requestOptions = {
+        method: 'POST',
+        body: form,
+      };
+      // let res = await fetch('localhost:3000/v1/ticketing', requestOptions);
+      // let resJson = await res.json();
+
+      console.log(requestOptions.body);
+  }
+
 
   const changePrice = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuantity(e.target.valueAsNumber);
@@ -79,21 +122,10 @@ export default function Register() {
     const newLocal = pembayaran[0].name;
     return setPayment(newLocal);
   }, []);
-
-  React.useEffect(() => {
-    const newLocal = pembayaran[0].noRek;
-    return setNoRekening(newLocal);
-  }, []);
-
-  React.useEffect(() => {
-    const newLocal = pembayaran[0].atasNama;
-    return setNama(newLocal);
-  }, []);
-
   const changeState = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setPayment(pembayaran[e.target.value].name);
-    setNoRekening(pembayaran[e.target.value].noRek);
-    setNama(pembayaran[e.target.value].atasNama);
+    setPayment(e.target.value);
+    // setNoRekening(pembayaran[e.target.value].noRek);
+    // setNama(pembayaran[e.target.value].atasNama);
   };
 
   React.useEffect(() => {
@@ -134,18 +166,19 @@ export default function Register() {
         <h3 className='mb-[90px] mt-[45px] text-center text-[26px] font-bold text-cblack'>
           Form Pendaftaran
         </h3>
-        <form
-          action=''
+        <form onSubmit={formSubmitHandler}
           className='mb-[50px] flex flex-col space-y-[45px] px-[78px]'
         >
           <div className='font-mediumtext-cblack flex flex-col space-y-2 '>
             <label className='text-xl font-semibold'>Nama Lengkap</label>
             <input
-              id='name'
+              id='nama'
               type='text'
               className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
               placeholder='Masukkan nama lengkap kamu'
               name='name'
+              onChange={changeForm}
+              value={form.nama}
               required
             />
           </div>
@@ -157,17 +190,21 @@ export default function Register() {
               className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
               placeholder='Masukkan email aktif kamu'
               name='email'
+              onChange={changeForm}
+              value={form.email}
               required
             />
           </div>
           <div className='font-mediumtext-cblack flex flex-col space-y-2'>
             <label className='text-xl font-semibold'>No telepon</label>
             <input
-              id='telepon'
+              id='noTelepon'
               type='text'
               className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
               placeholder='Masukkan nomor telepon kamu'
               name='noTelepon'
+              onChange={changeForm}
+              value={form.noTelepon}
               required
             />
           </div>
@@ -176,12 +213,19 @@ export default function Register() {
               Pilih Opsi Pembayaran
             </label>
             <select
+              id='opsi'
               disabled={!pembayaran.length}
-              onChange={changeState}
+              onChange={(e:any) => {changeState(e); changeForm(e)}}
+              value={form.opsi}
               className='rounded-md !border border-[#6B7280] bg-transparent  p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
             >
+              <option />
               {pembayaran.map((pay) => (
-                <option key={pay.uid} value={pay.uid} className='focus:bg-black'>
+                <option
+                  key={pay.uid}
+                  value={pay.name}
+                  className='focus:bg-black'
+                >
                   {pay.name}
                 </option>
               ))}
@@ -192,19 +236,23 @@ export default function Register() {
               className='text-xl font-semibold'
               onChange={(e: any) => {
                 setPayment(e.target.value);
-                setNoRekening(pembayaran[e.target.key]['noRek']);
-                setNama(pembayaran[e.target.key]['atasNama']);
               }}
             >
               {payment == 'Bank BRI' ? `Nomor rekening` : `Nomor ${payment}`}
             </label>
             <input
               min={0}
-              id='rekening'
+              id='noRek'
               type='number'
               className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
-              placeholder={payment == 'Bank BRI' ? `Masukkan nomor rekening kamu` : `Masukkan Nomor ${payment} kamu`}
+              placeholder={
+                payment == 'Bank BRI'
+                  ? `Masukkan nomor rekening kamu`
+                  : `Masukkan Nomor ${payment} kamu`
+              }
               name='rekening'
+              onChange={changeForm}
+              value={form.noRek}
               required
             />
           </div>
@@ -218,34 +266,41 @@ export default function Register() {
               className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
               placeholder='Masukkan nomor kode referral kamu'
               name='kode'
-              required
+              onChange={changeForm}
+              value={form.kode}
             />
           </div>
           <div className='flex flex-col justify-center space-y-[30px] md:flex-row md:justify-start md:space-y-0 md:space-x-5'>
             <div className='font-mediumtext-cblack flex flex-col space-y-2'>
               <label className='text-xl font-semibold'>Total harga</label>
               <input
-                id='name'
                 type='text'
                 className='rounded-md !border  border-cgreen bg-transparent p-2 !ring-cgreen'
-                placeholder='Masukkan nama lengkap kamu'
-                name='harga'
+                value={`Rp. ${price}`}
+                onChange={(e:any) => {changeQuantity(e); changeForm(e)}}
                 disabled
-                value={`RP. ${price}`}
-                onChange={changeQuantity}
+              />
+               <input
+                id='cost'
+                type='number'
+                className='rounded-md !border  border-cgreen bg-transparent p-2 !ring-cgreen'
+                name='harga'
+                value={price}
+                onChange={(e:any) => {changeQuantity(e); changeForm(e)}}
                 required
+                hidden
               />
             </div>
             <div className='font-mediumtext-cblack flex flex-col space-y-2 md:w-[382px]'>
               <label className='text-xl font-semibold'>Jumlah tiket</label>
               <input
-                id='name'
+                id='jumlah'
                 type='number'
                 className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
                 placeholder='Masukkan jumlah tiket yang kamu beli'
                 name='quantity'
                 value={quantity}
-                onChange={changePrice}
+                onChange={(e:any) => {changePrice(e); changeForm(e)}}
                 min={1}
                 required
               />
@@ -270,13 +325,13 @@ export default function Register() {
               </button>
               <input
                 ref={fileRef}
-                onChange={handleChange}
+                onChange={(e:any) => {handleChange(e); changeForm(e)}}
+                value={form.buktiTF}
                 multiple={false}
-                id='inputan'
+                id='buktiTF'
                 name='bukti-tf'
                 type='file'
                 className=' hidden rounded-md !border border-[rgb(107,114,128)] bg-transparent autofill:bg-transparent focus:!border-pink-200 focus:!ring-pink-200  focus-visible:!border-pink-200'
-                placeholder='Masukkan nomor WhatsApp anggota 1'
                 required
               />
             </div>
@@ -293,10 +348,10 @@ export default function Register() {
             </h5>
             <p className='text-xl font-medium text-black'>{payment}</p>
             <p className='text-xl font-medium text-black'>
-              {payment == 'Bank BRI' ? `No rekening` : `No ${payment}`} -{' '}
-              {noRekening}{' '}
+              {payment == 'Bank BRI' ? `No rekening` : `No ${payment}`} - {' '}
+              {payment == 'Gopay' ? pembayaran[0].noRek : payment == 'OVO' ? pembayaran[1].noRek : payment == 'Shopee Pay' ? pembayaran[2].noRek : pembayaran[3].noRek }{' '}
             </p>
-            <p className='text-xl font-medium text-black'>{`a/n ${nama}`}</p>
+            <p className='text-xl font-medium text-black'>{`a/n ${payment == 'Gopay' ? pembayaran[0].atasNama : payment == 'OVO' ? pembayaran[1].atasNama : payment == 'Shopee Pay' ? pembayaran[2].atasNama : pembayaran[3].atasNama }`}</p>
           </div>
 
           <div className='flex justify-center'>

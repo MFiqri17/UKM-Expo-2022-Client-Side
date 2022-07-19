@@ -15,9 +15,7 @@ export default function Catalog() {
   const [catalogs] = useState(catalog);
   return (
     <div className=' text-center'>
-      
-        <SectionTitle title='Catalog' />
-      
+      <SectionTitle title='Catalog' />
 
       <div className='hidden md:block'>
         <Tab.Group>

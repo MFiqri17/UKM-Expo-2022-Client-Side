@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { A11y,Navigation, Pagination, Scrollbar } from 'swiper';
+import { A11y, Navigation, Pagination, Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -24,9 +24,7 @@ export default function MobileBundle() {
         {Object.keys(categories).map((category, index) => (
           <SwiperSlide key={index}>
             <div className='h-[441px] w-[350px] '>content </div>
-            <h4  className='pb-[156px]'>
-              {category}
-            </h4>
+            <h4 className='pb-[156px]'>{category}</h4>
           </SwiperSlide>
         ))}
       </Swiper>

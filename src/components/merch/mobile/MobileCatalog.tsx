@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { A11y,Navigation, Pagination, Scrollbar } from 'swiper';
+import { A11y, Navigation, Pagination, Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -22,16 +22,16 @@ export default function MobileBundle() {
         className='block md:hidden'
       >
         <SwiperSlide>
-          <Kaos Kaos="Kaos" />
+          <Kaos Kaos='Kaos' />
         </SwiperSlide>
         <SwiperSlide>
-          <Totebag Totebag="Totebag" />
+          <Totebag Totebag='Totebag' />
         </SwiperSlide>
         <SwiperSlide>
-          <Keychain Keychain="KeyChain" />
+          <Keychain Keychain='KeyChain' />
         </SwiperSlide>
         <SwiperSlide>
-          <SmallMerch SmallMerch="Small Merch" />
+          <SmallMerch SmallMerch='Small Merch' />
         </SwiperSlide>
       </Swiper>
     </>

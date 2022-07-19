@@ -11,7 +11,7 @@ export default function Timer({ expiryTimestamp }: { expiryTimestamp: Date }) {
   });
   return (
     <div className='mt-[135px] text-center'>
-      <SectionTitle title='Pre Order'/>
+      <SectionTitle title='Pre Order' />
       <h4 className='mt-8 mb-16 text-2xl font-medium md:text-4xl'>
         Reguler registration ditutup
       </h4>

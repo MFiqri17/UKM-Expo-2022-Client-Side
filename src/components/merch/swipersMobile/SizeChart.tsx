@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { A11y,Navigation, Pagination, Scrollbar } from 'swiper';
+import { A11y, Navigation, Pagination, Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import catalog from '@/components/merch/data/CatalogArray';
