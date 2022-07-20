@@ -143,9 +143,9 @@ export default function Register() {
   };
 
 
-  React.useEffect(() => {
+  // React.useEffect(() => {
     
-  })
+  // })
 
   React.useEffect(() => {
     const newLocal = pembayaran[0].name;
