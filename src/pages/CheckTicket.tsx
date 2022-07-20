@@ -33,7 +33,7 @@ export default function CheckTicket(){
     }).then(
       (res) => {
         setData(res.data.data)
-        setStatus(data.booking_status ? "Sudah Terverifikasi silahkan cek email anda" : "Belum Terverifikasi silahkan tunggu dan selalu cek email anda")
+        setStatus(data.booking_status ? "Sudah Terverifikasi silahkan cek email anda" : "Your ticket is on the way ")
       }
     )
   }
