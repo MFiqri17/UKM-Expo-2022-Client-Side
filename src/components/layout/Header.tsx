@@ -1,6 +1,7 @@
-import { Dialog, Transition } from '@headlessui/react';
+import { Dialog, Popover, Transition } from '@headlessui/react';
 import clsx from 'clsx';
 import Image from 'next/image';
+import Link from 'next/link';
 import * as React from 'react';
 
 import UnderlineLink from '@/components/links/UnderlineLink';
@@ -15,6 +16,7 @@ const links = [
 
 export default function Header() {
   const [isNavbarOpen, setIsNavbarOpen] = React.useState<boolean>(false);
+  const [isDropdownOpen, setIsDropdownOpen] = React.useState<boolean>(false);
   return (
     <header className='sticky top-0 z-50 bg-clightorange py-2 px-2 shadow-md sm:px-4'>
       <div className='layout flex h-14 items-center justify-between'>
@@ -37,6 +39,34 @@ export default function Header() {
                 </UnderlineLink>
               </li>
             ))}
+            <li>
+              <Popover className='relative'>
+                <Popover.Button className='btn btn-gradient rounded-md py-2 px-3 font-bold'>
+                  BUY TICKET
+                </Popover.Button>
+                <Transition
+                  as={React.Fragment}
+                  enter='transition ease-out duration-200'
+                  enterFrom='opacity-0 translate-y-1'
+                  enterTo='opacity-100 translate-y-0'
+                  leave='transition ease-in duration-150'
+                  leaveFrom='opacity-100 translate-y-0'
+                  leaveTo='opacity-0 translate-y-1'
+                >
+                  <Popover.Panel className='absolute z-10 mt-3 transform px-4 sm:px-0'>
+                    <div className='overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5'>
+                      <div className='relative flex flex-col gap-y-2 bg-white p-3'>
+                        <Link href='/Register'>
+                          <p className='cursor-pointer font-semibold'>
+                            Buy Now
+                          </p>
+                        </Link>
+                      </div>
+                    </div>
+                  </Popover.Panel>
+                </Transition>
+              </Popover>
+            </li>
           </ul>
           {/* Mobile View */}
           <button className={clsx(!isNavbarOpen && 'hidden')}>
@@ -106,6 +136,37 @@ export default function Header() {
                             </UnderlineLink>
                           </li>
                         ))}
+                        <li
+                          className='flex items-center gap-x-3'
+                          onClick={() => setIsDropdownOpen((prev) => !prev)}
+                        >
+                          <h1 className='text-3xl text-clightorange'>
+                            BUY TICKET
+                          </h1>
+                          <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            fill='none'
+                            viewBox='0 0 24 24'
+                            stroke='currentColor'
+                            strokeWidth={2}
+                            className='h-9 w-9 pb-2 text-clightorange'
+                          >
+                            <path
+                              strokeLinecap='round'
+                              strokeLinejoin='round'
+                              d='M19 9l-7 7-7-7'
+                            />
+                          </svg>
+                        </li>
+                        {isDropdownOpen && (
+                          <li>
+                            <Link href='/Register'>
+                              <h1 className='text-3xl text-clightorange'>
+                                Buy Now
+                              </h1>
+                            </Link>
+                          </li>
+                        )}
                       </ul>
                     </Dialog.Panel>
                   </Transition.Child>

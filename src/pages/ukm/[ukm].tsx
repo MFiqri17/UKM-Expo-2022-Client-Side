@@ -1,10 +1,10 @@
-import { ukm } from '@/components/ukm/data/ukm';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 
 import Layout from '@/components/layout/Layout';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import Seo from '@/components/Seo';
+import { ukm } from '@/components/ukm/data/ukm';
 import DetailSection from '@/components/ukm/detail/DetailSection';
 import HeroUKM from '@/components/ukm/main/HeroUKM';
 
@@ -29,7 +29,10 @@ export default function UKMDetailPage() {
         <Seo templateTitle={UKM && UKM.nama} />
         <main>
           <HeroUKM />
-          <section className='bg-white py-10 px-4 sm:px-16 sm:py-20'>
+          <section
+            className='bg-white py-10 px-4 sm:px-16 sm:py-20'
+            id='main-section'
+          >
             {isLoading ? (
               <div className='min-h-[30rem] w-full animate-pulse rounded-xl bg-gray-200'></div>
             ) : UKM ? (
