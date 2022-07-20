@@ -387,7 +387,7 @@ export default function Register() {
             </h5>
             <p className='text-xl font-medium text-black'>{payment}</p>
             <p className='text-xl font-medium text-black'>
-              {payment == 'Bank BRI' ? `No rekening` : `No ${payment}`} -{' '}
+              {payment == 'BRI' ? `No rekening` : `No ${payment}`} -{' '}
               {payment == 'Gopay'
                 ? pembayaran[0].noRek
                 : payment == 'OVO'
