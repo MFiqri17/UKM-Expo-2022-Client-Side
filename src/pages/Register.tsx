@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import React, { useRef, useState } from 'react';
-import swal from 'sweetalert2';
+import toast, { Toaster } from 'react-hot-toast';
+const notify = () => toast('Here is your toast.');
 
 import RegisterLayout from '@/components/register/RegisterLayout';
 
@@ -115,15 +116,12 @@ export default function Register() {
       data: formdata,
     })
       .then((res) => {
-        swal.fire({
-          position: 'center',
-          icon: 'success',
-          title: 'Your form has been saved',
-          showConfirmButton: false,
-          timer: 1500,
-        });
+        toast.success('Pembelian tiket berhasil ')
+        router.push('/')
       })
-      .then((res) => router.push('/'));
+      .catch((err) => {
+        toast.error(`error: ${err} Pembelian gagal`)
+      });
   };
 
   const changePrice = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -153,8 +151,9 @@ export default function Register() {
       
   });
   setTotal(total)
-  if(total >= 300 || todayDate > new Date(2022, 7, 22)){
+  if(total === 300 ||todayDate.getDate() >= new Date(2022, 7, 22).getDate()){
     setHarga(40000);
+    console.log(harga)
   }
     })
   }, [])
@@ -201,8 +200,12 @@ export default function Register() {
     };
   }, [Img]);
 
+
+
   return (
-    <> {isClosed ? <div>Pembelian tiket ditutup sementara Sampai pukul 8.30 dikarenakan perbaikan server</div> : 
+    <> 
+     <Toaster />
+    {isClosed ? <div>Pembelian tiket ditutup sementara Sampai pukul 8.30 dikarenakan perbaikan server</div> : 
     <RegisterLayout>
     <h3 className='mb-[90px] mt-[45px] text-center text-[26px] font-bold text-cblack'>
       Form Pendaftaran
