@@ -48,7 +48,7 @@ const pembayaran = [
 export default function Register() {
   const router = useRouter();
   const [harga, setHarga] = useState(30000);
-  const [isClosed, setIsclosed] = useState(false);
+  const [isClosed, setIsclosed] = useState(true);
   const [price, setPrice] = useState(0);
   const [quantity, setQuantity] = useState(0);
   const fileRef = useRef<HTMLInputElement>(null);
