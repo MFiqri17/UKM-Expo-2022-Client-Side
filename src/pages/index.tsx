@@ -95,7 +95,7 @@ export default function HomePage() {
         </section>
         <section className='mb-20 flex items-center justify-center text-xl font-medium'>
           <UnstyledLink
-            href='#'
+            href='/informasi'
             className='rounded-xl bg-gradient-to-r from-cgreenb to-cgreen py-4 px-8 text-lg transition duration-300 hover:scale-105 md:text-2xl'
           >
             Cara mendaftar
