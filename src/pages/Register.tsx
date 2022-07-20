@@ -1,5 +1,7 @@
 import React, { useRef, useState } from 'react';
-import { useRouter } from 'next/router';
+import  {useRouter}  from 'next/router';
+import swal from "sweetalert2";
+
 
 import RegisterLayout from '@/components/register/RegisterLayout';
 
@@ -49,7 +51,7 @@ const pembayaran = [
 
 export default function Register() {
   const router = useRouter()
-  const harga = 25000;
+  const harga = 30000;
   const [price, setPrice] = useState(0);
   const [quantity, setQuantity] = useState(0);
   const fileRef = useRef<HTMLInputElement>(null);
@@ -96,6 +98,7 @@ export default function Register() {
     // console.log(e.currentTarget.files[0]);
   }
   
+
   
 
   const formSubmitHandler = async (e:any) => {
@@ -113,17 +116,23 @@ export default function Register() {
    formdata.append("ticket_total", form.jumlah);
    formdata.append("payment_total", total.toString());
   
-      const requestOptions:object = {
-        method: 'POST',
-        body: formdata,
-      };
 
      axios({
         method: 'post',
         headers: {'Content-Type': 'multipart/form-data' },
         url: 'https://server.tesdeveloper.me/v1/ticketing',
         data: formdata
-      }).then( () =>  router.push('/'));
+      }).then(
+        (res) => {
+          swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Your form has been saved',
+            showConfirmButton: false,
+            timer: 1500
+          })
+        } 
+      ).then( (res) =>  router.push('/'));
 
 
    
