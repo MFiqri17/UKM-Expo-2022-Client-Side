@@ -273,7 +273,7 @@ export default function Register() {
               type='number'
               className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
               placeholder={
-                payment == 'Bank BRI'
+                payment == 'BRI'
                   ? `Masukkan nomor rekening kamu`
                   : `Masukkan Nomor ${payment} kamu`
               }
