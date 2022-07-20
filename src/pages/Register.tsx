@@ -49,8 +49,10 @@ export default function Register() {
   const router = useRouter();
   const [harga, setHarga] = useState(30000);
   const [isClosed, setIsclosed] = useState(true);
+  const [todayDate, setTodayDate] = useState(new Date());
   const [price, setPrice] = useState(0);
   const [quantity, setQuantity] = useState(0);
+  const [total, setTotal] = useState(0);
   const fileRef = useRef<HTMLInputElement>(null);
   const initialFileState: IFileState = {
     file: null,
@@ -143,9 +145,19 @@ export default function Register() {
   };
 
 
-  // React.useEffect(() => {
-    
-  // })
+  React.useEffect(() => {
+    fetch("https://server.tesdeveloper.me/v1/ticketing").then(res => res.json()).then(data => {
+        let total = 0;
+      data.data.forEach((ticket:any) => {
+      total += parseInt(ticket.ticket_total);
+      
+  });
+  setTotal(total)
+  if(total >= 300 || todayDate > new Date(2022, 7, 22)){
+    setHarga(40000);
+  }
+    })
+  }, [])
 
   React.useEffect(() => {
     const newLocal = pembayaran[0].name;
