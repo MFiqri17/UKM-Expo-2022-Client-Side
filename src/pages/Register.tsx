@@ -265,7 +265,7 @@ export default function Register() {
                 setPayment(e.target.value);
               }}
             >
-              {payment == 'Bank BRI' ? `Nomor rekening` : `Nomor ${payment}`}
+              {payment == 'BRI' ? `Nomor rekening` : `Nomor ${payment}`}
             </label>
             <input
               min={0}
