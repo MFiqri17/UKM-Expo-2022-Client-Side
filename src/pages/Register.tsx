@@ -392,7 +392,7 @@ export default function Register() {
                 ? pembayaran[0].noRek
                 : payment == 'OVO'
                 ? pembayaran[1].noRek
-                : payment == 'Shopee Pay'
+                : payment == 'Shopee'
                 ? pembayaran[2].noRek
                 : pembayaran[3].noRek}{' '}
             </p>
