@@ -70,7 +70,13 @@ export default function HomePage() {
         </section>
         <section className='layout mb-40 flex flex-col space-y-16'>
           <div className='grid h-fit grid-cols-1 md:grid-cols-2'>
-            <div className='w-full rounded-l-3xl bg-slate-700'></div>
+            <div className='relative w-full overflow-hidden rounded-l-3xl'>
+              <Image
+                src='/images/events/opening.png'
+                alt='opening'
+                layout='fill'
+              />
+            </div>
             <div className='flex flex-col space-y-6 rounded-r-3xl bg-clightorange px-8 py-24'>
               <h3>Opening</h3>
               <p>
@@ -109,10 +115,22 @@ export default function HomePage() {
                 </UnstyledLink>
               </div>
             </div>
-            <div className='w-full rounded-r-3xl bg-slate-700'></div>
+            <div className='relative w-full overflow-hidden rounded-r-3xl'>
+              <Image
+                src='/images/events/main-event.png'
+                alt='opening'
+                layout='fill'
+              />
+            </div>
           </div>
           <div className='grid h-fit grid-cols-1 md:grid-cols-2'>
-            <div className='w-full rounded-l-3xl bg-slate-700'></div>
+            <div className='relative w-full overflow-hidden rounded-l-3xl'>
+              <Image
+                src='/images/events/opening.png'
+                alt='opening'
+                layout='fill'
+              />
+            </div>
             <div className='flex flex-col space-y-6 rounded-r-3xl bg-clightorange px-8 py-24'>
               <h3>Closing</h3>
               <p>
