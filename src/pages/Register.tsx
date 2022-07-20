@@ -50,8 +50,8 @@ const pembayaran = [
 export default function Register() {
   const router = useRouter()
   const harga = 25000;
-  const [price, setPrice] = useState(harga);
-  const [quantity, setQuantity] = useState(1);
+  const [price, setPrice] = useState(0);
+  const [quantity, setQuantity] = useState(0);
   const fileRef = useRef<HTMLInputElement>(null);
   const initialFileState: IFileState = {
     file: null,
@@ -118,13 +118,10 @@ export default function Register() {
         body: formdata,
       };
 
-      console.log(form.buktiTF)
-      console.log(total)
-
      axios({
         method: 'post',
         headers: {'Content-Type': 'multipart/form-data' },
-        url: 'http://localhost:3001/v1/ticketing',
+        url: 'https://server.tesdeveloper.me/v1/ticketing',
         data: formdata
       }).then( () =>  router.push('/'));
 
@@ -335,7 +332,7 @@ export default function Register() {
                 name='quantity'
                 value={quantity}
                 onChange={(e:any) => {changePrice(e); changeForm(e)}}
-                min={1}
+                min={0}
                 required
               />
             </div>
