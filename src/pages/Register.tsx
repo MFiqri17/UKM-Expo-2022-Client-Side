@@ -401,7 +401,7 @@ export default function Register() {
                 ? pembayaran[0].atasNama
                 : payment == 'OVO'
                 ? pembayaran[1].atasNama
-                : payment == 'Shopee Pay'
+                : payment == 'Shopee'
                 ? pembayaran[2].atasNama
                 : pembayaran[3].atasNama
             }`}</p>
