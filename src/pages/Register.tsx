@@ -47,7 +47,8 @@ const pembayaran = [
 
 export default function Register() {
   const router = useRouter();
-  const harga = 30000;
+  const [harga, setHarga] = useState(30000);
+  const [isClosed, setIsclosed] = useState(true);
   const [price, setPrice] = useState(0);
   const [quantity, setQuantity] = useState(0);
   const fileRef = useRef<HTMLInputElement>(null);
@@ -141,6 +142,11 @@ export default function Register() {
     e.target.files;
   };
 
+
+  React.useEffect(() => {
+    
+  })
+
   React.useEffect(() => {
     const newLocal = pembayaran[0].name;
     return setPayment(newLocal);
@@ -184,236 +190,238 @@ export default function Register() {
   }, [Img]);
 
   return (
-    <>
-      <RegisterLayout>
-        <h3 className='mb-[90px] mt-[45px] text-center text-[26px] font-bold text-cblack'>
-          Form Pendaftaran
-        </h3>
-        <form
-          onSubmit={formSubmitHandler}
-          className='mb-[50px] flex flex-col space-y-[45px] px-[78px]'
+    <> {isClosed ? <div>Pembelian tiket ditutup sementara</div> : 
+    <RegisterLayout>
+    <h3 className='mb-[90px] mt-[45px] text-center text-[26px] font-bold text-cblack'>
+      Form Pendaftaran
+    </h3>
+    <form
+      onSubmit={formSubmitHandler}
+      className='mb-[50px] flex flex-col space-y-[45px] px-[78px]'
+    >
+      <div className='font-mediumtext-cblack flex flex-col space-y-2 '>
+        <label className='text-xl font-semibold'>Nama Lengkap</label>
+        <input
+          id='nama'
+          type='text'
+          className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
+          placeholder='Masukkan nama lengkap kamu'
+          name='name'
+          onChange={changeForm}
+          value={form.nama}
+          required
+        />
+      </div>
+      <div className='font-mediumtext-cblack flex flex-col space-y-2'>
+        <label className='text-xl font-semibold'>Email</label>
+        <input
+          id='email'
+          type='email'
+          className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
+          placeholder='Masukkan email aktif kamu'
+          name='email'
+          onChange={changeForm}
+          value={form.email}
+          required
+        />
+      </div>
+      <div className='font-mediumtext-cblack flex flex-col space-y-2'>
+        <label className='text-xl font-semibold'>No telepon</label>
+        <input
+          id='noTelepon'
+          type='text'
+          className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
+          placeholder='Masukkan nomor telepon kamu'
+          name='noTelepon'
+          onChange={changeForm}
+          value={form.noTelepon}
+          required
+        />
+      </div>
+      <div className='font-mediumtext-cblack flex flex-col space-y-2'>
+        <label className='text-xl font-semibold'>
+          Pilih Opsi Pembayaran
+        </label>
+        <select
+          id='opsi'
+          disabled={!pembayaran.length}
+          onChange={(e: any) => {
+            changeState(e);
+            changeForm(e);
+          }}
+          value={form.opsi}
+          className='rounded-md !border border-[#6B7280] bg-transparent  p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
         >
-          <div className='font-mediumtext-cblack flex flex-col space-y-2 '>
-            <label className='text-xl font-semibold'>Nama Lengkap</label>
-            <input
-              id='nama'
-              type='text'
-              className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
-              placeholder='Masukkan nama lengkap kamu'
-              name='name'
-              onChange={changeForm}
-              value={form.nama}
-              required
-            />
-          </div>
-          <div className='font-mediumtext-cblack flex flex-col space-y-2'>
-            <label className='text-xl font-semibold'>Email</label>
-            <input
-              id='email'
-              type='email'
-              className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
-              placeholder='Masukkan email aktif kamu'
-              name='email'
-              onChange={changeForm}
-              value={form.email}
-              required
-            />
-          </div>
-          <div className='font-mediumtext-cblack flex flex-col space-y-2'>
-            <label className='text-xl font-semibold'>No telepon</label>
-            <input
-              id='noTelepon'
-              type='text'
-              className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
-              placeholder='Masukkan nomor telepon kamu'
-              name='noTelepon'
-              onChange={changeForm}
-              value={form.noTelepon}
-              required
-            />
-          </div>
-          <div className='font-mediumtext-cblack flex flex-col space-y-2'>
-            <label className='text-xl font-semibold'>
-              Pilih Opsi Pembayaran
-            </label>
-            <select
-              id='opsi'
-              disabled={!pembayaran.length}
-              onChange={(e: any) => {
-                changeState(e);
-                changeForm(e);
-              }}
-              value={form.opsi}
-              className='rounded-md !border border-[#6B7280] bg-transparent  p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
+          <option />
+          {pembayaran.map((pay) => (
+            <option
+              key={pay.uid}
+              value={pay.name}
+              className='focus:bg-black'
             >
-              <option />
-              {pembayaran.map((pay) => (
-                <option
-                  key={pay.uid}
-                  value={pay.name}
-                  className='focus:bg-black'
-                >
-                  {pay.name}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className='font-mediumtext-cblack flex flex-col space-y-2'>
-            <label
-              className='text-xl font-semibold'
-              onChange={(e: any) => {
-                setPayment(e.target.value);
-              }}
-            >
-              {payment == 'BRI' ? `Nomor rekening` : `Nomor ${payment}`}
-            </label>
-            <input
-              min={0}
-              id='noRek'
-              type='number'
-              className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
-              placeholder={
-                payment == 'BRI'
-                  ? `Masukkan nomor rekening kamu`
-                  : `Masukkan Nomor ${payment} kamu`
-              }
-              name='rekening'
-              onChange={changeForm}
-              value={form.noRek}
-              required
-            />
-          </div>
-          <div className='font-mediumtext-cblack flex flex-col space-y-2 md:w-[363px]'>
-            <label className='text-xl font-semibold'>
-              Kode referral Student Ambassador
-            </label>
-            <input
-              id='kode'
-              type='text'
-              className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
-              placeholder='Masukkan nomor kode referral kamu'
-              name='kode'
-              onChange={changeForm}
-              value={form.kode}
-            />
-          </div>
-          <div className='flex flex-col justify-center space-y-[30px] md:flex-row md:justify-start md:space-y-0 md:space-x-5'>
-            <div className='font-mediumtext-cblack flex flex-col space-y-2'>
-              <label className='text-xl font-semibold'>Total harga</label>
-              <input
-                type='text'
-                className='rounded-md !border  border-cgreen bg-transparent p-2 !ring-cgreen'
-                value={`Rp. ${price}`}
-                onChange={(e: any) => {
-                  changeQuantity(e);
-                  changeForm(e);
-                }}
-                disabled
-              />
-              <input
-                id='cost'
-                type='number'
-                className='rounded-md !border  border-cgreen bg-transparent p-2 !ring-cgreen'
-                name='harga'
-                value={price}
-                onChange={(e: any) => {
-                  changeQuantity(e);
-                  changeForm(e);
-                }}
-                required
-                hidden
-              />
-            </div>
-            <div className='font-mediumtext-cblack flex flex-col space-y-2 md:w-[382px]'>
-              <label className='text-xl font-semibold'>Jumlah tiket</label>
-              <input
-                id='jumlah'
-                type='number'
-                className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
-                placeholder='Masukkan jumlah tiket yang kamu beli'
-                name='quantity'
-                value={quantity}
-                onChange={(e: any) => {
-                  changePrice(e);
-                  changeForm(e);
-                }}
-                min={0}
-                required
-              />
-            </div>
-          </div>
-          <div className='font-mediumtext-cblack flex flex-col space-y-2'>
-            <label className='text-xl font-semibold'>
-              Upload bukti transfer kamu
-            </label>
-            <div className='flex flex-row items-center justify-start'>
-              <button
-                id='buton'
-                type='button'
-                className=' flex items-center rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
-                onClick={(e) => {
-                  e.preventDefault();
-                  fileRef?.current?.click();
-                }}
-              >
-                {' '}
-                <img className='mr-4' src='images/upload.svg' alt='' /> Add File{' '}
-              </button>
-              <input
-                ref={fileRef}
-                onChange={(e: any) => {
-                  changeFile(e);
-                  handleChange(e);
-                }}
-                // value={form.buktiTF}
-                multiple={false}
-                id='buktiTF'
-                name='bukti-tf'
-                type='file'
-                className=' hidden rounded-md !border border-[rgb(107,114,128)] bg-transparent autofill:bg-transparent focus:!border-pink-200 focus:!ring-pink-200  focus-visible:!border-pink-200'
-                required
-              />
-            </div>
-          </div>
-          <div>
-            <img src={Img.src} alt='' />
-          </div>
+              {pay.name}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div className='font-mediumtext-cblack flex flex-col space-y-2'>
+        <label
+          className='text-xl font-semibold'
+          onChange={(e: any) => {
+            setPayment(e.target.value);
+          }}
+        >
+          {payment == 'BRI' ? `Nomor rekening` : `Nomor ${payment}`}
+        </label>
+        <input
+          min={0}
+          id='noRek'
+          type='number'
+          className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
+          placeholder={
+            payment == 'BRI'
+              ? `Masukkan nomor rekening kamu`
+              : `Masukkan Nomor ${payment} kamu`
+          }
+          name='rekening'
+          onChange={changeForm}
+          value={form.noRek}
+          required
+        />
+      </div>
+      <div className='font-mediumtext-cblack flex flex-col space-y-2 md:w-[363px]'>
+        <label className='text-xl font-semibold'>
+          Kode referral Student Ambassador
+        </label>
+        <input
+          id='kode'
+          type='text'
+          className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
+          placeholder='Masukkan nomor kode referral kamu'
+          name='kode'
+          onChange={changeForm}
+          value={form.kode}
+        />
+      </div>
+      <div className='flex flex-col justify-center space-y-[30px] md:flex-row md:justify-start md:space-y-0 md:space-x-5'>
+        <div className='font-mediumtext-cblack flex flex-col space-y-2'>
+          <label className='text-xl font-semibold'>Total harga</label>
+          <input
+            type='text'
+            className='rounded-md !border  border-cgreen bg-transparent p-2 !ring-cgreen'
+            value={`Rp. ${price}`}
+            onChange={(e: any) => {
+              changeQuantity(e);
+              changeForm(e);
+            }}
+            disabled
+          />
+          <input
+            id='cost'
+            type='number'
+            className='rounded-md !border  border-cgreen bg-transparent p-2 !ring-cgreen'
+            name='harga'
+            value={price}
+            onChange={(e: any) => {
+              changeQuantity(e);
+              changeForm(e);
+            }}
+            required
+            hidden
+          />
+        </div>
+        <div className='font-mediumtext-cblack flex flex-col space-y-2 md:w-[382px]'>
+          <label className='text-xl font-semibold'>Jumlah tiket</label>
+          <input
+            id='jumlah'
+            type='number'
+            className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
+            placeholder='Masukkan jumlah tiket yang kamu beli'
+            name='quantity'
+            value={quantity}
+            onChange={(e: any) => {
+              changePrice(e);
+              changeForm(e);
+            }}
+            min={0}
+            required
+          />
+        </div>
+      </div>
+      <div className='font-mediumtext-cblack flex flex-col space-y-2'>
+        <label className='text-xl font-semibold'>
+          Upload bukti transfer kamu
+        </label>
+        <div className='flex flex-row items-center justify-start'>
+          <button
+            id='buton'
+            type='button'
+            className=' flex items-center rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
+            onClick={(e) => {
+              e.preventDefault();
+              fileRef?.current?.click();
+            }}
+          >
+            {' '}
+            <img className='mr-4' src='images/upload.svg' alt='' /> Add File{' '}
+          </button>
+          <input
+            ref={fileRef}
+            onChange={(e: any) => {
+              changeFile(e);
+              handleChange(e);
+            }}
+            // value={form.buktiTF}
+            multiple={false}
+            id='buktiTF'
+            name='bukti-tf'
+            type='file'
+            className=' hidden rounded-md !border border-[rgb(107,114,128)] bg-transparent autofill:bg-transparent focus:!border-pink-200 focus:!ring-pink-200  focus-visible:!border-pink-200'
+            required
+          />
+        </div>
+      </div>
+      <div>
+        <img src={Img.src} alt='' />
+      </div>
 
-          <img className='my-[45px]' src='svg/Line 17.svg' alt='' />
+      <img className='my-[45px]' src='svg/Line 17.svg' alt='' />
 
-          <div className=''>
-            <h5 className='text-xl font-semibold text-black'>
-              Rekening Tujuan
-            </h5>
-            <p className='text-xl font-medium text-black'>{payment}</p>
-            <p className='text-xl font-medium text-black'>
-              {payment == 'BRI' ? `No rekening` : `No ${payment}`} -{' '}
-              {payment == 'Gopay'
-                ? pembayaran[0].noRek
-                : payment == 'OVO'
-                ? pembayaran[1].noRek
-                : payment == 'Shopee'
-                ? pembayaran[2].noRek
-                : pembayaran[3].noRek}{' '}
-            </p>
-            <p className='text-xl font-medium text-black'>{`a/n ${
-              payment == 'Gopay'
-                ? pembayaran[0].atasNama
-                : payment == 'OVO'
-                ? pembayaran[1].atasNama
-                : payment == 'Shopee'
-                ? pembayaran[2].atasNama
-                : pembayaran[3].atasNama
-            }`}</p>
-          </div>
+      <div className=''>
+        <h5 className='text-xl font-semibold text-black'>
+          Rekening Tujuan
+        </h5>
+        <p className='text-xl font-medium text-black'>{payment}</p>
+        <p className='text-xl font-medium text-black'>
+          {payment == 'BRI' ? `No rekening` : `No ${payment}`} -{' '}
+          {payment == 'Gopay'
+            ? pembayaran[0].noRek
+            : payment == 'OVO'
+            ? pembayaran[1].noRek
+            : payment == 'Shopee'
+            ? pembayaran[2].noRek
+            : pembayaran[3].noRek}{' '}
+        </p>
+        <p className='text-xl font-medium text-black'>{`a/n ${
+          payment == 'Gopay'
+            ? pembayaran[0].atasNama
+            : payment == 'OVO'
+            ? pembayaran[1].atasNama
+            : payment == 'Shopee'
+            ? pembayaran[2].atasNama
+            : pembayaran[3].atasNama
+        }`}</p>
+      </div>
 
-          <div className='flex justify-center'>
-            <button className='w-[13.75rem] rounded-[20px] bg-gradient-to-r from-cgreen to-cgreenb py-[10px] text-xl font-semibold text-cblack'>
-              Daftar
-            </button>
-          </div>
-        </form>
-      </RegisterLayout>
+      <div className='flex justify-center'>
+        <button className='w-[13.75rem] rounded-[20px] bg-gradient-to-r from-cgreen to-cgreenb py-[10px] text-xl font-semibold text-cblack'>
+          Daftar
+        </button>
+      </div>
+    </form>
+  </RegisterLayout>
+    }
+      
     </>
   );
 }
