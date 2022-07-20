@@ -1,48 +1,48 @@
-import React, { useRef, useState, useEffect } from 'react';
-import RegisterLayout from '@/components/register/RegisterLayout';
 import axios from 'axios';
+import React, { useState } from 'react';
 
+import RegisterLayout from '@/components/register/RegisterLayout';
 
-export default function CheckTicket(){
-
-  
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState("");
-  const [data, setData] = useState({booking_status:""});
+export default function CheckTicket() {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('');
+  const [data, setData] = useState({ booking_status: '' });
 
   // useEffect(() => {
   //   requestEmail();
   // }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-
-  const formSubmitHandler = async (e:any) => {
-    
-    e.preventDefault()
+  const formSubmitHandler = async (e: any) => {
+    e.preventDefault();
     requestEmail();
-  }
-
-  
+  };
 
   const requestEmail = () => {
-    let raw = `{\n    \"email\" : \"${email}\"\n}`; 
+    const raw = `{\n    \"email\" : \"${email}\"\n}`;
     axios({
       method: 'post',
-      headers: {'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json' },
       url: 'https://server.tesdeveloper.me/v1/ticketing/getTicket',
-      data: raw
-    }).then(
-      (res) => {
-        setData(res.data.data)
-        setStatus(data.booking_status ? "Sudah Terverifikasi silahkan cek email anda" : "Your ticket is on the way ")
-      }
-    )
-  }
+      data: raw,
+    }).then((res) => {
+      setData(res.data.data);
+      setStatus(
+        data.booking_status
+          ? 'Sudah Terverifikasi silahkan cek email anda'
+          : 'Your ticket is on the way '
+      );
+    });
+  };
 
-  return(
+  return (
     <>
-      <RegisterLayout >
-        <form action="" onSubmit={formSubmitHandler} className='mb-[50px] flex flex-col space-y-[45px] px-[78px]'>
-        <div className='font-mediumtext-cblack flex flex-col space-y-2'>
+      <RegisterLayout>
+        <form
+          action=''
+          onSubmit={formSubmitHandler}
+          className='mb-[50px] flex flex-col space-y-[45px] px-[78px]'
+        >
+          <div className='font-mediumtext-cblack flex flex-col space-y-2'>
             <label className='text-xl font-semibold'>Email</label>
             <input
               id='email'
@@ -51,7 +51,7 @@ export default function CheckTicket(){
               placeholder='Masukkan email aktif kamu'
               name='email'
               value={email}
-              onChange={(e:any) => setEmail(e.target.value)}
+              onChange={(e: any) => setEmail(e.target.value)}
               required
             />
           </div>
@@ -62,13 +62,8 @@ export default function CheckTicket(){
           </div>
         </form>
 
-        <div className='text-center'>
-            
-            { 
-             (status) 
-            }
-        </div>
+        <div className='text-center'>{status}</div>
       </RegisterLayout>
     </>
-  )
+  );
 }

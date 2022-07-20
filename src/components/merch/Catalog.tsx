@@ -5,7 +5,6 @@ import { useState } from 'react';
 import CatalogCard from '@/components/merch/CatalogCard';
 import catalog from '@/components/merch/data/CatalogArray';
 import MobileCatalog from '@/components/merch/mobile/MobileCatalog';
-import Image from 'next/image';
 import SectionTitle from '@/components/SectionTitle';
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');

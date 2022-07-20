@@ -6,7 +6,6 @@ import * as React from 'react';
 
 import UnderlineLink from '@/components/links/UnderlineLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
-
 const links = [
   { href: '/', label: 'HOME' },
   { href: '/event', label: 'EVENT' },
@@ -61,6 +60,11 @@ export default function Header() {
                             Buy Now
                           </p>
                         </Link>
+                        <Link href='/CheckTicket'>
+                          <p className='cursor-pointer font-semibold'>
+                            Check My Ticket
+                          </p>
+                        </Link>
                       </div>
                     </div>
                   </Popover.Panel>
@@ -113,7 +117,6 @@ export default function Header() {
               >
                 <div className='fixed inset-0 bg-cgreen bg-opacity-75' />
               </Transition.Child>
-
               <div className='fixed inset-0 overflow-y-auto'>
                 <div className='flex min-h-full items-center justify-center p-4 text-center'>
                   <Transition.Child
@@ -165,6 +168,19 @@ export default function Header() {
                                 Buy Now
                               </h1>
                             </Link>
+                            <Link href='/CheckTicket'>
+                              <h1 className='text-3xl text-clightorange'>
+                                Check My Ticket
+                              </h1>
+                            </Link>
+                          </li>
+                        )}
+                      </ul>
+                    </Dialog.Panel>
+                  </Transition.Child>
+                </div>
+              </div>
+            </Dialog>
           </Transition>
         </nav>
       </div>

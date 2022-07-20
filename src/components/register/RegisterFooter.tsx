@@ -4,7 +4,7 @@ export default function RegisterFooter() {
   return (
     <>
       <div className='flex w-full flex-col justify-center p-4 lg:flex-row lg:justify-between'>
-        <div className='flex flex-row space-x-6 mx-auto mb-4 w-fit lg:mx-0 lg:mb-0'>
+        <div className='mx-auto mb-4 flex w-fit flex-row space-x-6 lg:mx-0 lg:mb-0'>
           <a
             href='https://wa.me/6282143719390'
             className='block transition duration-300 hover:scale-105'
@@ -22,13 +22,14 @@ export default function RegisterFooter() {
               <img src='images/whatsapp-icon.svg' alt='whatsapp-icon' />
             </div>
           </a>
-
-          
         </div>
 
-
         <div className='flex flex-row items-end justify-center space-x-6'>
-          <a href='https://www.ukmexpo-its.com/' target='_blank' rel='noreferrer'>
+          <a
+            href='https://www.ukmexpo-its.com/'
+            target='_blank'
+            rel='noreferrer'
+          >
             <svg
               className='fill-[#D0D0D0] transition duration-300 ease-linear hover:fill-cgreen'
               width='20'

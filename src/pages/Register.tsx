@@ -1,13 +1,9 @@
+import axios from 'axios';
+import { useRouter } from 'next/router';
 import React, { useRef, useState } from 'react';
-import  {useRouter}  from 'next/router';
-import swal from "sweetalert2";
-
+import swal from 'sweetalert2';
 
 import RegisterLayout from '@/components/register/RegisterLayout';
-
-import axios from 'axios';
-
-
 
 interface IFileState {
   file: File | null;
@@ -50,7 +46,7 @@ const pembayaran = [
 ];
 
 export default function Register() {
-  const router = useRouter()
+  const router = useRouter();
   const harga = 30000;
   const [price, setPrice] = useState(0);
   const [quantity, setQuantity] = useState(0);
@@ -64,81 +60,68 @@ export default function Register() {
   const [payment, setPayment] = React.useState('');
 
   const [form, setForm] = React.useState({
-    nama: "",
-    email: "",
-    noTelepon: "",
-    opsi: "",
-    noRek: "",
-    kode: "",
-    jumlah: "",
-    cost: "",
-    buktiTF: "",
-  })
+    nama: '',
+    email: '',
+    noTelepon: '',
+    opsi: '',
+    noRek: '',
+    kode: '',
+    jumlah: '',
+    cost: '',
+    buktiTF: '',
+  });
 
-
-  const changeForm = (e:any) => {
+  const changeForm = (e: any) => {
     setForm((prevState) => ({
       ...prevState,
-      [e.target.id]: e.target.value
-   }));
-  }
+      [e.target.id]: e.target.value,
+    }));
+  };
 
   const changeFile = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if(e.target.files){
-    const file = e.target.files[0]  
-    setForm((prevState) => ({
-      ...prevState,
-      [e.target.id]: file
-
-      
-
-    }))
-  }
+    if (e.target.files) {
+      const file = e.target.files[0];
+      setForm((prevState) => ({
+        ...prevState,
+        [e.target.id]: file,
+      }));
+    }
     // if(e.currentTarget.files)
     // console.log(e.currentTarget.files[0]);
-  }
-  
+  };
 
-  
-
-  const formSubmitHandler = async (e:any) => {
+  const formSubmitHandler = async (e: any) => {
     e.preventDefault();
 
-   const total = parseInt(form.jumlah) * harga; 
+    const total = parseInt(form.jumlah) * harga;
 
-   const formdata = new FormData();
-   formdata.append("name", form.nama);
-   formdata.append("email", form.email);
-   formdata.append("whatsapp", form.noTelepon);
-   formdata.append("payment_proof", form.buktiTF);
-   formdata.append("payment_no", form.noRek);
-   formdata.append("payment_method", form.opsi);
-   formdata.append("ticket_total", form.jumlah);
-   formdata.append("payment_total", total.toString());
-  
+    const formdata = new FormData();
+    formdata.append('name', form.nama);
+    formdata.append('email', form.email);
+    formdata.append('whatsapp', form.noTelepon);
+    formdata.append('payment_proof', form.buktiTF);
+    formdata.append('payment_no', form.noRek);
+    formdata.append('payment_method', form.opsi);
+    formdata.append('ticket_total', form.jumlah);
+    formdata.append('payment_total', total.toString());
 
-     axios({
-        method: 'post',
-        headers: {'Content-Type': 'multipart/form-data' },
-        url: 'https://server.tesdeveloper.me/v1/ticketing',
-        data: formdata
-      }).then(
-        (res) => {
-          swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Your form has been saved',
-            showConfirmButton: false,
-            timer: 1500
-          })
-        } 
-      ).then( (res) =>  router.push('/'));
-
-
-   
-      
-  }
-
+    axios({
+      method: 'post',
+      headers: { 'Content-Type': 'multipart/form-data' },
+      url: 'https://server.tesdeveloper.me/v1/ticketing',
+      data: formdata,
+    })
+      .then((res) => {
+        swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Your form has been saved',
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      })
+      .then((res) => router.push('/'));
+  };
 
   const changePrice = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuantity(e.target.valueAsNumber);
@@ -206,7 +189,8 @@ export default function Register() {
         <h3 className='mb-[90px] mt-[45px] text-center text-[26px] font-bold text-cblack'>
           Form Pendaftaran
         </h3>
-        <form onSubmit={formSubmitHandler}
+        <form
+          onSubmit={formSubmitHandler}
           className='mb-[50px] flex flex-col space-y-[45px] px-[78px]'
         >
           <div className='font-mediumtext-cblack flex flex-col space-y-2 '>
@@ -255,7 +239,10 @@ export default function Register() {
             <select
               id='opsi'
               disabled={!pembayaran.length}
-              onChange={(e:any) => {changeState(e); changeForm(e)}}
+              onChange={(e: any) => {
+                changeState(e);
+                changeForm(e);
+              }}
               value={form.opsi}
               className='rounded-md !border border-[#6B7280] bg-transparent  p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
             >
@@ -317,16 +304,22 @@ export default function Register() {
                 type='text'
                 className='rounded-md !border  border-cgreen bg-transparent p-2 !ring-cgreen'
                 value={`Rp. ${price}`}
-                onChange={(e:any) => {changeQuantity(e); changeForm(e)}}
+                onChange={(e: any) => {
+                  changeQuantity(e);
+                  changeForm(e);
+                }}
                 disabled
               />
-               <input
+              <input
                 id='cost'
                 type='number'
                 className='rounded-md !border  border-cgreen bg-transparent p-2 !ring-cgreen'
                 name='harga'
                 value={price}
-                onChange={(e:any) => {changeQuantity(e); changeForm(e)}}
+                onChange={(e: any) => {
+                  changeQuantity(e);
+                  changeForm(e);
+                }}
                 required
                 hidden
               />
@@ -340,7 +333,10 @@ export default function Register() {
                 placeholder='Masukkan jumlah tiket yang kamu beli'
                 name='quantity'
                 value={quantity}
-                onChange={(e:any) => {changePrice(e); changeForm(e)}}
+                onChange={(e: any) => {
+                  changePrice(e);
+                  changeForm(e);
+                }}
                 min={0}
                 required
               />
@@ -365,7 +361,10 @@ export default function Register() {
               </button>
               <input
                 ref={fileRef}
-                onChange={(e:any) => {changeFile(e); handleChange(e)}}
+                onChange={(e: any) => {
+                  changeFile(e);
+                  handleChange(e);
+                }}
                 // value={form.buktiTF}
                 multiple={false}
                 id='buktiTF'
@@ -388,10 +387,24 @@ export default function Register() {
             </h5>
             <p className='text-xl font-medium text-black'>{payment}</p>
             <p className='text-xl font-medium text-black'>
-              {payment == 'Bank BRI' ? `No rekening` : `No ${payment}`} - {' '}
-              {payment == 'Gopay' ? pembayaran[0].noRek : payment == 'OVO' ? pembayaran[1].noRek : payment == 'Shopee Pay' ? pembayaran[2].noRek : pembayaran[3].noRek }{' '}
+              {payment == 'Bank BRI' ? `No rekening` : `No ${payment}`} -{' '}
+              {payment == 'Gopay'
+                ? pembayaran[0].noRek
+                : payment == 'OVO'
+                ? pembayaran[1].noRek
+                : payment == 'Shopee Pay'
+                ? pembayaran[2].noRek
+                : pembayaran[3].noRek}{' '}
             </p>
-            <p className='text-xl font-medium text-black'>{`a/n ${payment == 'Gopay' ? pembayaran[0].atasNama : payment == 'OVO' ? pembayaran[1].atasNama : payment == 'Shopee Pay' ? pembayaran[2].atasNama : pembayaran[3].atasNama }`}</p>
+            <p className='text-xl font-medium text-black'>{`a/n ${
+              payment == 'Gopay'
+                ? pembayaran[0].atasNama
+                : payment == 'OVO'
+                ? pembayaran[1].atasNama
+                : payment == 'Shopee Pay'
+                ? pembayaran[2].atasNama
+                : pembayaran[3].atasNama
+            }`}</p>
           </div>
 
           <div className='flex justify-center'>
