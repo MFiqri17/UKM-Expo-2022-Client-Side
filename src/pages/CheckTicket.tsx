@@ -18,6 +18,7 @@ export default function CheckTicket() {
   };
 
   const requestEmail = () => {
+    // @ts-ignore
     const raw = `{\n    \"email\" : \"${email}\"\n}`;
     axios({
       method: 'post',
