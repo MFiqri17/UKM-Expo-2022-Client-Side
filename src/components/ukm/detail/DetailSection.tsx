@@ -23,9 +23,6 @@ export default function DetailUKM({ UKM }: IDetailUKMProps) {
             <div className='flex grow flex-col justify-center gap-y-5 py-6'>
               <h1 className='font-semibold'>{nama}</h1>
               <p>{deskripsi}</p>
-              <button className='btn btn-gradient mx-auto rounded sm:mx-0 sm:w-2/5'>
-                Daftar Sekarang
-              </button>
             </div>
             <div>
               <h4>Hubungi Kami</h4>
@@ -50,7 +47,7 @@ export default function DetailUKM({ UKM }: IDetailUKMProps) {
       <div className='mb-20 flex h-[11rem] justify-center sm:mb-28 sm:h-[19rem] md:h-[31rem]'>
         <iframe
           className='aspect-video'
-          src='https://www.youtube.com/embed/dQw4w9WgXcQ'
+          src='https://www.youtube.com/embed/BYba9Laa3lo'
           title='YouTube video player'
           frameBorder='0'
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'

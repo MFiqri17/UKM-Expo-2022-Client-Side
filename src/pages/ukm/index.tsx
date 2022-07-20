@@ -52,7 +52,10 @@ export default function UKMPage() {
         <Seo templateTitle='UKM' />
         <main>
           <HeroUKM />
-          <section className='bg-white py-10 px-4 sm:px-16 sm:py-20'>
+          <section
+            id='main-section'
+            className='bg-white py-10 px-4 sm:px-16 sm:py-20'
+          >
             <BidangUKM setSelectedBidang={setSelectedBidang} />
             <ListUKM UKMList={UKMList} selectedBidang={selectedBidang} />
           </section>
