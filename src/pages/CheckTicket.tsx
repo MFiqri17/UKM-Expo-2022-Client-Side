@@ -19,7 +19,7 @@ export default function CheckTicket() {
 
   const requestEmail = () => {
     // @ts-ignore
-    const raw = `{\n    \"email\" : \"${email}\"\n}`;
+    const raw = {email : email};
     axios({
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
