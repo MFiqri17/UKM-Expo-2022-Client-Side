@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 import axios from 'axios';
 import React, { useState } from 'react';
 
@@ -19,7 +20,7 @@ export default function CheckTicket() {
 
   const requestEmail = () => {
     // @ts-ignore
-    const raw = {email : email};
+    const raw = {email:email};
     axios({
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
