@@ -1,8 +1,8 @@
-import { ukm } from '@/components/ukm/data/ukm';
 import * as React from 'react';
 
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
+import { ukm } from '@/components/ukm/data/ukm';
 import BidangUKM from '@/components/ukm/main/BidangUKM';
 import HeroUKM from '@/components/ukm/main/HeroUKM';
 import ListUKM from '@/components/ukm/main/ListUKM';
@@ -52,7 +52,10 @@ export default function UKMPage() {
         <Seo templateTitle='UKM' />
         <main>
           <HeroUKM />
-          <section className='bg-white py-10 px-4 sm:px-16 sm:py-20'>
+          <section
+            id='main-section'
+            className='bg-white py-10 px-4 sm:px-16 sm:py-20'
+          >
             <BidangUKM setSelectedBidang={setSelectedBidang} />
             <ListUKM UKMList={UKMList} selectedBidang={selectedBidang} />
           </section>
