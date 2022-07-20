@@ -165,14 +165,6 @@ export default function Header() {
                                 Buy Now
                               </h1>
                             </Link>
-                          </li>
-                        )}
-                      </ul>
-                    </Dialog.Panel>
-                  </Transition.Child>
-                </div>
-              </div>
-            </Dialog>
           </Transition>
         </nav>
       </div>
