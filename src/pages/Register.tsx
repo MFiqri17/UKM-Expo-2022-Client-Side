@@ -48,7 +48,7 @@ const pembayaran = [
 export default function Register() {
   const router = useRouter();
   const [harga, setHarga] = useState(30000);
-  const [isClosed, setIsclosed] = useState(true);
+  const [isClosed, setIsclosed] = useState(false);
   const [price, setPrice] = useState(0);
   const [quantity, setQuantity] = useState(0);
   const fileRef = useRef<HTMLInputElement>(null);
@@ -190,7 +190,7 @@ export default function Register() {
   }, [Img]);
 
   return (
-    <> {isClosed ? <div>Pembelian tiket ditutup sementara</div> : 
+    <> {isClosed ? <div>Pembelian tiket ditutup sementara Sampai pukul 8.30 dikarenakan perbaikan server</div> : 
     <RegisterLayout>
     <h3 className='mb-[90px] mt-[45px] text-center text-[26px] font-bold text-cblack'>
       Form Pendaftaran
