@@ -13,7 +13,7 @@ export default function CheckTicket() {
   //   requestEmail();
   // }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const formSubmitHandler = async (e: any) => {
+  const formSubmitHandler = async (e) => {
     e.preventDefault();
     requestEmail();
   };
@@ -53,7 +53,7 @@ export default function CheckTicket() {
               placeholder='Masukkan email aktif kamu'
               name='email'
               value={email}
-              onChange={(e: any) => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
