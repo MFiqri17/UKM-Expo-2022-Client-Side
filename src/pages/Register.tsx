@@ -52,7 +52,7 @@ export default function Register() {
   }
   const router = useRouter();
   const [harga, setHarga] = useState(30000);
-  const [isClosed] = useState(false);
+  const [isClosed] = useState(true);
   const [todayDate] = useState(new Date());
 
   const [formErrors, setFormErrors] = useState({} as errorLists);
