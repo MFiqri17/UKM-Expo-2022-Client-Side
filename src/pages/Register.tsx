@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import React, { useRef, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import RegisterLayout from '@/components/register/RegisterLayout';
+import Seo from '@/components/Seo';
 
 interface IFileState {
   file: File | null;
@@ -58,7 +59,7 @@ export default function Register() {
   }
   const router = useRouter();
   const [harga, setHarga] = useState(30000);
-  const [isClosed] = useState(false);
+  const [isClosed] = useState(true);
   const [todayDate] = useState(new Date());
 
   const [formErrors, setFormErrors] = useState({} as errorLists);
@@ -131,7 +132,7 @@ export default function Register() {
         router.push('/')
       })
       .catch((err) => {
-        toast.error(`error: ${err} Pembelian gagal`)
+        toast.error(`error: ${err} Pembelian gagal`);
       });
   };
 
@@ -204,21 +205,22 @@ export default function Register() {
     e.target.files;
   };
 
-
   React.useEffect(() => {
     fetch("https://server.tesdeveloper.me/v1/ticketingsss").then(res => res.json()).then(data => {
         let total = 0;
-      data.data.forEach((ticket:any) => {
-      total += parseInt(ticket.ticket_total);
-      
-  });
-  setTotal(total)
-  if(total === 300 ||todayDate.getDate() >= new Date(2022, 7, 22).getDate()){
-    setHarga(40000);
-    console.log(harga)
-  }
-    })
-  }, [])
+        data.data.forEach((ticket: any) => {
+          total += parseInt(ticket.ticket_total);
+        });
+        setTotal(total);
+        if (
+          total === 300 ||
+          todayDate.getDate() >= new Date(2022, 7, 22).getDate()
+        ) {
+          setHarga(40000);
+          console.log(harga);
+        }
+      });
+  }, []);
 
   React.useEffect(() => {
     const newLocal = pembayaran[0].name;
@@ -262,12 +264,10 @@ export default function Register() {
     };
   }, [Img]);
 
-
-
   return (
     <> 
      <Toaster  position="bottom-center"/>
-    {isClosed ? <div>Pembelian tiket ditutup sementara Sampai pukul 8.30 dikarenakan perbaikan server</div> : 
+     
     <RegisterLayout>
     <h3 className='mb-[90px] mt-[45px] text-center text-[26px] font-bold text-cblack'>
       Form Pendaftaran
@@ -483,43 +483,43 @@ export default function Register() {
         <img src={Img.src} alt='' />
       </div>
 
-      <img className='my-[45px]' src='svg/Line 17.svg' alt='' />
+              <img className='my-[45px]' src='svg/Line 17.svg' alt='' />
 
-      <div className=''>
-        <h5 className='text-xl font-semibold text-black'>
-          Rekening Tujuan
-        </h5>
-        <p className='text-xl font-medium text-black'>{payment}</p>
-        <p className='text-xl font-medium text-black'>
-          {payment == 'BRI' ? `No rekening` : `No ${payment}`} -{' '}
-          {payment == 'Gopay'
-            ? pembayaran[0].noRek
-            : payment == 'OVO'
-            ? pembayaran[1].noRek
-            : payment == 'Shopee'
-            ? pembayaran[2].noRek
-            : pembayaran[3].noRek}{' '}
-        </p>
-        <p className='text-xl font-medium text-black'>{`a/n ${
-          payment == 'Gopay'
-            ? pembayaran[0].atasNama
-            : payment == 'OVO'
-            ? pembayaran[1].atasNama
-            : payment == 'Shopee'
-            ? pembayaran[2].atasNama
-            : pembayaran[3].atasNama
-        }`}</p>
-      </div>
+              <div className=''>
+                <h5 className='text-xl font-semibold text-black'>
+                  Rekening Tujuan
+                </h5>
+                <p className='text-xl font-medium text-black'>{payment}</p>
+                <p className='text-xl font-medium text-black'>
+                  {payment == 'BRI' ? `No rekening` : `No ${payment}`} -{' '}
+                  {payment == 'Gopay'
+                    ? pembayaran[0].noRek
+                    : payment == 'OVO'
+                    ? pembayaran[1].noRek
+                    : payment == 'Shopee'
+                    ? pembayaran[2].noRek
+                    : pembayaran[3].noRek}{' '}
+                </p>
+                <p className='text-xl font-medium text-black'>{`a/n ${
+                  payment == 'Gopay'
+                    ? pembayaran[0].atasNama
+                    : payment == 'OVO'
+                    ? pembayaran[1].atasNama
+                    : payment == 'Shopee'
+                    ? pembayaran[2].atasNama
+                    : pembayaran[3].atasNama
+                }`}</p>
+              </div>
 
-      <div className='flex justify-center'>
-        <button className='w-[13.75rem] rounded-[20px] bg-gradient-to-r from-cgreen to-cgreenb py-[10px] text-xl font-semibold text-cblack'>
-          Daftar
-        </button>
-      </div>
-    </form>
-  </RegisterLayout>
-    }
-      
+              <div className='flex justify-center'>
+                <button className='w-[13.75rem] rounded-[20px] bg-gradient-to-r from-cgreen to-cgreenb py-[10px] text-xl font-semibold text-cblack'>
+                  Daftar
+                </button>
+              </div>
+            </form>
+
+        
+      </RegisterLayout>
     </>
   );
 }
