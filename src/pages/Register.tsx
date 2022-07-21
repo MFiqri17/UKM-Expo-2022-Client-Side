@@ -2,8 +2,6 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 import React, { useRef, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
-const notify = () => toast('Here is your toast.');
-
 import RegisterLayout from '@/components/register/RegisterLayout';
 
 interface IFileState {
@@ -47,10 +45,23 @@ const pembayaran = [
 ];
 
 export default function Register() {
+  type errorLists = {
+    nama: string,
+    email: string,
+    noTelepon: string,
+    opsi: string,
+    noRek: string,
+    kode: string,
+    jumlah: string,
+    cost: string,
+    buktiTF: string,
+  }
   const router = useRouter();
   const [harga, setHarga] = useState(30000);
-  const [isClosed, setIsclosed] = useState(true);
-  const [todayDate, setTodayDate] = useState(new Date());
+  const [isClosed] = useState(false);
+  const [todayDate] = useState(new Date());
+
+  const [formErrors, setFormErrors] = useState({} as errorLists);
   const [price, setPrice] = useState(0);
   const [quantity, setQuantity] = useState(0);
   const [total, setTotal] = useState(0);
@@ -96,7 +107,7 @@ export default function Register() {
 
   const formSubmitHandler = async (e: any) => {
     e.preventDefault();
-
+    setFormErrors(validate(form));
     const total = parseInt(form.jumlah) * harga;
 
     const formdata = new FormData();
@@ -115,13 +126,64 @@ export default function Register() {
       url: 'https://server.tesdeveloper.me/v1/ticketing',
       data: formdata,
     })
-      .then((res) => {
+      .then(() => {
         toast.success('Pembelian tiket berhasil ')
         router.push('/')
       })
       .catch((err) => {
         toast.error(`error: ${err} Pembelian gagal`)
       });
+  };
+
+  React.useEffect(() => {
+    console.log(formErrors);
+    if (Object.keys(formErrors).length === 0) {
+      console.log(form);
+    }
+  }, [formErrors]);
+  const validate = (values:any) => {
+    type Errors = {
+      nama: string,
+      email: string,
+      noTelepon: string,
+      opsi: string,
+      noRek: string,
+      kode: string,
+      jumlah: string,
+      cost: string,
+      buktiTF: string,
+    };
+
+    const errors = {} as Errors;
+
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    if (!values.nama) {
+      errors.nama = "Nama Lengkap wajib diisi ya!";
+      console.log("blah blah")
+    }
+    if (!values.email) {
+      errors.email = "Email wajib diisi ya!";
+    } else if (!regex.test(values.email)) {
+      errors.email = "Format email tidak valid";
+    }
+    if (!values.noTelepon) {
+      errors.noTelepon = "No Telepon wajib diisi ya!";
+    }
+    if (!values.opsi) {
+      errors.opsi = "Opsi Pembayaran wajib diisi ya!";
+    }
+    if (!values.noRek) {
+      errors.noRek = "Nomor yang kamu gunakan untuk transaksi wajib diisi ya!";
+    }
+    if (!values.jumlah) {
+      errors.jumlah = "Jumlah tiket yang ingin kamu beli wajib diisi ya!";
+    } else if (values.jumlah <= 0) {
+      errors.jumlah = "Jumlah tiket yang dibeli minimal 1 ya!"
+    }
+    if (!values.buktiTF) {
+      errors.buktiTF = "Bukti Transfer kamu wajib diisi ya!";
+    }
+    return errors;
   };
 
   const changePrice = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -144,7 +206,7 @@ export default function Register() {
 
 
   React.useEffect(() => {
-    fetch("https://server.tesdeveloper.me/v1/ticketing").then(res => res.json()).then(data => {
+    fetch("https://server.tesdeveloper.me/v1/ticketingsss").then(res => res.json()).then(data => {
         let total = 0;
       data.data.forEach((ticket:any) => {
       total += parseInt(ticket.ticket_total);
@@ -204,7 +266,7 @@ export default function Register() {
 
   return (
     <> 
-     <Toaster />
+     <Toaster  position="bottom-center"/>
     {isClosed ? <div>Pembelian tiket ditutup sementara Sampai pukul 8.30 dikarenakan perbaikan server</div> : 
     <RegisterLayout>
     <h3 className='mb-[90px] mt-[45px] text-center text-[26px] font-bold text-cblack'>
@@ -212,8 +274,9 @@ export default function Register() {
     </h3>
     <form
       onSubmit={formSubmitHandler}
-      className='mb-[50px] flex flex-col space-y-[45px] px-[78px]'
+      className='mb-[50px] flex flex-col space-y-[45px] md:px-[78px] px-[40px]'
     >
+      <div className='flex flex-col space-y-2'>
       <div className='font-mediumtext-cblack flex flex-col space-y-2 '>
         <label className='text-xl font-semibold'>Nama Lengkap</label>
         <input
@@ -224,9 +287,12 @@ export default function Register() {
           name='name'
           onChange={changeForm}
           value={form.nama}
-          required
+      
         />
       </div>
+      <p className='font-poppins text-red-700 font-semibold'>{formErrors.nama}</p>
+      </div>
+      <div className='flex flex-col space-y-2'>
       <div className='font-mediumtext-cblack flex flex-col space-y-2'>
         <label className='text-xl font-semibold'>Email</label>
         <input
@@ -237,9 +303,12 @@ export default function Register() {
           name='email'
           onChange={changeForm}
           value={form.email}
-          required
+      
         />
       </div>
+      <p className='font-poppins text-red-700 font-semibold'>{formErrors.email}</p>
+      </div>
+      <div className='flex flex-col space-y-2'>
       <div className='font-mediumtext-cblack flex flex-col space-y-2'>
         <label className='text-xl font-semibold'>No telepon</label>
         <input
@@ -250,9 +319,12 @@ export default function Register() {
           name='noTelepon'
           onChange={changeForm}
           value={form.noTelepon}
-          required
+      
         />
       </div>
+      <p className='font-poppins text-red-700 font-semibold'>{formErrors.noTelepon}</p>
+      </div>
+      <div className='flex flex-col space-y-2'>
       <div className='font-mediumtext-cblack flex flex-col space-y-2'>
         <label className='text-xl font-semibold'>
           Pilih Opsi Pembayaran
@@ -279,6 +351,9 @@ export default function Register() {
           ))}
         </select>
       </div>
+      <p className='font-poppins text-red-700 font-semibold'>{formErrors.opsi}</p>
+      </div>
+      <div className='flex flex-col space-y-2'>
       <div className='font-mediumtext-cblack flex flex-col space-y-2'>
         <label
           className='text-xl font-semibold'
@@ -291,7 +366,7 @@ export default function Register() {
         <input
           min={0}
           id='noRek'
-          type='number'
+          type='text'
           className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
           placeholder={
             payment == 'BRI'
@@ -301,9 +376,12 @@ export default function Register() {
           name='rekening'
           onChange={changeForm}
           value={form.noRek}
-          required
+      
         />
       </div>
+      <p className='font-poppins text-red-700 font-semibold'>{formErrors.noRek}</p>
+      </div>
+      <div className='flex flex-col space-y-2'>
       <div className='font-mediumtext-cblack flex flex-col space-y-2 md:w-[363px]'>
         <label className='text-xl font-semibold'>
           Kode referral Student Ambassador
@@ -317,6 +395,7 @@ export default function Register() {
           onChange={changeForm}
           value={form.kode}
         />
+      </div>
       </div>
       <div className='flex flex-col justify-center space-y-[30px] md:flex-row md:justify-start md:space-y-0 md:space-x-5'>
         <div className='font-mediumtext-cblack flex flex-col space-y-2'>
@@ -341,10 +420,11 @@ export default function Register() {
               changeQuantity(e);
               changeForm(e);
             }}
-            required
+        
             hidden
           />
         </div>
+        <div className='flex flex-col space-y-2'>
         <div className='font-mediumtext-cblack flex flex-col space-y-2 md:w-[382px]'>
           <label className='text-xl font-semibold'>Jumlah tiket</label>
           <input
@@ -359,8 +439,10 @@ export default function Register() {
               changeForm(e);
             }}
             min={0}
-            required
+        
           />
+        </div>
+        <p className='font-poppins text-red-700 font-semibold'>{formErrors.jumlah}</p>
         </div>
       </div>
       <div className='font-mediumtext-cblack flex flex-col space-y-2'>
@@ -392,9 +474,10 @@ export default function Register() {
             name='bukti-tf'
             type='file'
             className=' hidden rounded-md !border border-[rgb(107,114,128)] bg-transparent autofill:bg-transparent focus:!border-pink-200 focus:!ring-pink-200  focus-visible:!border-pink-200'
-            required
+        
           />
         </div>
+        <p className='font-poppins text-red-700 font-semibold'>{formErrors.buktiTF}</p>
       </div>
       <div>
         <img src={Img.src} alt='' />
