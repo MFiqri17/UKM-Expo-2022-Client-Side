@@ -26,18 +26,11 @@ const pembayaran = [
     uid: 1,
 
     name: 'OVO',
-    noRek: '082143719390',
-    atasNama: 'maitsa adzro fania',
+    noRek: '089514623705',
+    atasNama: 'achmad aunilla taftiyan',
   },
   {
     uid: 2,
-
-    name: 'Shopee',
-    noRek: '088804821572',
-    atasNama: 'maitsadzr',
-  },
-  {
-    uid: 3,
 
     name: 'BRI',
     noRek: '365601027280538',
@@ -59,7 +52,7 @@ export default function Register() {
   }
   const router = useRouter();
   const [harga, setHarga] = useState(30000);
-  const [isClosed] = useState(true);
+  const [isClosed] = useState(false);
   const [todayDate] = useState(new Date());
 
   const [formErrors, setFormErrors] = useState({} as errorLists);
@@ -132,7 +125,7 @@ export default function Register() {
         router.push('/')
       })
       .catch((err) => {
-        toast.error(`error: ${err} Pembelian gagal`);
+        toast.error(`Pembelian tiket gagal silahkan cek kembali isian anda`);
       });
   };
 
@@ -206,7 +199,7 @@ export default function Register() {
   };
 
   React.useEffect(() => {
-    fetch("https://server.tesdeveloper.me/v1/ticketingsss").then(res => res.json()).then(data => {
+    fetch("https://server.tesdeveloper.me/v1/ticketing").then(res => res.json()).then(data => {
         let total = 0;
         data.data.forEach((ticket: any) => {
           total += parseInt(ticket.ticket_total);
@@ -228,8 +221,6 @@ export default function Register() {
   }, []);
   const changeState = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setPayment(e.target.value);
-    // setNoRekening(pembayaran[e.target.value].noRek);
-    // setNama(pembayaran[e.target.value].atasNama);
   };
 
   React.useEffect(() => {
@@ -266,10 +257,26 @@ export default function Register() {
 
   return (
     <> 
-     <Toaster  position="bottom-center"/>
+     <Toaster  position="top-center"/>
      
     <RegisterLayout>
-    <h3 className='mb-[90px] mt-[45px] text-center text-[26px] font-bold text-cblack'>
+
+    <Seo templateTitle='Buy Ticket' />
+    {isClosed ? (
+       <div className='flex flex-col items-center justify-center gap-y-2 py-16 px-10'>
+       <h3 className='text-gradient text-center font-primary'>
+         Pembelian tiket ditutup sementara hingga Jumat, 22 Juni 2022
+       </h3>
+       <div className='px-14'>
+         <h4 className='text-gradient text-center font-primary'>
+           Jangan lewatkan informasi terbaru di seluruh sosial media dan
+           website UKM Expo ITS 2022
+         </h4>
+       </div>
+     </div>
+    ) : (
+      <>
+      <h3 className='mb-[90px] mt-[45px] text-center text-[26px] font-bold text-cblack'>
       Form Pendaftaran
     </h3>
     <form
@@ -496,18 +503,14 @@ export default function Register() {
                     ? pembayaran[0].noRek
                     : payment == 'OVO'
                     ? pembayaran[1].noRek
-                    : payment == 'Shopee'
-                    ? pembayaran[2].noRek
-                    : pembayaran[3].noRek}{' '}
+                    : pembayaran[2].noRek}{' '}
                 </p>
                 <p className='text-xl font-medium text-black'>{`a/n ${
                   payment == 'Gopay'
                     ? pembayaran[0].atasNama
                     : payment == 'OVO'
                     ? pembayaran[1].atasNama
-                    : payment == 'Shopee'
-                    ? pembayaran[2].atasNama
-                    : pembayaran[3].atasNama
+                    : pembayaran[2].atasNama
                 }`}</p>
               </div>
 
@@ -517,8 +520,10 @@ export default function Register() {
                 </button>
               </div>
             </form>
-
+            </>
         
+    )}
+    
       </RegisterLayout>
     </>
   );
