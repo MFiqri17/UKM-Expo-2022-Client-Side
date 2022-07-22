@@ -22,8 +22,8 @@ const pembayaran = [
     uid: 0,
 
     name: 'Gopay',
-    noRek: '082143719390',
-    atasNama: 'maitsa adzro fania',
+    noRek: '08113086464',
+    atasNama: 'Kirana Mahes',
   },
   {
     uid: 1,
@@ -57,7 +57,7 @@ export default function Register() {
     buktiTF?: string;
   }
 
-  const QUANTITY_MAX = 10;
+  
   const router = useRouter();
   const [harga, setHarga] = useState(30000);
   const [isClosed, setIsClosed] = useState(true);
@@ -221,22 +221,21 @@ export default function Register() {
   };
 
   React.useEffect(() => {
-    // fetch('https://server.tesdeveloper.me/v1/ticketing')
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     let total = 0;
-    //     data.data.forEach((ticket: any) => {
-    //       total += parseInt(ticket.ticket_total);
-    //     });
-    //     setTotal(total);
+    fetch('https://admin.tesdeveloper.me/api/ticketing')
+      .then((res) => res.json())
+      .then((data) => {
+        let total = 0;
+        data.data.forEach((ticket: any) => {
+          total += parseInt(ticket.ticket_total);
+        });
+        setTotal(total);
         if (
-          
           todayDate.getDate() >= new Date(2022, 7, 22).getDate()
         ) {
           setHarga(40000);
           console.log(harga);
         }
-      // });
+      });
   }, [harga]);
 
 
@@ -449,7 +448,7 @@ export default function Register() {
                       changeForm(e);
                     }}
                     min={0}
-                    max={10}
+                    max={8}
                   />
                 </div>
                 <p className='font-poppins font-semibold text-red-700'>
@@ -629,7 +628,7 @@ export default function Register() {
         {isClosed ? (
           <div className='flex flex-col items-center justify-center gap-y-2 py-16 px-10'>
             <h3 className='text-gradient text-center font-primary'>
-              Pembelian tiket ditutup sementara hingga Jumat, 23 Juli 2022
+              Pembelian tiket ditutup sementara hingga Sabtu, 23 Juli 2022
             </h3>
             <div className='px-14'>
               <h4 className='text-gradient text-center font-primary'>

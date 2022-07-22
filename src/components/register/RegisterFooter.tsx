@@ -6,7 +6,7 @@ export default function RegisterFooter() {
       <div className='flex w-full flex-col justify-center p-4 lg:flex-row lg:justify-between'>
         <div className='mx-auto mb-4 flex w-fit flex-row space-x-6 lg:mx-0 lg:mb-0'>
           <a
-            href='https://wa.me/6282143719390'
+            href='https://wa.me/6289514623705'
             className='block transition duration-300 hover:scale-105'
             target='_blank'
             rel='noreferrer'
@@ -17,7 +17,7 @@ export default function RegisterFooter() {
           </a>
 
           <a
-            href='https://wa.me/6289514623705'
+            href='https://wa.me/628113086464'
             className='block transition duration-300 hover:scale-105'
             target='_blank'
             rel='noreferrer'
