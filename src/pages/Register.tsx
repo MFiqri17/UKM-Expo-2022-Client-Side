@@ -57,6 +57,7 @@ export default function Register() {
     buktiTF?: string;
   }
 
+  const QUANTITY_MAX = 10;
   const router = useRouter();
   const [harga, setHarga] = useState(30000);
   const [isClosed, setIsClosed] = useState(true);
@@ -176,9 +177,7 @@ export default function Register() {
 
     setFormErrors2(errors2);
 
-    if (Object.keys(errors2).length === 0) {
-      return setStep(step + 1);
-    } else {
+    if (Object.keys(errors2).length !== 0) {
       return setStep(1);
     }
   };
@@ -240,6 +239,8 @@ export default function Register() {
       // });
   }, [harga]);
 
+
+
   // React.useEffect(() => {
   //   if (total >= 1000) {
   //     setIsClosed(true);
@@ -255,6 +256,9 @@ export default function Register() {
   const changeState = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setPayment(e.target.value);
   };
+
+
+
 
   React.useEffect(() => {
     const fileReader = new FileReader();
@@ -297,22 +301,34 @@ export default function Register() {
     // const formdata = new FormData();
 
     if (step === 0) {
+      validate1(form);
+    } else if (step === 1) {
       const formdata = new FormData();
+
       formdata.append('name', form.nama);
       formdata.append('email', form.email);
       formdata.append('whatsapp', form.noTelepon);
       formdata.append('ticket_total', form.jumlah);
       formdata.append('payment_total', total.toString());
-
-      validate1(form);
-    } else if (step === 1) {
-      const formdata = new FormData();
-
       formdata.append('payment_proof', form.buktiTF);
       formdata.append('payment_no', form.noRek);
       formdata.append('payment_method', form.opsi);
 
       validate2(form);
+
+      axios({
+        method: 'post',
+        headers: { 'Content-Type': 'multipart/form-data' },
+        url: 'https://admin.tesdeveloper.me/api/ticketingsss',
+        data: formdata,
+      })
+        .then(() => {
+          toast.success('Pembelian tiket berhasil ')
+          return setStep(step + 1);
+        })
+        .catch(() => {
+          toast.error(`Pembelian tiket gagal`);
+        });
 
       console.log(form);
       console.log(step);
@@ -321,19 +337,7 @@ export default function Register() {
       router.push('/');
     }
 
-    // axios({
-    //   method: 'post',
-    //   headers: { 'Content-Type': 'multipart/form-data' },
-    //   url: 'https://server.tesdeveloper.me/v1/ticketing',
-    //   data: formdata,
-    // })
-    //   .then(() => {
-    //     toast.success('Pembelian tiket berhasil ')
-    //     router.push('/')
-    //   })
-    //   .catch(() => {
-    //     toast.error(`Pembelian tiket gagal silahkan cek kembali isian anda`);
-    //   });
+   
   };
 
   // const formSubmitHandler2 = async (e: any) => {
@@ -445,6 +449,7 @@ export default function Register() {
                       changeForm(e);
                     }}
                     min={0}
+                    max={10}
                   />
                 </div>
                 <p className='font-poppins font-semibold text-red-700'>
@@ -624,7 +629,7 @@ export default function Register() {
         {isClosed ? (
           <div className='flex flex-col items-center justify-center gap-y-2 py-16 px-10'>
             <h3 className='text-gradient text-center font-primary'>
-              Pembelian tiket ditutup sementara hingga Jumat, 23 Juni 2022
+              Pembelian tiket ditutup sementara hingga Jumat, 23 Juli 2022
             </h3>
             <div className='px-14'>
               <h4 className='text-gradient text-center font-primary'>
