@@ -9,6 +9,7 @@ export default function RegisterFooter() {
             href='https://wa.me/6282143719390'
             className='block transition duration-300 hover:scale-105'
             target='_blank'
+            rel='noreferrer'
           >
             <div className='rounded-xl bg-[#25D366] px-2 py-1'>
               <img src='images/whatsapp-icon.svg' alt='whatsapp-icon' />
@@ -19,6 +20,7 @@ export default function RegisterFooter() {
             href='https://wa.me/6289514623705'
             className='block transition duration-300 hover:scale-105'
             target='_blank'
+            rel='noreferrer'
           >
             <div className='rounded-xl bg-[#25D366] px-2 py-1'>
               <img src='images/whatsapp-icon.svg' alt='whatsapp-icon' />
