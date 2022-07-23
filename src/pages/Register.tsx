@@ -97,7 +97,7 @@ export default function Register() {
       [e.target.id]: e.target.value,
     }));
 
-    if(parseInt(form.jumlah) > 8){
+    if (parseInt(form.jumlah) > 8) {
       setForm((prevState) => ({
         ...prevState,
         [e.target.id]: 8,
@@ -235,7 +235,7 @@ export default function Register() {
           total += parseInt(ticket.ticket_total);
         });
         setTotal(total);
-        if(todayDate.getMonth() >= new Date(2022, 8, 5).getMonth()) {
+        if (todayDate.getMonth() >= new Date(2022, 8, 5).getMonth()) {
           if (todayDate.getDate() >= new Date(2022, 8, 5).getMonth()) {
             setHarga(55000);
             // setIsClosed(true);
@@ -243,7 +243,6 @@ export default function Register() {
         }
       });
   }, [harga]);
-
 
   // React.useEffect(() => {
   //   if (total >= 1490) {
@@ -303,13 +302,11 @@ export default function Register() {
     // const formdata = new FormData();
 
     if (step === 0) {
-      React.useEffect( () => {
-        if(isClosed){
+      React.useEffect(() => {
+        if (isClosed) {
           router.reload;
         }
-      }
- 
-      )
+      });
       validate1(form);
     } else if (step === 1) {
       const formdata = new FormData();
@@ -639,13 +636,25 @@ export default function Register() {
         {isClosed ? (
           <div className='flex flex-col items-center justify-center gap-y-2 py-16 px-10'>
             <h3 className='text-gradient text-center font-primary'>
-              Pembelian tiket ditutup sementara hingga Sabtu, 23 Juli 2022.
-              Bagi Pembeli yang merasa mendapatkan pesan error tiket gagal, silahkan cek email terlebih dahulu. Apabila email dari kami sudah ada di inbox kamu artinya pembayaran tiket kamu sudah berhasil kami rekap
+              Pembelian tiket pre-sale 2 sudah ditutup dikarenakan sold out. Bagi
+              Pembeli yang merasa mendapatkan pesan error tiket gagal, silahkan
+              cek email terlebih dahulu. Apabila email dari kami sudah ada di
+              inbox kamu artinya pembayaran tiket kamu sudah berhasil kami rekap.
+              Dan Silahkan mengisi formulir berikut apabila sudah
+              melakukan transfer namun belum bisa submit di web. 
             </h3>
             <div className='px-14'>
+             
+
+              <h5 className='text-gradient font-primary text-lg text-center'>
+                <a className='block py-6 text-blue-600' href='https://intip.in/KonfirmasiTiketUKMEXPO2022'>
+                  intip.in/KonfirmasiTiketUKMEXPO2022
+                </a>
+              </h5>
+
               <h4 className='text-gradient text-center font-primary'>
                 Jangan lewatkan informasi terbaru di seluruh sosial media dan
-                website UKM Expo ITS 2022
+                website UKM Expo ITS 2022.
               </h4>
             </div>
           </div>
