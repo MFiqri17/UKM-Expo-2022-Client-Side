@@ -59,7 +59,7 @@ export default function Register() {
 
   const router = useRouter();
   const [harga, setHarga] = useState(45000);
-  const [isClosed, setIsClosed] = useState(false);
+  const [isClosed, setIsClosed] = useState(true);
   const [todayDate] = useState(new Date());
 
   const [formErrors1, setFormErrors1] = useState({} as errorLists1);
@@ -96,6 +96,13 @@ export default function Register() {
       ...prevState,
       [e.target.id]: e.target.value,
     }));
+
+    if(parseInt(form.jumlah) > 8){
+      setForm((prevState) => ({
+        ...prevState,
+        [e.target.id]: 8,
+      }));
+    }
   };
 
   const changeFile = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -238,14 +245,14 @@ export default function Register() {
   }, [harga]);
 
 
-  React.useEffect(() => {
-    if (total >= 1490) {
-      setIsClosed(true);
-    } else {
-      setIsClosed(false);
-      console.log(isClosed)
-    }
-  }, [total]); // Jangann lupa dihidipun lagi nanti
+  // React.useEffect(() => {
+  //   if (total >= 1490) {
+  //     setIsClosed(true);
+  //   } else {
+  //     setIsClosed(false);
+  //     console.log(isClosed)
+  //   }
+  // }, [total]); // Jangann lupa dihidipun lagi nanti
 
   React.useEffect(() => {
     const newLocal = pembayaran[0].name;
