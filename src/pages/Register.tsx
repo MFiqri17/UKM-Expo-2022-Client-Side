@@ -234,8 +234,13 @@ export default function Register() {
             console.log(harga);
           }
         }
+        if (total >= 0) {
+        setIsClosed(true);
+      } else {
+        setIsClosed(false);
+      }
       });
-  }, [harga]);
+  }, [harga, total]);
 
   // React.useEffect(() => {
   //   if (total >= 1500) {
