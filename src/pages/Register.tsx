@@ -57,9 +57,8 @@ export default function Register() {
     buktiTF?: string;
   }
 
-  
   const router = useRouter();
-  const [harga, setHarga] = useState(30000);
+  const [harga, setHarga] = useState(45000);
   const [isClosed, setIsClosed] = useState(true);
   const [todayDate] = useState(new Date());
 
@@ -229,19 +228,17 @@ export default function Register() {
           total += parseInt(ticket.ticket_total);
         });
         setTotal(total);
-        if (
-          todayDate.getDate() >= new Date(2022, 7, 22).getDate()
-        ) {
-          setHarga(40000);
-          console.log(harga);
+        if(todayDate.getMonth() >= new Date(2022, 8, 5).getMonth()) {
+          if (todayDate.getDate() >= new Date(2022, 8, 5).getMonth()) {
+            setHarga(55000);
+            console.log(harga);
+          }
         }
       });
   }, [harga]);
 
-
-
   // React.useEffect(() => {
-  //   if (total >= 1000) {
+  //   if (total >= 1500) {
   //     setIsClosed(true);
   //   } else {
   //     setIsClosed(false);
@@ -255,9 +252,6 @@ export default function Register() {
   const changeState = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setPayment(e.target.value);
   };
-
-
-
 
   React.useEffect(() => {
     const fileReader = new FileReader();
@@ -322,7 +316,7 @@ export default function Register() {
         data: formdata,
       })
         .then(() => {
-          toast.success('Pembelian tiket berhasil ')
+          toast.success('Pembelian tiket berhasil ');
           return setStep(step + 1);
         })
         .catch(() => {
@@ -332,11 +326,8 @@ export default function Register() {
       console.log(form);
       console.log(step);
     } else if (step === 2) {
-
       router.push('/');
     }
-
-   
   };
 
   // const formSubmitHandler2 = async (e: any) => {
@@ -462,15 +453,15 @@ export default function Register() {
       case 1:
         return (
           <>
-
             <div className='flex flex-col space-y-2'>
               <div className='mb-8 text-center'>
                 <h4 className='text-xl font-medium'>
-                  Halo <span className='font-semibold'>{form.nama}</span> segera lakukan pembayaran sebesar{' '}
+                  Halo <span className='font-semibold'>{form.nama}</span> segera
+                  lakukan pembayaran sebesar{' '}
                   <span className='font-semibold'>
                     Rp. {parseInt(form.jumlah) * harga} {''}
                   </span>
-                    sebelum
+                  sebelum
                 </h4>
               </div>
               <TicketTimer expiryTimestamp={time} />
@@ -608,11 +599,15 @@ export default function Register() {
       case 2:
         return (
           <>
-            <div className='font-poppins flex flex-col justify-center align-center text-center space-y-8 font-medium'>
+            <div className='font-poppins align-center flex flex-col justify-center space-y-8 text-center font-medium'>
               <div className='flex justify-center'>
-              <img className='w-[200px]' src="svg/ukm_logo.svg" alt="" />
+                <img className='w-[200px]' src='svg/ukm_logo.svg' alt='' />
               </div>
-              <h4 className='text-cblack font-medium text-xl'>Terima kasih <span className='font-semibold'>{form.nama}</span>  telah melakukan pembelian tiket, tiket kamu akan segera kami proses.</h4>
+              <h4 className='text-xl font-medium text-cblack'>
+                Terima kasih <span className='font-semibold'>{form.nama}</span>{' '}
+                telah melakukan pembelian tiket, tiket kamu akan segera kami
+                proses.
+              </h4>
             </div>
           </>
         );
@@ -649,7 +644,7 @@ export default function Register() {
               {conditionalForm()}
 
               <div className='flex justify-center space-x-5'>
-              {step > 0 && step < 2 && (
+                {step > 0 && step < 2 && (
                   <button
                     className='w-[13.75rem] rounded-[20px]  border-2 border-cblack py-[10px] text-xl font-semibold text-cblack !transition !duration-300 hover:!scale-105'
                     onClick={() => setStep(step - 1)}
@@ -658,13 +653,11 @@ export default function Register() {
                   </button>
                 )}
                 <button
-                  
                   className='w-[13.75rem] rounded-[20px] bg-gradient-to-r from-cgreen to-cgreenb py-[10px] text-xl font-semibold text-cblack !transition !duration-300 hover:!scale-105'
                   onClick={formSubmitHandler}
                 >
                   {step === 0 ? 'Next' : step === 2 ? 'Back to Home' : 'Daftar'}
                 </button>
-         
               </div>
             </form>
           </>
