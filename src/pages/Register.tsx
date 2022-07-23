@@ -303,6 +303,13 @@ export default function Register() {
     // const formdata = new FormData();
 
     if (step === 0) {
+      React.useEffect( () => {
+        if(isClosed){
+          router.reload;
+        }
+      }
+ 
+      )
       validate1(form);
     } else if (step === 1) {
       const formdata = new FormData();
