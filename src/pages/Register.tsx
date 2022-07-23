@@ -59,7 +59,7 @@ export default function Register() {
 
   const router = useRouter();
   const [harga, setHarga] = useState(45000);
-  const [isClosed, setIsClosed] = useState(true);
+  const [isClosed, setIsClosed] = useState(false);
   const [todayDate] = useState(new Date());
 
   const [formErrors1, setFormErrors1] = useState({} as errorLists1);
@@ -231,24 +231,21 @@ export default function Register() {
         if(todayDate.getMonth() >= new Date(2022, 8, 5).getMonth()) {
           if (todayDate.getDate() >= new Date(2022, 8, 5).getMonth()) {
             setHarga(55000);
-            console.log(harga);
+            // setIsClosed(true);
           }
         }
-        if (total >= 0) {
-        setIsClosed(true);
-      } else {
-        setIsClosed(false);
-      }
       });
-  }, [harga, total]);
+  }, [harga]);
 
-  // React.useEffect(() => {
-  //   if (total >= 1500) {
-  //     setIsClosed(true);
-  //   } else {
-  //     setIsClosed(false);
-  //   }
-  // }, [total]); // Jangann lupa dihidipun lagi nanti
+
+  React.useEffect(() => {
+    if (total >= 1490) {
+      setIsClosed(true);
+    } else {
+      setIsClosed(false);
+      console.log(isClosed)
+    }
+  }, [total]); // Jangann lupa dihidipun lagi nanti
 
   React.useEffect(() => {
     const newLocal = pembayaran[0].name;
@@ -317,7 +314,7 @@ export default function Register() {
       axios({
         method: 'post',
         headers: { 'Content-Type': 'multipart/form-data' },
-        url: 'https://admin.tesdeveloper.me/api/ticketingsss',
+        url: 'https://admin.tesdeveloper.me/api/ticketing',
         data: formdata,
       })
         .then(() => {
