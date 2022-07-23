@@ -632,7 +632,8 @@ export default function Register() {
         {isClosed ? (
           <div className='flex flex-col items-center justify-center gap-y-2 py-16 px-10'>
             <h3 className='text-gradient text-center font-primary'>
-              Pembelian tiket ditutup sementara hingga Sabtu, 23 Juli 2022
+              Pembelian tiket ditutup sementara hingga Sabtu, 23 Juli 2022.
+              Bagi Pembeli yang merasa mendapatkan pesan error tiket gagal, silahkan cek email terlebih dahulu. Apabila email dari kami sudah ada di inbox kamu artinya pembayaran tiket kamu sudah berhasil kami rekap
             </h3>
             <div className='px-14'>
               <h4 className='text-gradient text-center font-primary'>
