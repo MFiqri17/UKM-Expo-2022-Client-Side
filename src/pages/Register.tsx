@@ -1,12 +1,12 @@
 import axios from 'axios';
+import clsx from 'clsx';
 import { useRouter } from 'next/router';
 import React, { useRef, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
+
 import RegisterLayout from '@/components/register/RegisterLayout';
-import Seo from '@/components/Seo';
-import { useTimer } from 'react-timer-hook';
 import TicketTimer from '@/components/register/TicketTimer';
-import UnstyledLink from '@/components/links/UnstyledLink';
+import Seo from '@/components/Seo';
 
 interface IFileState {
   file: File | null;
@@ -61,7 +61,7 @@ export default function Register() {
   const [harga, setHarga] = useState(45000);
   const [isClosed, setIsClosed] = useState(true);
   const [todayDate] = useState(new Date());
-
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [formErrors1, setFormErrors1] = useState({} as errorLists1);
   const [formErrors2, setFormErrors2] = useState({} as errorLists2);
   const [price, setPrice] = useState(0);
@@ -304,6 +304,7 @@ export default function Register() {
     if (step === 0) {
       validate1(form);
     } else if (step === 1) {
+      setIsLoading(true);
       const formdata = new FormData();
 
       formdata.append('name', form.nama);
@@ -329,6 +330,9 @@ export default function Register() {
         })
         .catch(() => {
           toast.error(`Pembelian tiket gagal`);
+        })
+        .finally(() => {
+          setIsLoading(false);
         });
 
       console.log(form);
@@ -402,7 +406,7 @@ export default function Register() {
                 {formErrors1.noTelepon}
               </p>
             </div>
-            <div className='flex flex-col space-y-2'>
+            {/* <div className='flex flex-col space-y-2'>
               <div className='font-mediumtext-cblack flex flex-col space-y-2 md:w-[363px]'>
                 <label className='text-xl font-semibold'>
                   Kode referral Student Ambassador
@@ -417,7 +421,7 @@ export default function Register() {
                   value={form.kode}
                 />
               </div>
-            </div>
+            </div> */}
             <div className='flex flex-col justify-center space-y-[30px] md:flex-row md:justify-start md:space-y-0 md:space-x-5'>
               <div className='font-mediumtext-cblack flex flex-col space-y-2'>
                 <label className='text-xl font-semibold'>Total harga</label>
@@ -443,8 +447,17 @@ export default function Register() {
                     name='quantity'
                     value={quantity}
                     onChange={(e: any) => {
+                      if (e.target.value > 8) {
+                        e.target.value = 8;
+                        toast.error('Jumlah tiket tidak boleh lebih dari 8');
+                      }
                       changePrice(e);
                       changeForm(e);
+                    }}
+                    onKeyUp={(e: any) => {
+                      if (e.target.value > 8) {
+                        e.target.value = 8;
+                      }
                     }}
                     min={0}
                     max={8}
@@ -467,7 +480,7 @@ export default function Register() {
                   Halo <span className='font-semibold'>{form.nama}</span> segera
                   lakukan pembayaran sebesar{' '}
                   <span className='font-semibold'>
-                    Rp. {parseInt(form.jumlah) * harga} {''}
+                    Rp. {parseInt(form.jumlah) * harga}
                   </span>
                   sebelum
                 </h4>
@@ -631,18 +644,19 @@ export default function Register() {
         {isClosed ? (
           <div className='flex flex-col items-center justify-center gap-y-2 py-16 px-10'>
             <h3 className='text-gradient text-center font-primary'>
-              Pembelian tiket pre-sale 2 sudah ditutup dikarenakan sold out. Bagi
-              Pembeli yang merasa mendapatkan pesan error tiket gagal, silahkan
-              cek email terlebih dahulu. Apabila email dari kami sudah ada di
-              inbox kamu artinya pembayaran tiket kamu sudah berhasil kami rekap.
-              Dan Silahkan mengisi formulir berikut apabila sudah
-              melakukan transfer namun belum bisa submit di web. 
+              Pembelian tiket pre-sale 2 sudah ditutup dikarenakan sold out.
+              Bagi Pembeli yang merasa mendapatkan pesan error tiket gagal,
+              silahkan cek email terlebih dahulu. Apabila email dari kami sudah
+              ada di inbox kamu artinya pembayaran tiket kamu sudah berhasil
+              kami rekap. Dan Silahkan mengisi formulir berikut apabila sudah
+              melakukan transfer namun belum bisa submit di web.
             </h3>
             <div className='px-14'>
-             
-
-              <h5 className='text-gradient font-primary text-lg text-center'>
-                <a className='block py-6 text-blue-600' href='https://intip.in/KonfirmasiTiketUKMEXPO2022'>
+              <h5 className='text-gradient text-center font-primary text-lg'>
+                <a
+                  className='block py-6 text-blue-600'
+                  href='https://intip.in/KonfirmasiTiketUKMEXPO2022'
+                >
                   intip.in/KonfirmasiTiketUKMEXPO2022
                 </a>
               </h5>
@@ -674,10 +688,37 @@ export default function Register() {
                   </button>
                 )}
                 <button
-                  className='w-[13.75rem] rounded-[20px] bg-gradient-to-r from-cgreen to-cgreenb py-[10px] text-xl font-semibold text-cblack !transition !duration-300 hover:!scale-105'
+                  className={clsx(
+                    'w-[13.75rem] rounded-[20px] bg-gradient-to-r from-cgreen to-cgreenb py-[10px] text-xl font-semibold text-cblack !transition !duration-300 hover:!scale-105',
+                    isLoading && 'cursor-not-allowed'
+                  )}
                   onClick={formSubmitHandler}
+                  disabled={isLoading}
                 >
-                  {step === 0 ? 'Next' : step === 2 ? 'Back to Home' : 'Daftar'}
+                  {isLoading ? (
+                    <svg
+                      role='status'
+                      className='mx-auto h-8 w-8 animate-spin fill-dark text-clightorange'
+                      viewBox='0 0 100 101'
+                      fill='none'
+                      xmlns='http://www.w3.org/2000/svg'
+                    >
+                      <path
+                        d='M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z'
+                        fill='currentColor'
+                      />
+                      <path
+                        d='M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z'
+                        fill='currentFill'
+                      />
+                    </svg>
+                  ) : step === 0 ? (
+                    'Next'
+                  ) : step === 2 ? (
+                    'Back to Home'
+                  ) : (
+                    'Daftar'
+                  )}
                 </button>
               </div>
             </form>
