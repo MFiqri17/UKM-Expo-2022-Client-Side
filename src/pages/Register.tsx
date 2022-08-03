@@ -248,7 +248,7 @@ export default function Register() {
     if (total >= 3337) {
       setIsClosed(true);
     } else {
-      setIsClosed(false);
+      setIsClosed(true);
     }
   }, [total]); // Jangann lupa dihidipun lagi nanti
 
@@ -646,24 +646,10 @@ export default function Register() {
         {isClosed ? (
           <div className='flex flex-col items-center justify-center gap-y-2 py-16 px-10'>
             <h3 className='text-gradient text-center font-primary'>
-              Pembelian tiket pre-sale 3 sudah ditutup dikarenakan sold out.
-              Bagi Pembeli yang merasa mendapatkan pesan error tiket gagal,
-              silahkan cek email terlebih dahulu. Apabila email dari kami sudah
-              ada di inbox kamu artinya pembayaran tiket kamu sudah berhasil
-              kami rekap. Dan Silahkan mengisi formulir berikut apabila sudah
-              melakukan transfer namun belum bisa submit di web.
+              Pembelian tiket pre-sale 3 ditutup sementara untuk maintenance server. Form akan dibuka kembali ketika maintenance server telah selesai.
             </h3>
             <div className='px-14'>
-              <h5 className='text-gradient text-center font-primary text-lg'>
-                <a
-                  className='block py-6 text-blue-600'
-                  href='https://intip.in/KonfirmasiTiketUKMEXPO2022'
-                >
-                  intip.in/KonfirmasiTiketUKMEXPO2022
-                </a>
-              </h5>
-
-              <h4 className='text-gradient text-center font-primary'>
+             <h4 className='text-gradient text-center font-primary'>
                 Jangan lewatkan informasi terbaru di seluruh sosial media dan
                 website UKM Expo ITS 2022.
               </h4>
