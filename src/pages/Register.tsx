@@ -27,8 +27,7 @@ const pembayaran = [
   },
   {
     uid: 1,
-
-    name: 'OVO',
+    name: 'ShopeePay',
     noRek: '089514623705',
     atasNama: 'achmad aunilla taftiyan',
   },
@@ -234,24 +233,24 @@ export default function Register() {
         data.data.forEach((ticket: any) => {
           total += parseInt(ticket.ticket_total);
         });
+        console.log(total);
         setTotal(total);
-        if (todayDate.getMonth() >= new Date(2022, 8, 5).getMonth()) {
-          if (todayDate.getDate() >= new Date(2022, 8, 5).getMonth()) {
-            setHarga(60000);
-            // setIsClosed(true);
-          }
-        }
+        // if (todayDate.getMonth() >= new Date(2022, 8, 5).getMonth()) {
+        //   if (todayDate.getDate() >= new Date(2022, 8, 5).getMonth()) {
+        //     setHarga(60000);
+        //     setIsClosed(true);
+        //   }
+        // }
       });
   }, [harga]);
 
-  // React.useEffect(() => {
-  //   if (total >= 1490) {
-  //     setIsClosed(true);
-  //   } else {
-  //     setIsClosed(false);
-  //     console.log(isClosed)
-  //   }
-  // }, [total]); // Jangann lupa dihidipun lagi nanti
+  React.useEffect(() => {
+    if (total >= 3337) {
+      setIsClosed(true);
+    } else {
+      setIsClosed(false);
+    }
+  }, [total]); // Jangann lupa dihidipun lagi nanti
 
   React.useEffect(() => {
     const newLocal = pembayaran[0].name;
@@ -596,23 +595,26 @@ export default function Register() {
               <p className='text-xl font-medium text-black'>{payment}</p>
               <p className='text-xl font-medium text-black'>
                 {payment == 'BRI' ? `No rekening` : `No ${payment}`} -{' '}
-                {payment == 'Gopay'
-                  ? pembayaran[0].noRek
-                  : payment == 'OVO'
+                {payment == 'ShopeePay'
                   ? pembayaran[1].noRek
                   : payment == 'BRI'
                   ? pembayaran[2].noRek
                   : ''}{' '}
               </p>
               <p className='text-xl font-medium text-black'>{`a/n ${
-                payment == 'Gopay'
-                  ? pembayaran[0].atasNama
-                  : payment == 'OVO'
+                payment == 'ShopeePay'
                   ? pembayaran[1].atasNama
                   : payment == 'BRI'
                   ? pembayaran[2].atasNama
                   : ''
               }`}</p>
+              {payment === 'Gopay' && (
+                <div>
+                  <p>1. Gopay 085850609905 AN Chasna Zahara</p>
+                  <p>2. Gopay 08113086464 AN Kirana Mahes</p>
+                  <p>3. Gopay 082143719390 AN maitsa adzro fania</p>
+                </div>
+              )}
             </div>
           </>
         );
@@ -644,7 +646,7 @@ export default function Register() {
         {isClosed ? (
           <div className='flex flex-col items-center justify-center gap-y-2 py-16 px-10'>
             <h3 className='text-gradient text-center font-primary'>
-              Pembelian tiket pre-sale 2 sudah ditutup dikarenakan sold out.
+              Pembelian tiket pre-sale 3 sudah ditutup dikarenakan sold out.
               Bagi Pembeli yang merasa mendapatkan pesan error tiket gagal,
               silahkan cek email terlebih dahulu. Apabila email dari kami sudah
               ada di inbox kamu artinya pembayaran tiket kamu sudah berhasil
