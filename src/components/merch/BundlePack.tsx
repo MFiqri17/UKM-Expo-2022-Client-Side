@@ -1,7 +1,6 @@
 import { Tab } from '@headlessui/react';
 import * as React from 'react';
 import { useState } from 'react';
-import Image from 'next/image';
 
 import BundleArray from '@/components/merch/data/BundleArray';
 import MobileBundle from '@/components/merch/mobile/MobileBundle';

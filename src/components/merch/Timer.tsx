@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useTimer } from 'react-timer-hook';
-import Image from 'next/image';
+
 import Button from '@/components/buttons/Button';
 import SectionTitle from '@/components/SectionTitle';
 
