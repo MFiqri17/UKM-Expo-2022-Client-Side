@@ -248,7 +248,7 @@ export default function Register() {
     if (total >= 3337) {
       setIsClosed(true);
     } else {
-      setIsClosed(true);
+      setIsClosed(false);
     }
   }, [total]); // Jangann lupa dihidipun lagi nanti
 
