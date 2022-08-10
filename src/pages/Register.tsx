@@ -597,14 +597,14 @@ export default function Register() {
                 {payment == 'BNI' ? `No Virtual Account` : `No ${payment}`} -{' '}
                 {payment == 'ShopeePay'
                   ? pembayaran[1].noRek
-                  : payment == 'BRI'
+                  : payment == 'BNI'
                   ? pembayaran[2].noRek
                   : ''}{' '}
               </p>
               <p className='text-xl font-medium text-black'>{`a/n ${
                 payment == 'ShopeePay'
                   ? pembayaran[1].atasNama
-                  : payment == 'BRI'
+                  : payment == 'BNI'
                   ? pembayaran[2].atasNama
                   : ''
               }`}</p>
