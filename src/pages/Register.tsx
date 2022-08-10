@@ -34,9 +34,9 @@ const pembayaran = [
   {
     uid: 2,
 
-    name: 'BRI',
-    noRek: '365601027280538',
-    atasNama: 'maitsa adzro fania',
+    name: 'BNI',
+    noRek: '8257711030210003',
+    atasNama: 'Bantuan Kegiatan Mahasiswa',
   },
 ];
 
@@ -524,7 +524,7 @@ export default function Register() {
                     setPayment(e.target.value);
                   }}
                 >
-                  {payment == 'BRI' ? `Nomor rekening` : `Nomor ${payment}`}
+                  {payment == 'BNI' ? `Nomor rekening` : `Nomor ${payment}`}
                 </label>
                 <input
                   min={0}
@@ -532,7 +532,7 @@ export default function Register() {
                   type='text'
                   className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
                   placeholder={
-                    payment == 'BRI'
+                    payment == 'BNI'
                       ? `Masukkan nomor rekening kamu`
                       : `Masukkan Nomor ${payment} kamu`
                   }
@@ -594,7 +594,7 @@ export default function Register() {
               </h5>
               <p className='text-xl font-medium text-black'>{payment}</p>
               <p className='text-xl font-medium text-black'>
-                {payment == 'BRI' ? `No rekening` : `No ${payment}`} -{' '}
+                {payment == 'BNI' ? `No Virtual Account` : `No ${payment}`} -{' '}
                 {payment == 'ShopeePay'
                   ? pembayaran[1].noRek
                   : payment == 'BRI'
