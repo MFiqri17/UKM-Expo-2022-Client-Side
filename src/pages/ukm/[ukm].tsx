@@ -10,23 +10,23 @@ import HeroUKM from '@/components/ukm/main/HeroUKM';
 
 import { IUKMData } from '@/pages/ukm';
 
-export default function UKMDetailPage() {
+export default function UKMDetailPage(props: any) {
   const router = useRouter();
   const [UKM, setUKM] = React.useState<IUKMData>();
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
 
-  React.useEffect(() => {
-    setIsLoading(true);
-    const selectedukm = ukm.find(({ href }) => href === router.asPath);
-    if (selectedukm) {
-      setUKM(selectedukm);
-    }
-    setIsLoading(false);
-  }, [router.asPath]);
+  // React.useEffect(() => {
+  //   setIsLoading(true);
+  //   const selectedukm = ukm.find(({ href }) => href === router.asPath);
+  //   if (selectedukm) {
+  //     setUKM(selectedukm);
+  //   }
+  //   setIsLoading(false);
+  // }, [router.asPath]);
   return (
     <>
       <Layout>
-        <Seo templateTitle={UKM && UKM.nama} />
+        <Seo templateTitle={props && props.nama} />
         <main>
           <HeroUKM />
           <section
@@ -35,8 +35,8 @@ export default function UKMDetailPage() {
           >
             {isLoading ? (
               <div className='min-h-[30rem] w-full animate-pulse rounded-xl bg-gray-200'></div>
-            ) : UKM ? (
-              <DetailSection UKM={UKM} />
+            ) : props ? (
+              <DetailSection UKM={props} />
             ) : (
               <div className='h-[5rem]'>
                 <h2 className='text-gradient mb-2 font-primary'>
@@ -52,4 +52,20 @@ export default function UKMDetailPage() {
       </Layout>
     </>
   );
+}
+
+export async function getServerSideProps(ctx: any) {
+  const { ukm: data } = ctx.params;
+  const selectedukm = ukm.find(({ href }) => href === `/ukm/${data}`);
+  if (selectedukm?.deskripsi.split(' ')[0] === 'Lorem') {
+    return {
+      redirect: {
+        destination: 'https://www.instagram.com/ukmexpo_its/',
+      },
+      props: {},
+    };
+  }
+  return {
+    props: selectedukm,
+  };
 }
