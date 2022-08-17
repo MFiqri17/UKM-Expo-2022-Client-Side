@@ -57,14 +57,14 @@ export default function UKMDetailPage(props: any) {
 export async function getServerSideProps(ctx: any) {
   const { ukm: data } = ctx.params;
   const selectedukm = ukm.find(({ href }) => href === `/ukm/${data}`);
-  if (selectedukm?.deskripsi.split(' ')[0] === 'Lorem') {
-    return {
-      redirect: {
-        destination: 'https://www.instagram.com/ukmexpo_its/',
-      },
-      props: {},
-    };
-  }
+  // if (selectedukm?.deskripsi.split(' ')[0] === 'Lorem') {
+  //   return {
+  //     redirect: {
+  //       destination: 'https://www.instagram.com/ukmexpo_its/',
+  //     },
+  //     props: {},
+  //   };
+  // }
   return {
     props: selectedukm,
   };

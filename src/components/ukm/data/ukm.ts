@@ -1634,7 +1634,7 @@ export const ukm = [
   {
     nama: 'Kendo ITS',
     deskripsi:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
+      'Kendo merupakan seni bela diri asal Jepang yang menggunakan pedang yang berasal dari bambu yang disebut shinai dan baju pelindung yang disebut bogu. UKM Kendo ITS sendiri adalah UKM menaungi mahasiswa/mahasiswi yang memiliki minat dan bakat yang berkaitan dengan bela diri kendo ini.',
     bidang: 'Bela Diri',
     img: '',
     logo: '/images/ukm/logo/kendo-its.svg',
@@ -1642,59 +1642,39 @@ export const ukm = [
     contacts: [
       {
         contact: 'instagram',
-        href: '#',
-      },
-      {
-        contact: 'youtube',
-        href: '#',
-      },
-      {
-        contact: 'twitter',
-        href: '#',
+        href: 'https://www.instagram.com/kendoits/',
       },
     ],
     prestasi: [
       {
-        nama: 'Juara 1 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'MALANG KENDO TOURNAMENT',
+        deskripsi: 'Best Fighting Spirit ',
+        img: '/images/ukm/prestasi/prestasi-1.png',
       },
       {
-        nama: 'Juara 2 Makan Kerupuk',
+        nama: 'KOURYUUKI 11',
         deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+          'Juara 1 Team Match, Team Match Best Fighting Spirit, Juara 3 Team Match, Juara 1 Shinai Division, Juara 2 Shinai Division, Shinai Division Best Fighting Spirit, Juara 3 Shinai Division ',
+        img: '/images/ukm/prestasi/prestasi-2.png',
       },
       {
-        nama: 'Juara 3 Makan Kerupuk',
+        nama: 'ASEAN KENDO TOURNAMENT',
+        deskripsi: '2 Orang Terpilih sebagai Tim Nasional Indonesia',
+        img: '/images/ukm/prestasi/prestasi-3.png',
+      },
+      {
+        nama: 'EAST JAVA KENDO TOURNAMENT',
         deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+          'Juara 1 Men Kyu Division, Juara 1 Team Match, Juara 2 Men Kyu Division, Juara 3 Men Kyu Division, Best Fighting Spirit Men Kyu Division ',
+        img: '/images/ukm/prestasi/prestasi-4.png',
       },
     ],
-    faq: [
-      {
-        question: 'Apa itu ukm Tapak Suci ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Tapak Suci ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Tapak Suci ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-    ],
+    faq: [],
   },
   {
     nama: 'Taekwondo ITS',
     deskripsi:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
+      'UKM beladiri yang dominan menggunakan kaki dan berasal dari Korea, TAEKWONDO.',
     bidang: 'Bela Diri',
     img: '',
     logo: '/images/ukm/logo/taekwondo-its.svg',
@@ -1702,59 +1682,27 @@ export const ukm = [
     contacts: [
       {
         contact: 'instagram',
-        href: '#',
-      },
-      {
-        contact: 'youtube',
-        href: '#',
-      },
-      {
-        contact: 'twitter',
-        href: '#',
+        href: 'https://www.instagram.com/taekwondo_its/',
       },
     ],
     prestasi: [
       {
-        nama: 'Juara 1 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'Kejuaran Taekwondo Piala Komite Olahraga Nasional Indonesia (KONI) Surabaya 2019',
+        deskripsi: 'Raih 14 Medali',
+        img: '/images/ukm/prestasi/prestasi-1.png',
       },
       {
-        nama: 'Juara 2 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
-      },
-      {
-        nama: 'Juara 3 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'Kejuaran Taekwondo UM Cup 2018',
+        deskripsi: 'Raih 11 Medali',
+        img: '/images/ukm/prestasi/prestasi-2.png',
       },
     ],
-    faq: [
-      {
-        question: 'Apa itu ukm Tapak Suci ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Tapak Suci ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Tapak Suci ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-    ],
+    faq: [],
   },
   {
     nama: 'PSHT ITS',
     deskripsi:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
+      'UKM PSHT ITS berdiri pada tanggal 16 Juli 2003 pukul 14.41 WIB di Forum Musyawarah Tahunan LMB 2003 di Wisma Asah Terampil, Pacet, Mojokerto, sampai waktu yang tidak ditentukan. UKM PSHT ITS berkedudukan di Institut Teknologi Sepuluh Nopember Surabaya (ITS). UKM Persaudaraan Setia Hati Terate (PSHT) sebagai salah satu organisasi kemahasiswaan di ITS tentu sangat dibutuhkan oleh mahasiswa demi perkembangan potensi dirinya di masa mendatang, baik dari segi kesenian, olahraga, hobi, minat, kerohanian dan persaudaraan, sehingga akan mampu memberikan nilai lebih pada mahasiswa untuk memunculkan aura kreativitas dalam dirinya. Ketua pertama adalah Mas Yanuar.',
     bidang: 'Bela Diri',
     img: '',
     logo: '/images/ukm/logo/psht-its.svg',
@@ -1762,59 +1710,37 @@ export const ukm = [
     contacts: [
       {
         contact: 'instagram',
-        href: '#',
-      },
-      {
-        contact: 'youtube',
-        href: '#',
-      },
-      {
-        contact: 'twitter',
-        href: '#',
+        href: 'https://www.instagram.com/psht_its/',
       },
     ],
     prestasi: [
       {
-        nama: 'Juara 1 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'ITS Cup 5 2018',
+        deskripsi: 'beberapa juara di tiap kategori',
+        img: '/images/ukm/prestasi/prestasi-1.png',
       },
       {
-        nama: 'Juara 2 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'Juara 3 UNEJ Cup 2018',
+        deskripsi: 'juara 3 kategori putra, juara 3 kategori putri',
+        img: '/images/ukm/prestasi/prestasi-2.png',
       },
       {
-        nama: 'Juara 3 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'Kota Pahlawan Championship 2019',
+        deskripsi: '8 atlet mendapat medali',
+        img: '/images/ukm/prestasi/prestasi-3.png',
+      },
+      {
+        nama: 'Banyuwangi Championship 2022',
+        deskripsi: 'Bronze Medal',
+        img: '/images/ukm/prestasi/prestasi-4.png',
       },
     ],
-    faq: [
-      {
-        question: 'Apa itu ukm Tapak Suci ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Tapak Suci ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Tapak Suci ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-    ],
+    faq: [],
   },
   {
     nama: 'ITS Astronomy Club',
     deskripsi:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
+      'ITS Astronomy Club (IAC) merupakan wadah berkumpulnya para pencinta astronomi di ITS. Di IAC kami mempelajari bagaimana teleskop dioperasikan, kami melakukan pengamatan dan berusaha menangkap fenomena alam terindah yang dapat kami rekam.',
     bidang: 'Bidang Khusus',
     img: '',
     logo: '/images/ukm/logo/its-astronomy-club.svg',
@@ -1822,59 +1748,16 @@ export const ukm = [
     contacts: [
       {
         contact: 'instagram',
-        href: '#',
-      },
-      {
-        contact: 'youtube',
-        href: '#',
-      },
-      {
-        contact: 'twitter',
-        href: '#',
+        href: 'https://www.instagram.com/its_astronomyclub/',
       },
     ],
-    prestasi: [
-      {
-        nama: 'Juara 1 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
-      },
-      {
-        nama: 'Juara 2 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
-      },
-      {
-        nama: 'Juara 3 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
-      },
-    ],
-    faq: [
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-    ],
+    prestasi: [],
+    faq: [],
   },
   {
     nama: 'Kopma ITS',
     deskripsi:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
+      'Koperasi Mahasiswa dr. Angka ITS merupakan UKM yang bergerak di bidang kewirausahaan dengan menyediakan berbagai unit usaha yang dapat menjadi lab pembelajaran bagaimana cara menjalankan bisnis, manajemen karyawan, promosi marketing, serta ada berbagai pelatihan berjenjang yang tentunya dapat meningkatkan hardskill dan softskill dari anggota. Didirikan pada 11 Mei 1982, saat ini sudah memiliki 4 unit usaha yang dijalankan, yaitu ITS Mart yang merupakan penyedia official merchandise dari ITS, Kopma Rental yang menyediakan penyewaan berbagai kebutuhan pelatihan, Marketplace Shoppee dan Tokopedia yang merupakan toko digital yang dimiliki dan dikembangkan oleh anggota Kopma, dan terakhir ada Cicak Coop yang menyediakan baju pelatihan serta jas almamater yang digunakan oleh seluruh civitas ITS.',
     bidang: 'Bidang Khusus',
     img: '',
     logo: '/images/ukm/logo/kopma-its.svg',
@@ -1882,59 +1765,34 @@ export const ukm = [
     contacts: [
       {
         contact: 'instagram',
-        href: '#',
-      },
-      {
-        contact: 'youtube',
-        href: '#',
-      },
-      {
-        contact: 'twitter',
-        href: '#',
+        href: 'https://www.instagram.com/kopma_its/',
       },
     ],
     prestasi: [
       {
-        nama: 'Juara 1 Makan Kerupuk',
+        nama: 'XL Future Leader Rumah Akselerasi Inovasi',
         deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+          'Top 45 dari 248 peserta UKM dan Organisasi seluruh Indonesia',
+        img: '/images/ukm/prestasi/prestasi-1.png',
       },
       {
-        nama: 'Juara 2 Makan Kerupuk',
+        nama: 'Official merchandiser dan perlengkapan ITS',
         deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+          'Melayani penjualan berbagai produk autentik dan resmi dari ITS',
+        img: '/images/ukm/prestasi/prestasi-2.png',
       },
       {
-        nama: 'Juara 3 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'KRI (Kontes Robot Indonesia) 2022',
+        deskripsi: 'Terpilih sebagai official merchandiser resmi',
+        img: '/images/ukm/prestasi/prestasi-3.png',
       },
     ],
-    faq: [
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-    ],
+    faq: [],
   },
   {
     nama: 'Satmenwa 802 ITS',
     deskripsi:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
+      'Resimen Mahasiswa (MENWA) 802-ITS merupakan wadah penyaluran potensi mahasiswa dalam rangka mewujudkan hak dan kewajiban warga negara dalam bela negara. Melalui Menwa, mahasiswa dilatih untuk lebih disiplin, berpengetahuan luas, berfisik kuat, dan bermental baja.',
     bidang: 'Bidang Khusus',
     img: '',
     logo: '/images/ukm/logo/satmenwa-802-its.svg',
@@ -1942,59 +1800,16 @@ export const ukm = [
     contacts: [
       {
         contact: 'instagram',
-        href: '#',
-      },
-      {
-        contact: 'youtube',
-        href: '#',
-      },
-      {
-        contact: 'twitter',
-        href: '#',
+        href: 'https://www.instagram.com/menwaits/',
       },
     ],
-    prestasi: [
-      {
-        nama: 'Juara 1 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
-      },
-      {
-        nama: 'Juara 2 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
-      },
-      {
-        nama: 'Juara 3 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
-      },
-    ],
-    faq: [
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-    ],
+    prestasi: [],
+    faq: [],
   },
   {
     nama: 'Penalaran ITS',
     deskripsi:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
+      'UKM Penalaran ITS merupakan salah satu Unit Kegiatan Mahasiswa bidang khusus di Institut Teknologi Sepuluh Nopember dengan tujuan untuk membentuk anggota yang berkualitas dalam segi manajerial, penelitian dan keilmiahan, serta kajian dan kesusastraan',
     bidang: 'Bidang Khusus',
     img: '',
     logo: '/images/ukm/logo/penalaran-its.svg',
@@ -2002,59 +1817,35 @@ export const ukm = [
     contacts: [
       {
         contact: 'instagram',
-        href: '#',
-      },
-      {
-        contact: 'youtube',
-        href: '#',
-      },
-      {
-        contact: 'twitter',
-        href: '#',
+        href: 'https://www.instagram.com/penalaranits/',
       },
     ],
     prestasi: [
       {
-        nama: 'Juara 1 Makan Kerupuk',
+        nama: 'Juara 1',
         deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+          'Irma Fitriani, Lomba Esai Mahakarya Logista IX Universitas Andalas 2021',
+        img: '/images/ukm/prestasi/prestasi-1.png',
       },
       {
-        nama: 'Juara 2 Makan Kerupuk',
+        nama: 'Bronze Medal',
         deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+          'Qurratul Ain Farahiyah, AISEEF (Asean Innovative Science Environmental and Entrepreneur Fair) 2022',
+        img: '/images/ukm/prestasi/prestasi-2.png',
       },
       {
-        nama: 'Juara 3 Makan Kerupuk',
+        nama: 'Juara 3',
         deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+          'Chandra Aryo Wibowo, Astra Digital Innovation & Technology Competition 2022',
+        img: '/images/ukm/prestasi/prestasi-3.png',
       },
     ],
-    faq: [
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-    ],
+    faq: [],
   },
   {
     nama: 'ITS Robotics',
     deskripsi:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
+      'ITS Robotics merupakan Unit Kegiatan Mahasiswa ITS yang bergerak di dalam memberikan pengenalan, pembelajaran, dan fasilitas kepada mahasiswa yang tertarik dan mau untuk bergabung ke dalam ITS Robotics. Ada berbagai aktifitas yang kami laksanakan untuk kesejahteraan dan kemakmuran anggota ITS Robotics, diantaranya adalah Welcome Party Anggota Baru, Pelatihan Dasar Mengenai Ilmu Dasar Robotika, Pengabdian Masyarakat Pelatihan Robotika, Pelatihan Calon Staff UKM Robotika ITS, dan Pendidikan Latihan Dasar (DIKLATSAR). Tentunya kegiatan-kegiatan tersebut menjadikan ITS Robotics sebagai tempat yang nyaman dan baik untuk anggota-anggotanya. ITS Robotics menaungi setidaknya 8 Tim Robot yang seringkali mengikuti perlombaan nasional maupun internasional yang tidak jarang untuk membawa mendali dan juga penghargaan yang membuat nama ITS Robotics menjadi semakin besar dan ternama. Berikut merupakan nama – nama tim yang bergerak di bawah naungan ITS Robotics yaitu IRIS, ICHIRO, BARUNASTRA, BANYUBRAMANTA, BAYUCARAKA, VI-ROSE, ABU ROBOCON, ABINARA',
     bidang: 'Bidang Khusus',
     img: '',
     logo: '/images/ukm/logo/its-robotics.svg',
@@ -2062,59 +1853,33 @@ export const ukm = [
     contacts: [
       {
         contact: 'instagram',
-        href: '#',
-      },
-      {
-        contact: 'youtube',
-        href: '#',
-      },
-      {
-        contact: 'twitter',
-        href: '#',
+        href: 'https://www.instagram.com/its.robotics/',
       },
     ],
     prestasi: [
       {
-        nama: 'Juara 1 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'Juara Umum',
+        deskripsi: 'Kontes Robot Indonesia (KRI) 2022, 2021, 2020',
+        img: '/images/ukm/prestasi/prestasi-1.png',
       },
       {
-        nama: 'Juara 2 Makan Kerupuk',
+        nama: 'First Place',
         deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+          'International Roboboat Competition 2022, kategori Autonomy Challenge dan kategori Design Documentation',
+        img: '/images/ukm/prestasi/prestasi-2.png',
       },
       {
-        nama: 'Juara 3 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'Juara 1',
+        deskripsi: 'Kontes Robot Tematik Indonesia (KRTMI)',
+        img: '/images/ukm/prestasi/prestasi-3.png',
       },
     ],
-    faq: [
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-    ],
+    faq: [],
   },
   {
     nama: 'ITS Foreign Language Society',
     deskripsi:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
+      'UKM IFLS merupakan UKM bidang khusus yang mempelajari bahasa dan budaya luar. IFLS terdiri dari 5 divisi yaitu IC,DC,Korea,Jepang dan IDS',
     bidang: 'Bidang Khusus',
     img: '',
     logo: '/images/ukm/logo/ifls.svg',
@@ -2122,59 +1887,32 @@ export const ukm = [
     contacts: [
       {
         contact: 'instagram',
-        href: '#',
-      },
-      {
-        contact: 'youtube',
-        href: '#',
-      },
-      {
-        contact: 'twitter',
-        href: '#',
+        href: 'https://www.instagram.com/ifls_its/',
       },
     ],
     prestasi: [
       {
-        nama: 'Juara 1 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'Quarterfinalist',
+        deskripsi: 'Asian English Olympiad 2021',
+        img: '/images/ukm/prestasi/prestasi-1.png',
       },
       {
-        nama: 'Juara 2 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: '3rd Runner Up',
+        deskripsi: 'ProAms 2021',
+        img: '/images/ukm/prestasi/prestasi-2.png',
       },
       {
-        nama: 'Juara 3 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'Co-2nd Runner Up',
+        deskripsi: 'DUNNO 2021',
+        img: '/images/ukm/prestasi/prestasi-3.png',
       },
     ],
-    faq: [
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-    ],
+    faq: [],
   },
   {
     nama: 'Lembaga Pers Mahasiswa 1.0 ITS',
     deskripsi:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
+      'Lembaga Pers Mahasiswa Satu Kosong merupakan sebuah Unit Kegiatan mahasiswa yang sekaligus menjadi media pers kampus yang berbasis teknologi dan ilmu pengetahuan',
     bidang: 'Bidang Khusus',
     img: '',
     logo: '/images/ukm/logo/lpm-its.svg',
@@ -2182,59 +1920,16 @@ export const ukm = [
     contacts: [
       {
         contact: 'instagram',
-        href: '#',
-      },
-      {
-        contact: 'youtube',
-        href: '#',
-      },
-      {
-        contact: 'twitter',
-        href: '#',
+        href: 'https://www.instagram.com/satukosong_its/',
       },
     ],
-    prestasi: [
-      {
-        nama: 'Juara 1 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
-      },
-      {
-        nama: 'Juara 2 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
-      },
-      {
-        nama: 'Juara 3 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
-      },
-    ],
-    faq: [
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-    ],
+    prestasi: [],
+    faq: [],
   },
   {
     nama: 'Pramuka ITS',
     deskripsi:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
+      'Merupakan salah satu UKM Bidang khusus di ITS yang berdiri tahun 1983. Karena Pramuka ITS berpangkalan di Kampus ITS atau kampus teknologi, menjadikan Pramuka ITS sebagai #PramukaBerteknologi dan terus berupaya mengubah mindset masyarakat bahwa pramuka juga terus mengikuti perkembangan zaman',
     bidang: 'Bidang Khusus',
     img: '',
     logo: '/images/ukm/logo/pramuka-its.svg',
@@ -2242,59 +1937,32 @@ export const ukm = [
     contacts: [
       {
         contact: 'instagram',
-        href: '#',
-      },
-      {
-        contact: 'youtube',
-        href: '#',
-      },
-      {
-        contact: 'twitter',
-        href: '#',
+        href: 'https://www.instagram.com/pramuka.its/',
       },
     ],
     prestasi: [
       {
-        nama: 'Juara 1 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'Panitia',
+        deskripsi: 'Giat Prestasi Jawa Timur',
+        img: '/images/ukm/prestasi/prestasi-1.png',
       },
       {
-        nama: 'Juara 2 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'Juri Lomba',
+        deskripsi: 'Paciran Scout Challenge',
+        img: '/images/ukm/prestasi/prestasi-2.png',
       },
       {
-        nama: 'Juara 3 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'Sukarelawan',
+        deskripsi: 'KM ITS for Lombok 2018',
+        img: '/images/ukm/prestasi/prestasi-3.png',
       },
     ],
-    faq: [
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-    ],
+    faq: [],
   },
   {
-    nama: 'Pecinta Lingkungan Hidup ITS',
+    nama: 'PLH SIKLUS ITS',
     deskripsi:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
+      'UKM PLH SIKLUS ITS bertujuan mewadahi mahasiswa dalam menyalurkan aspirasinya yang berkaitan dengan lingkungan hidup. Kegiatan yang diadakan berupa pengabdian kepada alam dan masyarakat dengan mengangkat permasalahan lingkungan yang sedang terjadi. Juga dilaksanakannya pelatihan softskill dan hardskill kepada anggota berupa manajemen kegiatan, Manajemen Organisasi, Teknik Panjat Tebing, Teknik Susur Goa, Gunung dan Hutan, dan Olahraga Arus Deras, serta Konservasi Lingkungan.',
     bidang: 'Bidang Khusus',
     img: '',
     logo: '/images/ukm/logo/plh-its.svg',
@@ -2302,59 +1970,32 @@ export const ukm = [
     contacts: [
       {
         contact: 'instagram',
-        href: '#',
-      },
-      {
-        contact: 'youtube',
-        href: '#',
-      },
-      {
-        contact: 'twitter',
-        href: '#',
+        href: 'https://www.instagram.com/plhsiklusits/',
       },
     ],
     prestasi: [
       {
-        nama: 'Juara 1 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'Melakukan analisi vegetasi di Alas Purwo',
+        deskripsi: '',
+        img: '/images/ukm/prestasi/prestasi-1.png',
       },
       {
-        nama: 'Juara 2 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'perhitungan cadangan karbon dan emisi karbon se-ITS',
+        deskripsi: '',
+        img: '/images/ukm/prestasi/prestasi-2.png',
       },
       {
-        nama: 'Juara 3 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'Melakukan penanaman Mangrove sejumal 500 bibit di PangkahKulon',
+        deskripsi: '',
+        img: '/images/ukm/prestasi/prestasi-3.png',
       },
     ],
-    faq: [
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-    ],
+    faq: [],
   },
   {
     nama: 'Technopreneurship Development Center (TDC) ITS',
     deskripsi:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
+      'UKM TDC adalah UKM yang mempelajari tentang bisnis berdasarkan teknologi. Ada banyak aktivitas yang bisa dilakukan anggota TDC yaitu  Webinar, Nongkrong, Diklat dan masih banyak lagi.',
     bidang: 'Bidang Khusus',
     img: '',
     logo: '/images/ukm/logo/tdc-its.svg',
@@ -2362,119 +2003,69 @@ export const ukm = [
     contacts: [
       {
         contact: 'instagram',
-        href: '#',
-      },
-      {
-        contact: 'youtube',
-        href: '#',
-      },
-      {
-        contact: 'twitter',
-        href: '#',
+        href: 'https://www.instagram.com/tdcits/',
       },
     ],
     prestasi: [
       {
-        nama: 'Juara 1 Makan Kerupuk',
+        nama: 'Silver Medal',
         deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+          'Asean Innovative Science Environmental and Entrepreneur Fair 2022',
+        img: '/images/ukm/prestasi/prestasi-1.png',
       },
       {
-        nama: 'Juara 2 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'Silver Medal',
+        deskripsi: 'International Youth Business Competition 2022',
+        img: '/images/ukm/prestasi/prestasi-2.png',
       },
       {
-        nama: 'Juara 3 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'Juara 2',
+        deskripsi: 'BUSINESS COMPETITION TELKOM UNIVERSITY 2021',
+        img: '/images/ukm/prestasi/prestasi-3.png',
       },
     ],
-    faq: [
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-    ],
+    faq: [],
   },
   {
     nama: 'KSR Palang Merah Indonesia ITS',
     deskripsi:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
+      'KSR PMI ITS adalah Unit Kegiatan Mahasiswa yang berperan sebagai Relawan Palang Merah Indonesia serta menjadi tonggak dari gerakan Palang Merah atas setiap kegiatan kemanusiaan yang dilaksanakan oleh PMI',
     bidang: 'Bidang Khusus',
     img: '',
-    logo: '/images/ukm/logo/pmi-its.svg',
+    logo: '/images/ukm/logo/ksr-pmi.png',
     href: '/ukm/pmi-its',
     contacts: [
       {
         contact: 'instagram',
-        href: '#',
-      },
-      {
-        contact: 'youtube',
-        href: '#',
-      },
-      {
-        contact: 'twitter',
-        href: '#',
+        href: 'https://www.instagram.com/ksrpmiits/',
       },
     ],
     prestasi: [
       {
-        nama: 'Juara 1 Makan Kerupuk',
+        nama: 'Juara 1 Sub Lomba Shelter',
         deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+          'UNY National Competition of Volunteer Skills #4 (UNICOVS#4)',
+        img: '/images/ukm/prestasi/prestasi-1.png',
       },
       {
-        nama: 'Juara 2 Makan Kerupuk',
+        nama: 'Juara Umum',
         deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+          'UNY National Competition of Volunteer Skills #3 (UNICOVS#3)',
+        img: '/images/ukm/prestasi/prestasi-2.png',
       },
       {
-        nama: 'Juara 3 Makan Kerupuk',
+        nama: 'Juara 1 Sub Lomba Inovasi Teknologi Tepat Guna',
         deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+          'UNY National Competition of Volunteer Skills #3 (UNICOVS#3)',
+        img: '/images/ukm/prestasi/prestasi-3.png',
       },
     ],
-    faq: [
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-    ],
+    faq: [],
   },
   {
     nama: 'Maritime Challenge ITS',
     deskripsi:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
+      'UKM Maritime Challenge adalah UKM yang bergerak di bidang khusus. Kegiatan di UKM Maritime Challenge didasarkan pada 3 pilar yaitu Boat Building, Seamanship, dan Maritime Heritage. Melalui 3 pilar tersebut, UKM Maritime Challenge membentuk anggotanya pandai bersosialisai dan berorganisasi',
     bidang: 'Bidang Khusus',
     img: '',
     logo: '/images/ukm/logo/maritime-challenge-its.svg',
@@ -2482,59 +2073,32 @@ export const ukm = [
     contacts: [
       {
         contact: 'instagram',
-        href: '#',
-      },
-      {
-        contact: 'youtube',
-        href: '#',
-      },
-      {
-        contact: 'twitter',
-        href: '#',
+        href: 'https://www.instagram.com/maritime.challenge/',
       },
     ],
     prestasi: [
       {
-        nama: 'Juara 1 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'Best Design',
+        deskripsi: 'Boat Race Competition COMET 2019',
+        img: '/images/ukm/prestasi/prestasi-1.png',
       },
       {
-        nama: 'Juara 2 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: '1st Place',
+        deskripsi: 'Diponegoro Ship Competition and Race 2018',
+        img: '/images/ukm/prestasi/prestasi-2.png',
       },
       {
-        nama: 'Juara 3 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: '2nd Place',
+        deskripsi: 'Dragon Boat Race Marine Icon 2015',
+        img: '/images/ukm/prestasi/prestasi-3.png',
       },
     ],
-    faq: [
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-    ],
+    faq: [],
   },
   {
     nama: 'ITS MUN Club',
     deskripsi:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
+      'ITS Model United Nations (MUN) Club adalah unit kegiatan mahasiswa yang berkecimpung di bidang simulasi sidang Persatuan Bangsa-Bangsa (United Nations), dimana seseorang akan berlaku sebagai delegasi atau perwakilan dari suatu negara yang kemudian terlibat dalam diskusi atau musyawarah tentang agenda tertentu. ITS MUN Club dapat menjadi wadah mahasiswa ITS untuk melatih kemampuan menulis, negosiasi, berdiplomasi, dan memperdebatkan sebuah argumen, dan berbicara di depan khalayak umum dari berbagai negara. MUN bertujuan untuk mendorong kesadaran mahasiswa akan hubungan dan isu internasional saat ini, memahami dan menemukan solusi untuk memecahkan masalah internasional, dimana peserta dapat meningkatkan kemampuan komunikasi dan diplomasi yang baik, sifat kritis, berpikir cepat tanggap, menghargai satu sama lain dan banyak wawasan serta jaringan',
     bidang: 'Bidang Khusus',
     img: '',
     logo: '/images/ukm/logo/its-mun-club.svg',
@@ -2542,53 +2106,26 @@ export const ukm = [
     contacts: [
       {
         contact: 'instagram',
-        href: '#',
-      },
-      {
-        contact: 'youtube',
-        href: '#',
-      },
-      {
-        contact: 'twitter',
-        href: '#',
+        href: 'https://www.instagram.com/itsmunclub/',
       },
     ],
     prestasi: [
       {
-        nama: 'Juara 1 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'Most Outstanding Delegate',
+        deskripsi: 'Moses Andrian, JOINMUN (Jogjakarta International MUN 2019)',
+        img: '/images/ukm/prestasi/prestasi-1.png',
       },
       {
-        nama: 'Juara 2 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'Best Position Paper',
+        deskripsi: 'Radifan Athallah, VESTMUN 2019 (Veteran East MUN 2019)',
+        img: '/images/ukm/prestasi/prestasi-2.png',
       },
       {
-        nama: 'Juara 3 Makan Kerupuk',
-        deskripsi:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-        img: '/images/logo/ukm-expo-black.svg',
+        nama: 'Best Position Paper and Verbal Commendation',
+        deskripsi: 'Putri Dwi Maharani, AIRLANGGA MUN 2021',
+        img: '/images/ukm/prestasi/prestasi-3.png',
       },
     ],
-    faq: [
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-      {
-        question: 'Apa itu ukm Pecinta Alam ITS?',
-        answer:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero odit reprehenderit quia provident, explicabo nesciunt animi saepe id sapiente et beatae. Nihil doloremque laborum laboriosam molestias pariatur',
-      },
-    ],
+    faq: [],
   },
 ];
