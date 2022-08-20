@@ -18,25 +18,25 @@ interface IFileState {
 }
 
 const pembayaran = [
-  {
+{
     uid: 0,
+
+    name: 'BNI ITS',
+    noRek: '8257711030210003',
+    atasNama: 'Bantuan Kegiatan Mahasiswa',
+  },
+  {
+    uid: 1,
 
     name: 'Gopay',
     noRek: '08113086464',
     atasNama: 'Kirana Mahes',
   },
   {
-    uid: 1,
+    uid: 2,
     name: 'ShopeePay',
     noRek: '089514623705',
     atasNama: 'achmad aunilla taftiyan',
-  },
-  {
-    uid: 2,
-
-    name: 'BNI',
-    noRek: '8257711030210003',
-    atasNama: 'Bantuan Kegiatan Mahasiswa',
   },
 ];
 
@@ -57,7 +57,7 @@ export default function Register() {
   }
 
   const router = useRouter();
-  const [harga, setHarga] = useState(60000);
+  const [harga, setHarga] = useState(54000);
   const [isClosed, setIsClosed] = useState(true);
   const [todayDate] = useState(new Date());
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -524,7 +524,7 @@ export default function Register() {
                     setPayment(e.target.value);
                   }}
                 >
-                  {payment == 'BNI' ? `Nomor rekening` : `Nomor ${payment}`}
+                  {payment == 'BNI ITS' ? `Nomor rekening` : `Nomor ${payment}`}
                 </label>
                 <input
                   min={0}
@@ -532,7 +532,7 @@ export default function Register() {
                   type='text'
                   className='rounded-md !border border-[#6B7280] bg-transparent p-2 autofill:bg-transparent focus:!border-cgreen focus:!ring-cgreen  focus-visible:!border-cgreen'
                   placeholder={
-                    payment == 'BNI'
+                    payment == 'BNI ITS'
                       ? `Masukkan nomor rekening kamu`
                       : `Masukkan Nomor ${payment} kamu`
                   }
@@ -594,17 +594,17 @@ export default function Register() {
               </h5>
               <p className='text-xl font-medium text-black'>{payment}</p>
               <p className='text-xl font-medium text-black'>
-                {payment == 'BNI' ? `No Virtual Account` : `No ${payment}`} -{' '}
+                {payment == 'BNI ITS' ? `No Virtual Account` : `No ${payment}`} -{' '}
                 {payment == 'ShopeePay'
                   ? pembayaran[1].noRek
-                  : payment == 'BNI'
+                  : payment == 'BNI ITS'
                   ? pembayaran[2].noRek
                   : ''}{' '}
               </p>
               <p className='text-xl font-medium text-black'>{`a/n ${
                 payment == 'ShopeePay'
                   ? pembayaran[1].atasNama
-                  : payment == 'BNI'
+                  : payment == 'BNI ITS'
                   ? pembayaran[2].atasNama
                   : ''
               }`}</p>
