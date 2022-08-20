@@ -596,16 +596,16 @@ export default function Register() {
               <p className='text-xl font-medium text-black'>
                 {payment == 'BNI ITS' ? `No Virtual Account` : `No ${payment}`} -{' '}
                 {payment == 'ShopeePay'
-                  ? pembayaran[1].noRek
-                  : payment == 'BNI ITS'
                   ? pembayaran[2].noRek
+                  : payment == 'BNI ITS'
+                  ? pembayaran[0].noRek
                   : ''}{' '}
               </p>
               <p className='text-xl font-medium text-black'>{`a/n ${
                 payment == 'ShopeePay'
-                  ? pembayaran[1].atasNama
-                  : payment == 'BNI ITS'
                   ? pembayaran[2].atasNama
+                  : payment == 'BNI ITS'
+                  ? pembayaran[0].atasNama
                   : ''
               }`}</p>
               {payment === 'Gopay' && (
