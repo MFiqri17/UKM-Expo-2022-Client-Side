@@ -245,7 +245,7 @@ export default function Register() {
   }, [harga]);
 
   React.useEffect(() => {
-    if (total >= 3789) {
+    if (total >= 3709) {
       setIsClosed(true);
     } else {
       setIsClosed(false);
