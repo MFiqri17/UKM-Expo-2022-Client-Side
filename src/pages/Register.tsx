@@ -18,13 +18,13 @@ interface IFileState {
 }
 
 const pembayaran = [
-  {
-    uid: 0,
+  // {
+  //   uid: 0,
 
-    name: 'BNI ITS',
-    noRek: '8257711030210003',
-    atasNama: 'Bantuan Kegiatan Mahasiswa',
-  },
+  //   name: 'BNI ITS',
+  //   noRek: '8257711030210003',
+  //   atasNama: 'Bantuan Kegiatan Mahasiswa',
+  // },
   {
     uid: 1,
 
@@ -57,7 +57,7 @@ export default function Register() {
   }
 
   const router = useRouter();
-  const [harga, setHarga] = useState(54000);
+  const [harga, setHarga] = useState(70000);
   const [isClosed, setIsClosed] = useState(true);
   const [todayDate] = useState(new Date());
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -597,14 +597,14 @@ export default function Register() {
                 {payment == 'BNI ITS' ? `No Virtual Account` : `No ${payment}`}{' '}
                 -{' '}
                 {payment == 'ShopeePay'
-                  ? pembayaran[2].noRek
+                  ? pembayaran[1].noRek
                   : payment == 'BNI ITS'
                   ? pembayaran[0].noRek
                   : ''}{' '}
               </p>
               <p className='text-xl font-medium text-black'>{`a/n ${
                 payment == 'ShopeePay'
-                  ? pembayaran[2].atasNama
+                  ? pembayaran[1].atasNama
                   : payment == 'BNI ITS'
                   ? pembayaran[0].atasNama
                   : ''
