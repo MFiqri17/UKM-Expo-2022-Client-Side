@@ -18,7 +18,7 @@ interface IFileState {
 }
 
 const pembayaran = [
-{
+  {
     uid: 0,
 
     name: 'BNI ITS',
@@ -245,7 +245,7 @@ export default function Register() {
   }, [harga]);
 
   React.useEffect(() => {
-    if (total >= 3709) {
+    if (total >= 4209) {
       setIsClosed(true);
     } else {
       setIsClosed(false);
@@ -594,7 +594,8 @@ export default function Register() {
               </h5>
               <p className='text-xl font-medium text-black'>{payment}</p>
               <p className='text-xl font-medium text-black'>
-                {payment == 'BNI ITS' ? `No Virtual Account` : `No ${payment}`} -{' '}
+                {payment == 'BNI ITS' ? `No Virtual Account` : `No ${payment}`}{' '}
+                -{' '}
                 {payment == 'ShopeePay'
                   ? pembayaran[2].noRek
                   : payment == 'BNI ITS'
@@ -646,10 +647,10 @@ export default function Register() {
         {isClosed ? (
           <div className='flex flex-col items-center justify-center gap-y-2 py-16 px-10'>
             <h3 className='text-gradient text-center font-primary'>
-              Pembelian tiket pre-sale 3 ditutup sementara untuk maintenance server. Form akan dibuka kembali ketika maintenance server telah selesai.
+              Pembelian tiket OTS akan segera dibuka
             </h3>
             <div className='px-14'>
-             <h4 className='text-gradient text-center font-primary'>
+              <h4 className='text-gradient text-center font-primary'>
                 Jangan lewatkan informasi terbaru di seluruh sosial media dan
                 website UKM Expo ITS 2022.
               </h4>

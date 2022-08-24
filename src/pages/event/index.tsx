@@ -3,6 +3,7 @@ import * as React from 'react';
 
 import Layout from '@/components/layout/Layout';
 import UnstyledLink from '@/components/links/UnstyledLink';
+import SectionTitle from '@/components/SectionTitle';
 import Seo from '@/components/Seo';
 
 /**
@@ -149,6 +150,101 @@ export default function HomePage() {
                   Lihat Lebih Lanjut
                 </UnstyledLink>
               </div>
+            </div>
+          </div>
+          <div>
+            <SectionTitle title='Peraturan Umum' />
+            <div className='rounded-2xl bg-clightorange px-2 py-8 shadow sm:px-10'>
+              <ul className='space-y-1 text-lg font-semibold'>
+                <li>
+                  1. Peserta acara UKM EXPO 2022 ini merupakan mahasiswa baru
+                  ITS angkatan 2022.
+                </li>
+                <li>
+                  2. Selain mahasiswa baru ITS angkatan 2022 dilarang memasuki
+                  kawasan acara, (wajib menunjukkan KTM/FRS online/My ITS dan
+                  KTP)
+                </li>
+                <li>
+                  3. Peserta wajib hadir di tempat 30 menit sebelum acara
+                  Opening UKM EXPO dimulai.
+                </li>
+                <li>
+                  4. Peserta wajib melakukan registrasi ke panitia sebelum acara
+                  Opening UKM EXPO dimulai.
+                </li>
+                <li>
+                  5. Peserta wajib menerapkan protokol kesehatan yang berlaku
+                  selama berada di lokasi acara.
+                </li>
+                <li>
+                  6. Peserta diharuskan memakai pakaian standar kuliah bebas
+                  sopan dan rapi.
+                </li>
+                <li>
+                  7. Peserta diharapkan mengikuti seluruh rangkaian acara dari
+                  awal hingga acara selesai.
+                </li>
+                <li>
+                  8. Peserta diharapkan untuk menjaga barang bawaan sendiri.
+                </li>
+                <li>
+                  9. Peserta diharapkan untuk mematuhi segala tata tertib yang
+                  berlaku selama berada di lokasi acara.
+                </li>
+                <li>
+                  10. Segala bentuk kehilangan barang bawaan berada di luar
+                  tanggung jawab panitia.
+                </li>
+                <li>
+                  11. Peserta bersedia menerima sanksi atas setiap pelanggaran
+                  yang dilakukan.
+                </li>
+                <li>
+                  12. Peserta wajib mematuhi seluruh SOP yang telah dibuat oleh
+                  panitia.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <SectionTitle title='Tata Tertib Peserta' />
+            <div className='rounded-2xl bg-clightorange px-2 py-8 shadow sm:px-10'>
+              <ul className='space-y-1 text-lg font-semibold'>
+                <li>
+                  1. Peserta dilarang membawa senjata tajam dan/atau bahan
+                  peledak.
+                </li>
+                <li>
+                  2. Peserta dilarang membawa obat-obatan terlarang, gas
+                  beracun, dan benda-benda lainnya yang bisa membahayakan orang
+                  lain.
+                </li>
+                <li>
+                  3. Peserta dilarang mengucapkan atau bertindak sesuatu yang
+                  mengandung SARA dan menyinggung orang lain.
+                </li>
+                <li>4. Peserta dilarang membawa hewan peliharaan.</li>
+                <li>
+                  5. Peserta dilarang membawa makanan dan minuman dari luar.
+                </li>
+                <li>
+                  6. Peserta dilarang merokok termasuk penggunaan rokok elektrik
+                  (vape atau sejenisnya)
+                </li>
+                <li>7. Peserta dilarang membuang sampah sembarangan.</li>
+                <li>
+                  8. Peserta dilarang menimbulkan kericuhan atau kegaduhan.
+                </li>
+                <li>
+                  9. Peserta dilarang merusak fasilitas yang ada di kawasan
+                  acara dan sekitarnya.
+                </li>
+                <li>
+                  10. Hal-hal yang belum diatur dalam peraturan akan diatur
+                  kemudian sesuai dengan keputusan panitia
+                </li>
+              </ul>
             </div>
           </div>
         </section>

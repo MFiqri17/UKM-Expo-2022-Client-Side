@@ -16,7 +16,7 @@ export default function RegisterFooter() {
             </div>
           </a>
 
-          <a
+          {/* <a
             href='https://wa.me/628113086464'
             className='block transition duration-300 hover:scale-105'
             target='_blank'
@@ -25,7 +25,7 @@ export default function RegisterFooter() {
             <div className='rounded-xl bg-[#25D366] px-2 py-1'>
               <img src='images/whatsapp-icon.svg' alt='whatsapp-icon' />
             </div>
-          </a>
+          </a> */}
         </div>
 
         <div className='flex flex-row items-end justify-center space-x-6'>
