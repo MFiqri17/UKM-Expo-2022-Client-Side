@@ -647,7 +647,7 @@ export default function Register() {
         {isClosed ? (
           <div className='flex flex-col items-center justify-center gap-y-2 py-16 px-10'>
             <h3 className='text-gradient text-center font-primary'>
-              Pembelian tiket OTS akan segera dibuka
+              Pembelian tiket OTS online telah ditutup. Tiket OTS offline dapat dibeli langsung di stan pada tanggal 27 Agustus 2022 pukul 15.15 hingga 16.45
             </h3>
             <div className='px-14'>
               <h4 className='text-gradient text-center font-primary'>
