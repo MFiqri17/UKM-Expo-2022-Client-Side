@@ -244,13 +244,14 @@ export default function Register() {
       });
   }, [harga]);
 
-  React.useEffect(() => {
-    if (total >= 4209) {
-      setIsClosed(true);
-    } else {
-      setIsClosed(false);
-    }
-  }, [total]); // Jangann lupa dihidipun lagi nanti
+  // React.useEffect(() => {
+  //   if (total >= 4209) {
+  //     setIsClosed(true);
+  //   } else {
+  //     setIsClosed(false);
+  //   }
+  // }, [total]); 
+  // Jangann lupa dihidipun lagi nanti
 
   React.useEffect(() => {
     const newLocal = pembayaran[0].name;
@@ -647,7 +648,7 @@ export default function Register() {
         {isClosed ? (
           <div className='flex flex-col items-center justify-center gap-y-2 py-16 px-10'>
             <h3 className='text-gradient text-center font-primary'>
-              Pembelian tiket OTS online telah ditutup. Tiket OTS offline dapat dibeli langsung di stan pada tanggal 27 Agustus 2022 pukul 15.15 hingga 16.45
+              Pembelian tiket OTS online telah ditutup. Tiket OTS offline dapat dibeli langsung di stan pada tanggal 27 Agustus 2022
             </h3>
             <div className='px-14'>
               <h4 className='text-gradient text-center font-primary'>
